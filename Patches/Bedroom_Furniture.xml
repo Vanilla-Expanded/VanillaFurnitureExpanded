@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName = "Bed" or defName = "DoubleBed" or defName = "HospitalBed" or defName = "RoyalBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+    <xpath>Defs/ThingDef[defName = "Bed" or defName = "DoubleBed" or defName = "HospitalBed" or defName = "RoyalBed" or defName="Bedroll" or defName="BedrollDouble"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
     <value>
       <li>Table_RoyalDresser</li>
       <li>Table_RoyalEndTable</li>
@@ -37,5 +37,22 @@
     <value>
       <li>Misc_FileCabinet</li>
     </value>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <success>Always</success>
+    <mods>
+      <li>Vanilla Furniture Expanded - Spacer Module</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName = "Bed_AdvBed" or defName = "Bed_AdvDoubleBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+          <value>
+            <li>Table_LightEndTable</li>
+          </value>
+        </li>
+      </operations>
+    </match>
   </Operation>
 </Patch>
