@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="ArtableBedBase">
     <defName>Bed_Kingsize</defName>
@@ -18,9 +18,10 @@
         <linkableFacilities>
           <li>EndTable</li>
           <li>Dresser</li>
-		  <li>Table_RoyalDresser</li>
-		  <li>Table_RoyalEndTable</li>
-		  		  <li>Table_Wardrobe</li>
+          <li>Table_LightEndTable</li>
+          <li>Table_RoyalDresser</li>
+          <li>Table_RoyalEndTable</li>
+          <li>Table_Wardrobe</li>
         </linkableFacilities>
       </li>
     </comps>
@@ -33,7 +34,7 @@
       <BedRestEffectiveness>1.1</BedRestEffectiveness>
       <Comfort>0.95</Comfort>
       <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
-			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+      <SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
     </statBases>
     <size>(2,2)</size>
     <stuffCategories>
@@ -41,7 +42,7 @@
       <li>Woody</li>
       <li>Stony</li>
     </stuffCategories>
-        <costStuffCount>120</costStuffCount>
+    <costStuffCount>120</costStuffCount>
     <costList>
       <Gold>75</Gold>
     </costList>
@@ -59,9 +60,9 @@
     <researchPrerequisites>
       <li>MF_RoyalFurniture</li>
     </researchPrerequisites>
-	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
     <uiIconScale>0.75</uiIconScale>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
 
   <ThingDef ParentName="TableBase">
@@ -72,8 +73,8 @@
     <graphicData>
       <texPath>Things/Bedroom/RoyalEndTable/RoyalEndTable</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-	  <drawSize>(1,1)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,1)</drawSize>
       <shadowData>
         <volume>(0.3, 0.6, 0.3)</volume>
       </shadowData>
@@ -108,10 +109,10 @@
     </comps>
     <staticSunShadowHeight>0</staticSunShadowHeight>
     <castEdgeShadows>false</castEdgeShadows>
-	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
-  
+
   <ThingDef ParentName="TableBase">
     <defName>Table_RoyalDresser</defName>
     <label>royal dresser</label>
@@ -120,8 +121,8 @@
     <graphicData>
       <texPath>Things/Bedroom/RoyalDresser/RoyalDresser</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-	  <drawSize>(2,1)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,1)</drawSize>
       <shadowData>
         <volume>(0.3, 0.6, 0.3)</volume>
       </shadowData>
@@ -133,7 +134,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>50</Beauty>
     </statBases>
-	<size>(2,1)</size>
+    <size>(2,1)</size>
     <pathCost>60</pathCost>
     <defaultPlacingRot>South</defaultPlacingRot>
     <costStuffCount>70</costStuffCount>
@@ -157,18 +158,18 @@
     </comps>
     <staticSunShadowHeight>0</staticSunShadowHeight>
     <castEdgeShadows>false</castEdgeShadows>
-	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
 
-   <ThingDef ParentName="ArtableFurnitureBase">
+  <ThingDef ParentName="ArtableFurnitureBase">
     <defName>Seat_RoyalChair</defName>
     <label>royal chair</label>
     <description>A comfy, padded seat with a high back plate rested inside a gold frame. Can be used at tables, work stations, and elsewhere.</description>
     <graphicData>
       <texPath>Things/Seating/RoyalChair/RoyalChair</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
+      <shaderType>CutoutComplex</shaderType>
       <drawSize>(1,1)</drawSize>
       <damageData>
         <rectN>(0.25,0.234375,0.5,0.28125)</rectN>
@@ -195,7 +196,7 @@
       <li>Leathery</li>
     </stuffCategories>
     <costStuffCount>65</costStuffCount>
-	<costList>
+    <costList>
       <Gold>35</Gold>
     </costList>
     <pathCost>30</pathCost>
@@ -208,7 +209,7 @@
     <researchPrerequisites>
       <li>MF_RoyalFurniture</li>
     </researchPrerequisites>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
 
 
@@ -219,7 +220,7 @@
     <graphicData>
       <texPath>Things/Seating/RoyalArmchair/RoyalArmchair</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
+      <shaderType>CutoutComplex</shaderType>
       <drawSize>(2.6,2.6)</drawSize>
       <damageData>
         <rectN>(0,0,1,0.703125)</rectN>
@@ -247,7 +248,7 @@
       <li>Leathery</li>
     </stuffCategories>
     <costStuffCount>140</costStuffCount>
-	<costList>
+    <costList>
       <Gold>60</Gold>
     </costList>
     <pathCost>30</pathCost>
@@ -260,22 +261,24 @@
     <researchPrerequisites>
       <li>MF_RoyalFurniture</li>
     </researchPrerequisites>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
-  
+
   <ThingDef Name="RoyalTableDesc" ParentName="TableGatherSpotBase" Abstract="True">
-	<description>An impressive looking table for eating off of, this one being complete with a gold outer rim and rounded ends, suited for the wealthy.</description>
+    <description>An impressive looking table for eating off of, this one being complete with a gold outer rim and rounded ends, suited for the wealthy.</description>
     <graphicData>
       <graphicClass>Graphic_Multi</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
+      <shaderType>CutoutComplex</shaderType>
       <damageData>
         <rect>(0.15,0.15,0.2,0.2)</rect>
       </damageData>
     </graphicData>
-	<researchPrerequisites><li>MF_RoyalFurniture</li></researchPrerequisites>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <researchPrerequisites>
+      <li>MF_RoyalFurniture</li>
+    </researchPrerequisites>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
-  
+
   <ThingDef ParentName="RoyalTableDesc">
     <defName>Table_Royal1x1c</defName>
     <label>royal table (1x1)</label>
@@ -292,11 +295,11 @@
     </statBases>
     <size>(1,1)</size>
     <costStuffCount>25</costStuffCount>
-	<costList>
+    <costList>
       <Gold>10</Gold>
     </costList>
-	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-	<rotatable>false</rotatable>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <rotatable>false</rotatable>
   </ThingDef>
 
   <ThingDef ParentName="RoyalTableDesc">
@@ -315,13 +318,13 @@
     </statBases>
     <size>(2,2)</size>
     <costStuffCount>100</costStuffCount>
-	<costList>
+    <costList>
       <Gold>40</Gold>
     </costList>
-	<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-	<rotatable>false</rotatable>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <rotatable>false</rotatable>
   </ThingDef>
- 
+
   <ThingDef ParentName="RoyalTableDesc">
     <defName>Table_Royal1x2c</defName>
     <label>royal table (1x2)</label>
@@ -338,12 +341,12 @@
     </statBases>
     <size>(1,2)</size>
     <costStuffCount>50</costStuffCount>
-	<costList>
+    <costList>
       <Gold>20</Gold>
     </costList>
-	<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
   </ThingDef>
- 
+
   <ThingDef ParentName="RoyalTableDesc">
     <defName>Table_Royal3x3c</defName>
     <label>royal table (3x3)</label>
@@ -360,13 +363,13 @@
     </statBases>
     <size>(3,3)</size>
     <costStuffCount>150</costStuffCount>
-	<costList>
+    <costList>
       <Gold>60</Gold>
     </costList>
-	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-	<rotatable>false</rotatable>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <rotatable>false</rotatable>
   </ThingDef>
- 
+
   <ThingDef ParentName="RoyalTableDesc">
     <defName>Table_Royal2x4c</defName>
     <label>royal table (2x4)</label>
@@ -383,9 +386,9 @@
     </statBases>
     <size>(2,4)</size>
     <costStuffCount>140</costStuffCount>
-	<costList>
+    <costList>
       <Gold>60</Gold>
     </costList>
-	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
   </ThingDef>
 </Defs>
