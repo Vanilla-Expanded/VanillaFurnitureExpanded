@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="BedWithQualityBase">
     <defName>Bed_StoneSlab</defName>
@@ -30,7 +30,7 @@
       <BedRestEffectiveness>0.80</BedRestEffectiveness>
       <Comfort>0.5</Comfort>
       <ImmunityGainSpeedFactor>0.95</ImmunityGainSpeedFactor>
-	  <SurgerySuccessChanceFactor>0.98</SurgerySuccessChanceFactor>
+      <SurgerySuccessChanceFactor>0.98</SurgerySuccessChanceFactor>
     </statBases>
     <size>(1,2)</size>
     <stuffCategories>
@@ -47,9 +47,9 @@
     <castEdgeShadows>True</castEdgeShadows>
     <techLevel>Neolithic</techLevel>
     <uiIconScale>0.90</uiIconScale>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
-  
+
   <ThingDef ParentName="BedWithQualityBase">
     <defName>Bed_Simple</defName>
     <label>simple bed</label>
@@ -68,9 +68,10 @@
         <linkableFacilities>
           <li>EndTable</li>
           <li>Dresser</li>
-		  <li>Table_RoyalDresser</li>
-		  <li>Table_RoyalEndTable</li>
-		  		  <li>Table_Wardrobe</li>
+          <li>Table_LightEndTable</li>
+          <li>Table_RoyalDresser</li>
+          <li>Table_RoyalEndTable</li>
+          <li>Table_Wardrobe</li>
         </linkableFacilities>
       </li>
     </comps>
@@ -83,7 +84,7 @@
       <BedRestEffectiveness>0.970</BedRestEffectiveness>
       <Comfort>0.7</Comfort>
       <ImmunityGainSpeedFactor>1.03</ImmunityGainSpeedFactor>
-			<SurgerySuccessChanceFactor>0.98</SurgerySuccessChanceFactor>
+      <SurgerySuccessChanceFactor>0.98</SurgerySuccessChanceFactor>
     </statBases>
     <size>(1,2)</size>
     <stuffCategories>
@@ -105,8 +106,6 @@
       <li>MF_BasicFurniture</li>
     </researchPrerequisites>
     <uiIconScale>0.90</uiIconScale>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
- 
- 
 </Defs>

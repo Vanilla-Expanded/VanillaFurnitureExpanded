@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="TableBase">
     <defName>Table_LightEndTable</defName>
@@ -8,8 +8,8 @@
     <graphicData>
       <texPath>Things/Bedroom/LampEndTable/EndTableLamp</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-	  <drawSize>(2,2)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
       <shadowData>
         <volume>(0.3, 0.6, 0.3)</volume>
       </shadowData>
@@ -53,6 +53,6 @@
     </comps>
     <staticSunShadowHeight>0</staticSunShadowHeight>
     <castEdgeShadows>false</castEdgeShadows>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
 </Defs>
