@@ -1,0 +1,20 @@
+﻿using RimWorld;
+using Verse;
+
+namespace AOMoreFurniture
+{
+    [DefOf]
+    public static class ThingDefOf
+    {
+        public static ThingDef Mote_FlyingDart;
+
+        public static ThingDef Radio_Industrial;
+
+        public static ThingDef Radio_Spacer;
+
+        static ThingDefOf()
+        {
+            DefOfHelper.EnsureInitializedInCtor(typeof(ThingDefOf));
+        }
+    }
+}
