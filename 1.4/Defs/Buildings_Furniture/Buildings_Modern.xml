@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="ArtableBedBase">
@@ -240,40 +240,4 @@
     </researchPrerequisites>
     <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
-
-  <ThingDef ParentName="LampBase">
-    <defName>Light_ModernLamp</defName>
-    <label>modern lamp</label>
-    <description>A power saving lamp that more effectively converts electricity to light, useful for lighting rooms. Will short circuit in rain.</description>
-    <fillPercent>0.20</fillPercent>
-    <graphicData>
-      <texPath>Things/Other/ModernLamp</texPath>
-      <drawSize>(1,1)</drawSize>
-    </graphicData>
-    <tickerType>Rare</tickerType>
-    <costList>
-      <Steel>40</Steel>
-    </costList>
-    <size>(1,1)</size>
-    <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <shortCircuitInRain>true</shortCircuitInRain>
-        <basePowerConsumption>10</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>16</glowRadius>
-        <glowColor>(255,255,255,0)</glowColor>
-      </li>
-    </comps>
-    <statBases>
-      <WorkToBuild>400</WorkToBuild>
-      <Mass>3</Mass>
-    </statBases>
-    <researchPrerequisites>
-      <li>Electricity</li>
-      <li>MF_ModernFurniture</li>
-    </researchPrerequisites>
-  </ThingDef>
-  <designationCategory>AOMorefurniture</designationCategory>
 </Defs>
