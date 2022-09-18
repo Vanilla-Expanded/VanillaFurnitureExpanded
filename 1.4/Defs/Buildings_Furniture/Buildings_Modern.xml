@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="ArtableBedBase">
@@ -227,6 +227,7 @@
     <costStuffCount>60</costStuffCount>
     <costList>
       <Plasteel>40</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <pathCost>30</pathCost>
     <fillPercent>0.40</fillPercent>
