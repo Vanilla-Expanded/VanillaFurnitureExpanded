@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="LampBase">
@@ -93,165 +93,16 @@
     <uiIconScale>0.7</uiIconScale>
   </ThingDef>
 
-  <!-- Moved to version folder to include the new 1.1 recipes -->
-  <!-- <ThingDef ParentName="BuildingBase">
-    <defName>Stone_Campfire</defName>
-    <label>stone campfire</label>
-    <description>Cooks meals but produces less heat but more light, burns out slower than the standard campfire. As with all heat sources, it must be placed indoors so it has a closed space to heat. Refuelable.</description>    
-    <thingClass>Building_WorkTable</thingClass>
-    <category>Building</category>
-    <graphicData>
-      <texPath>Things/Other/StoneCampfire/StoneCampfire</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
-      <drawRotated>false</drawRotated>
-      <allowFlip>false</allowFlip>
-      <damageData>
-        <rect>(0.2,0,0.6,0.1)</rect>
-      </damageData>
-    </graphicData>
-    <uiIconPath>Things/Other/StoneCampfire/StoneCampfire_MenuIcon</uiIconPath>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <tickerType>Normal</tickerType>
-    <drawerType>RealtimeOnly</drawerType>
-    <fillPercent>0.20</fillPercent>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToBuild>300</WorkToBuild>
-      <Flammability>0</Flammability>
-      <WorkTableWorkSpeedFactor>0.6</WorkTableWorkSpeedFactor>
-    </statBases>
-    <stuffCategories>
-      <li>Stony</li>
-    </stuffCategories>
-	<costStuffCount>20</costStuffCount>
-    <selectable>true</selectable>
-    <costList>
-      <WoodLog>30</WoodLog> 
-    </costList>
-    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
-    <placeWorkers>
-      <li>PlaceWorker_Heater</li>
-    </placeWorkers>
-    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
-    <comps>
-      <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>8.0</fuelConsumptionRate>
-        <fuelCapacity>30.0</fuelCapacity>
-        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
-        <fuelFilter>
-          <thingDefs>
-            <li>WoodLog</li>
-          </thingDefs>
-        </fuelFilter>
-        <initialFuelPercent>1</initialFuelPercent>
-      </li>
-      <li Class="CompProperties_Glower">
-        <glowRadius>12</glowRadius>
-        <glowColor>(252,187,113,0)</glowColor>
-      </li>
-      <li Class="CompProperties_HeatPusher">
-        <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>15</heatPerSecond>
-        <heatPushMaxTemperature>24</heatPushMaxTemperature>
-      </li>
-      <li Class="CompProperties_FireOverlay">
-        <fireSize>1</fireSize>
-		<offset>(0,0,0.2)</offset>
-      </li>
-      <li>
-        <compClass>CompGatherSpot</compClass>
-      </li>
-    </comps>
-    <designationCategory>Temperature</designationCategory>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <recipes>
-      <li>CookMealSimple</li>
-      <li>Make_Pemmican</li>
-      <li>BurnApparel</li>
-      <li>BurnDrugs</li>
-    </recipes>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
-    <building>
-      <isMealSource>true</isMealSource>
-      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-    </building>
-  </ThingDef> -->
-
-  <ThingDef ParentName="FurnitureWithQualityBase">
-    <defName>Shelf_1x1c</defName>
-    <label>shelf (1x1)</label>
-    <description>A small shelf for storing miscellaneous items. Items stored in this will not deteriorate, even if outside.</description>
-    <thingClass>Building_Storage</thingClass>
-    <graphicData>
-      <texPath>Things/Other/SmallShelf/SmallShelf</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(1.5,2)</drawSize>
-    </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.4</fillPercent>
-    <castEdgeShadows>true</castEdgeShadows>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>15</costStuffCount>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <Mass>4</Mass>
-      <WorkToBuild>300</WorkToBuild>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <size>(1,1)</size>
-    <defaultPlacingRot>South</defaultPlacingRot>
-    <building>
-      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
-      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
-      <defaultStorageSettings>
-        <priority>Important</priority>
-        <filter>
-          <categories>
-            <li>Weapons</li>
-          </categories>
-        </filter>
-      </defaultStorageSettings>
-    </building>
-    <inspectorTabs>
-      <li>ITab_Storage</li>
-    </inspectorTabs>
-    <staticSunShadowHeight>0.5</staticSunShadowHeight>
-    <surfaceType>Item</surfaceType>
-    <canOverlapZones>false</canOverlapZones>
-    <researchPrerequisites>
-      <li>ComplexFurniture</li>
-    </researchPrerequisites>
-    <designationCategory>AOMorefurniture</designationCategory>
-  </ThingDef>
-
-  <ThingDef ParentName="FurnitureWithQualityBase">
+  <ThingDef ParentName="ShelfBase">
     <defName>Shelf_WeaponRack</defName>
     <label>weapon rack</label>
     <description>A heavy duty rack for storing weaponry. Weapons stored in this will not deteriorate, even if outside.</description>
-    <thingClass>Building_Storage</thingClass>
     <graphicData>
       <texPath>Things/Other/WeaponShelf/WeaponShelf</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3,2)</drawSize>
     </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <fillPercent>0.4</fillPercent>
-    <castEdgeShadows>true</castEdgeShadows>
-    <stuffCategories>
+    <stuffCategories Inherit="False">
       <li>Metallic</li>
     </stuffCategories>
     <costStuffCount>40</costStuffCount>
@@ -264,8 +115,15 @@
     <size>(2,1)</size>
     <defaultPlacingRot>South</defaultPlacingRot>
     <building>
-      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
-      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <maxItemsInCell>5</maxItemsInCell>
+      <fixedStorageSettings>
+        <filter>
+          <disallowNotEverStorable>true</disallowNotEverStorable>
+          <categories>
+            <li>Weapons</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
       <defaultStorageSettings>
         <priority>Important</priority>
         <filter>
@@ -274,14 +132,9 @@
           </categories>
         </filter>
       </defaultStorageSettings>
+      <paintable>true</paintable>
     </building>
-    <inspectorTabs>
-      <li>ITab_Storage</li>
-    </inspectorTabs>
     <designationHotKey>Misc12</designationHotKey>
-    <staticSunShadowHeight>0.5</staticSunShadowHeight>
-    <surfaceType>Item</surfaceType>
-    <canOverlapZones>false</canOverlapZones>
     <researchPrerequisites>
       <li>ComplexFurniture</li>
     </researchPrerequisites>
