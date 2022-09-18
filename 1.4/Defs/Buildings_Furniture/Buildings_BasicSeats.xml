@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <ThingDef ParentName="FurnitureWithQualityBase">
     <defName>Seat_Cushion</defName>
@@ -42,7 +42,7 @@
       <isSittable>true</isSittable>
     </building>
     <uiIconOffset>(0, -0.05)</uiIconOffset>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureWithQualityBase">
@@ -67,7 +67,7 @@
         <edgeRight>Damage/Edge</edgeRight>
       </damageData>
     </graphicData>
-	<uiIconPath>Things/Seating/Bench/Bench_MenuIcon</uiIconPath>
+    <uiIconPath>Things/Seating/Bench/Bench_MenuIcon</uiIconPath>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
@@ -77,8 +77,8 @@
       <Beauty>0</Beauty>
       <Comfort>0.5</Comfort>
     </statBases>
-	<placingDraggableDimensions>1</placingDraggableDimensions>
-	<rotatable>false</rotatable>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <rotatable>false</rotatable>
     <socialPropernessMatters>true</socialPropernessMatters>
     <stuffCategories>
       <li>Metallic</li>
@@ -89,14 +89,16 @@
       <blueprintGraphicData>
         <texPath>Things/Seating/Bench/Bench_Blueprint_Atlas</texPath>
       </blueprintGraphicData>
-	        <isSittable>true</isSittable>
+      <isSittable>true</isSittable>
     </building>
     <costStuffCount>25</costStuffCount>
     <pathCost>30</pathCost>
     <fillPercent>0.20</fillPercent>
-	<researchPrerequisites><li>MF_BasicFurniture</li></researchPrerequisites>
+    <researchPrerequisites>
+      <li>MF_BasicFurniture</li>
+    </researchPrerequisites>
     <uiIconOffset>(0, -0.05)</uiIconOffset>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
 
 
@@ -143,7 +145,7 @@
     <researchPrerequisites>
       <li>ComplexFurniture</li>
     </researchPrerequisites>
-	<designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>AOMorefurniture</designationCategory>
   </ThingDef>
- 
+
 </Defs>

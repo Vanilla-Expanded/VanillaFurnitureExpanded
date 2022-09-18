@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThoughtDef>
@@ -19,7 +19,7 @@
     </stages>
   </ThoughtDef>
 
-   <StatDef>
+  <StatDef>
     <defName>AO_MusicHearingAbility</defName>
     <label>hearing ability</label>
     <description>How effective musical sources of enjoyment are, such as radios.</description>

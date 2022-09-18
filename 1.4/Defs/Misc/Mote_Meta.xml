@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="MoteBase">
@@ -13,7 +13,7 @@
       <texPath>Things/Mote/PlayingChips</texPath>
     </graphicData>
   </ThingDef>
- 
+
   <ThingDef ParentName="MoteBase">
     <defName>Mote_HoldingGloves</defName>
     <thingClass>MoteDualAttached</thingClass>
@@ -27,21 +27,21 @@
     </graphicData>
   </ThingDef>
 
-    <ThingDef ParentName="MoteBase">
+  <ThingDef ParentName="MoteBase">
     <defName>Mote_FlyingDart</defName>
     <graphicData>
       <texPath>Things/Mote/PlayingDart</texPath>
     </graphicData>
     <altitudeLayer>Projectile</altitudeLayer>
     <mote>
-    	<collide>true</collide>
+      <collide>true</collide>
       <solidTime>2</solidTime>
       <fadeOutTime>0.1</fadeOutTime>
       <landSound>Standard_Drop</landSound>
     </mote>
   </ThingDef>
- 
-    <ThingDef ParentName="MoteBase">
+
+  <ThingDef ParentName="MoteBase">
     <defName>Mote_MusicalNoteA</defName>
     <graphicData>
       <texPath>Things/Mote/MusicalNoteB</texPath>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="BuildingBase">
@@ -32,8 +32,8 @@
         <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>120</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Breakdownable"/>
-      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Flickable" />
     </comps>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
@@ -92,8 +92,8 @@
         <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>200</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Breakdownable"/>
-      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Flickable" />
       <li>
         <compClass>CompGatherSpot</compClass>
       </li>
@@ -188,7 +188,7 @@
         <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>120</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Flickable" />
     </comps>
     <tradeTags>
       <li>Television</li>
@@ -258,7 +258,7 @@
         <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>120</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Flickable" />
     </comps>
     <tradeTags>
       <li>Television</li>
@@ -336,7 +336,7 @@
         <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>180</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Flickable" />
     </comps>
     <tradeTags>
       <li>Television</li>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="BuildingBase">
@@ -49,11 +49,11 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>220</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_TempControl">
         <energyPerSecond>-21</energyPerSecond>
       </li>
-      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Breakdownable" />
     </comps>
     <designationCategory>Temperature</designationCategory>
     <designationHotKey>Misc5</designationHotKey>

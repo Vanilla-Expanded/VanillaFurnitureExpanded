@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <EffecterDef>
@@ -11,7 +11,10 @@
       <li>
         <subEffecterClass>SubEffecter_SoundIntermittent</subEffecterClass>
         <soundDef>PokerChips</soundDef>
-        <intermittentSoundInterval><min>650</min><max>1500</max></intermittentSoundInterval>
+        <intermittentSoundInterval>
+          <min>650</min>
+          <max>1500</max>
+        </intermittentSoundInterval>
       </li>
     </children>
   </EffecterDef>
@@ -22,7 +25,10 @@
       <li>
         <subEffecterClass>SubEffecter_SoundIntermittent</subEffecterClass>
         <soundDef>Piano_SFX</soundDef>
-        <intermittentSoundInterval><min>300</min><max>500</max></intermittentSoundInterval>
+        <intermittentSoundInterval>
+          <min>300</min>
+          <max>500</max>
+        </intermittentSoundInterval>
       </li>
       <li>
         <subEffecterClass>SubEffecter_DrifterEmoteChance</subEffecterClass>

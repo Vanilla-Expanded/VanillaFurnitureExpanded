@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <JobDef>
@@ -14,11 +14,11 @@
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
-    <JoyGiverDef>
+  <JoyGiverDef>
     <defName>Play_Roulette</defName>
     <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
     <baseChance>3</baseChance>
-	<requireChair>false</requireChair>
+    <requireChair>false</requireChair>
     <thingDefs>
       <li>Joy_RouletteTable</li>
     </thingDefs>
@@ -29,7 +29,7 @@
       <li>Manipulation</li>
     </requiredCapacities>
   </JoyGiverDef>
- 
+
   <JobDef>
     <defName>Play_Arcade</defName>
     <driverClass>AOMoreFurniture.JobDriver_PlayArcadeSounds</driverClass>
@@ -43,11 +43,11 @@
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
-    <JoyGiverDef>
+  <JoyGiverDef>
     <defName>Play_Arcade</defName>
     <giverClass>JoyGiver_WatchBuilding</giverClass>
     <baseChance>2</baseChance>
-	<desireSit>false</desireSit>
+    <desireSit>false</desireSit>
     <thingDefs>
       <li>Joy_Arcade</li>
     </thingDefs>
@@ -58,7 +58,7 @@
       <li>Manipulation</li>
     </requiredCapacities>
   </JoyGiverDef>
-  
+
   <JobDef>
     <defName>Play_Piano</defName>
     <driverClass>AOMoreFurniture.JobDriver_PlayPiano</driverClass>
@@ -72,11 +72,11 @@
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
-    <JoyGiverDef>
+  <JoyGiverDef>
     <defName>Play_Piano</defName>
     <giverClass>JoyGiver_WatchBuilding</giverClass>
     <baseChance>1</baseChance>
-	<desireSit>false</desireSit>
+    <desireSit>false</desireSit>
     <thingDefs>
       <li>Joy_Piano</li>
     </thingDefs>
@@ -86,7 +86,7 @@
       <li>Manipulation</li>
     </requiredCapacities>
   </JoyGiverDef>
-  
+
   <JobDef>
     <defName>Play_DartsBoard</defName>
     <driverClass>AOMoreFurniture.JobDriver_PlayDarts</driverClass>
@@ -99,8 +99,8 @@
     <taleOnCompletion>PlayedGame</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
-  
-    <JoyGiverDef>
+
+  <JoyGiverDef>
     <defName>Play_DartsBoard</defName>
     <giverClass>JoyGiver_WatchBuilding</giverClass>
     <baseChance>2</baseChance>
@@ -115,7 +115,7 @@
       <li>Manipulation</li>
     </requiredCapacities>
   </JoyGiverDef>
-  
+
   <JobDef>
     <defName>Play_PunchingBag</defName>
     <driverClass>AOMoreFurniture.JobDriver_PlayPunchingBag</driverClass>
@@ -129,11 +129,11 @@
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
-    <JoyGiverDef>
+  <JoyGiverDef>
     <defName>Play_PunchingBag</defName>
     <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
     <baseChance>1</baseChance>
-	<requireChair>false</requireChair>
+    <requireChair>false</requireChair>
     <thingDefs>
       <li>Joy_PunchingBag</li>
     </thingDefs>
@@ -143,8 +143,8 @@
       <li>Manipulation</li>
     </requiredCapacities>
   </JoyGiverDef>
-  
- 
+
+
   <JobDef>
     <defName>Play_ComputerIndustrial</defName>
     <driverClass>AOMoreFurniture.JobDriver_PlayComputerIndustrial</driverClass>
@@ -158,22 +158,22 @@
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
-    <JoyGiverDef>
+  <JoyGiverDef>
     <defName>Play_ComputerIndustrial</defName>
     <giverClass>JoyGiver_WatchBuilding</giverClass>
     <baseChance>0.5</baseChance>
-	<requireChair>true</requireChair>
+    <requireChair>true</requireChair>
     <thingDefs>
       <li>Joy_InudstrialComputer</li>
     </thingDefs>
     <jobDef>Play_ComputerIndustrial</jobDef>
     <joyKind>Gaming_Electronic</joyKind>
     <requiredCapacities>
-	  <li>Sight</li>
+      <li>Sight</li>
       <li>Manipulation</li>
     </requiredCapacities>
   </JoyGiverDef>
-  
+
   <JobDef>
     <defName>Play_ComputerModern</defName>
     <driverClass>AOMoreFurniture.JobDriver_PlayComputerModern</driverClass>
@@ -187,18 +187,18 @@
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
-    <JoyGiverDef>
+  <JoyGiverDef>
     <defName>Play_ComputerModern</defName>
     <giverClass>JoyGiver_WatchBuilding</giverClass>
     <baseChance>0.5</baseChance>
-	<requireChair>true</requireChair>
+    <requireChair>true</requireChair>
     <thingDefs>
       <li>Joy_ModernComputer</li>
     </thingDefs>
     <jobDef>Play_ComputerModern</jobDef>
     <joyKind>Gaming_Electronic</joyKind>
     <requiredCapacities>
-	  <li>Sight</li>
+      <li>Sight</li>
       <li>Manipulation</li>
     </requiredCapacities>
   </JoyGiverDef>
