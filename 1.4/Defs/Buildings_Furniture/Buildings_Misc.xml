@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="LampBase">
@@ -22,7 +22,7 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>false</shortCircuitInRain>
-        <basePowerConsumption>40</basePowerConsumption>
+        <basePowerConsumption>60</basePowerConsumption>
       </li>
       <li Class="CompProperties_Schedule">
         <!-- Match plant growing times -->
