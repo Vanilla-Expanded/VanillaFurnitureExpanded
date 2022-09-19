@@ -3,7 +3,7 @@
 
   <JobDef>
     <defName>Play_Roulette</defName>
-    <driverClass>AOMoreFurniture.JobDriver_PlayRoulette</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_PlayRoulette</driverClass>
     <reportString>playing roulette.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>3</joyMaxParticipants>
@@ -32,7 +32,7 @@
 
   <JobDef>
     <defName>Play_Arcade</defName>
-    <driverClass>AOMoreFurniture.JobDriver_PlayArcadeSounds</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_PlayArcadeSounds</driverClass>
     <reportString>playing arcade game.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
@@ -61,7 +61,7 @@
 
   <JobDef>
     <defName>Play_Piano</defName>
-    <driverClass>AOMoreFurniture.JobDriver_PlayPiano</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_PlayPiano</driverClass>
     <reportString>playing piano.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
@@ -89,7 +89,7 @@
 
   <JobDef>
     <defName>Play_DartsBoard</defName>
-    <driverClass>AOMoreFurniture.JobDriver_PlayDarts</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_PlayDarts</driverClass>
     <reportString>playing darts.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>2</joyMaxParticipants>
@@ -118,7 +118,7 @@
 
   <JobDef>
     <defName>Play_PunchingBag</defName>
-    <driverClass>AOMoreFurniture.JobDriver_PlayPunchingBag</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_PlayPunchingBag</driverClass>
     <reportString>using punching bag.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
@@ -147,7 +147,7 @@
 
   <JobDef>
     <defName>Play_ComputerIndustrial</defName>
-    <driverClass>AOMoreFurniture.JobDriver_PlayComputerIndustrial</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_PlayComputerIndustrial</driverClass>
     <reportString>using computer.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
@@ -176,7 +176,7 @@
 
   <JobDef>
     <defName>Play_ComputerModern</defName>
-    <driverClass>AOMoreFurniture.JobDriver_PlayComputerModern</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_PlayComputerModern</driverClass>
     <reportString>using computer.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>

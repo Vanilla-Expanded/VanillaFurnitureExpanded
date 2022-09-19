@@ -60,7 +60,6 @@
     <specialDisplayRadius>5</specialDisplayRadius>
   </ThingDef>
 
-
   <ThingDef ParentName="BuildingBase">
     <defName>Radio_Spacer</defName>
     <label>longwave radio</label>

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28729.10
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOMoreFurniture", "AOMoreFurniture\AOMoreFurniture.csproj", "{84D19FAC-5E35-4ECE-8D84-7C23D6158F26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanillaFurnitureEC", "AOMoreFurniture\VanillaFurnitureEC.csproj", "{84D19FAC-5E35-4ECE-8D84-7C23D6158F26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7748EAD-969A-4178-AE75-776DCE3CFE59}
 	EndGlobalSection
 EndGlobal

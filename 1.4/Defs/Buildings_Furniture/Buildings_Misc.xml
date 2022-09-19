@@ -182,9 +182,9 @@
     <designationCategory>Misc</designationCategory>
     <specialDisplayRadius>10</specialDisplayRadius>
     <comps>
-      <li Class="AOMoreFurniture.CompProperties_BinClean">
-        <TimerInTicks>2000</TimerInTicks>
-        <Radius>10</Radius>
+      <li Class="VanillaFurnitureEC.CompProperties_BinClean">
+        <timerInTicks>2000</timerInTicks>
+        <radius>10</radius>
       </li>
     </comps>
   </ThingDef>
@@ -232,9 +232,9 @@
     <designationCategory>Misc</designationCategory>
     <specialDisplayRadius>20</specialDisplayRadius>
     <comps>
-      <li Class="AOMoreFurniture.CompProperties_BinClean">
-        <TimerInTicks>1500</TimerInTicks>
-        <Radius>20</Radius>
+      <li Class="VanillaFurnitureEC.CompProperties_BinClean">
+        <timerInTicks>1500</timerInTicks>
+        <radius>20</radius>
       </li>
     </comps>
     <uiIconScale>1.2</uiIconScale>

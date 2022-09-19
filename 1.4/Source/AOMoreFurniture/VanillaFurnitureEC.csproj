@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{84D19FAC-5E35-4ECE-8D84-7C23D6158F26}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>AOMoreFurniture</RootNamespace>
-    <AssemblyName>AOMoreFurniture</AssemblyName>
+    <RootNamespace>VanillaFurnitureEC</RootNamespace>
+    <AssemblyName>VanillaFurnitureEC</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -55,17 +55,17 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompBinClean.cs" />
-    <Compile Include="CompProperties_BinClean.cs" />
+    <Compile Include="Comps\CompBinClean.cs" />
+    <Compile Include="Comps\CompProperties_BinClean.cs" />
     <Compile Include="EffecterDefOf.cs" />
     <Compile Include="HediffDefOf.cs" />
-    <Compile Include="JobDriver_PlayArcadeSounds.cs" />
-    <Compile Include="JobDriver_PlayComputerIndustrial.cs" />
-    <Compile Include="JobDriver_PlayComputerModern.cs" />
-    <Compile Include="JobDriver_PlayDarts.cs" />
-    <Compile Include="JobDriver_PlayPiano.cs" />
-    <Compile Include="JobDriver_PlayPunchingBag.cs" />
-    <Compile Include="JobDriver_PlayRoulette.cs" />
+    <Compile Include="JobDriver\JobDriver_PlayArcadeSounds.cs" />
+    <Compile Include="JobDriver\JobDriver_PlayComputerIndustrial.cs" />
+    <Compile Include="JobDriver\JobDriver_PlayComputerModern.cs" />
+    <Compile Include="JobDriver\JobDriver_PlayDarts.cs" />
+    <Compile Include="JobDriver\JobDriver_PlayPiano.cs" />
+    <Compile Include="JobDriver\JobDriver_PlayPunchingBag.cs" />
+    <Compile Include="JobDriver\JobDriver_PlayRoulette.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoundDefOf.cs" />
     <Compile Include="ThingDefOf.cs" />

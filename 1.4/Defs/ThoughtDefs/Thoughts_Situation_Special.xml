@@ -3,7 +3,7 @@
 
   <ThoughtDef>
     <defName>Thought_EffectRadio</defName>
-    <workerClass>AOMoreFurniture.ThoughtWorker_RadioBase</workerClass>
+    <workerClass>VanillaFurnitureEC.ThoughtWorker_RadioBase</workerClass>
     <effectMultiplyingStat>AO_MusicHearingAbility</effectMultiplyingStat>
     <stages>
       <li>

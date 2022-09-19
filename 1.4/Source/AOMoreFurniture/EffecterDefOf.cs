@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace AOMoreFurniture
+namespace VanillaFurnitureEC
 {
     [DefOf]
     public static class EffecterDefOf

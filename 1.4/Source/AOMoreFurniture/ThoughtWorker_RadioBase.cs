@@ -1,53 +1,41 @@
 ﻿using RimWorld;
-using System.Collections.Generic;
 using Verse;
 
-namespace AOMoreFurniture
+namespace VanillaFurnitureEC
 {
     internal class ThoughtWorker_RadioBase : ThoughtWorker
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
-            bool flag = false;
-            bool flag2 = !p.Spawned;
-            ThoughtState result;
-            if (flag2)
+            if (!p.Spawned)
+                return false;
+
+            var spacerRadios = p.Map.listerThings.ThingsOfDef(ThingDefOf.Radio_Spacer);
+            for (int r = 0; r < spacerRadios.Count; r++)
             {
-                result = false;
+                if (ShouldActivateThought(p, spacerRadios[r], 8))
+                    return ThoughtState.ActiveAtStage(1);
             }
-            else
+
+            var industrialRadios = p.Map.listerThings.ThingsOfDef(ThingDefOf.Radio_Industrial);
+            for (int r = 0; r < industrialRadios.Count; r++)
             {
-                List<Thing> list = p.Map.listerThings.ThingsOfDef(ThingDefOf.Radio_Spacer);
-                for (int i = 0; i < list.Count; i++)
-                {
-                    CompPowerTrader compPowerTrader = list[i].TryGetComp<CompPowerTrader>();
-                    bool flag3 = compPowerTrader == null || compPowerTrader.PowerOn;
-                    if (flag3)
-                    {
-                        bool flag4 = p.Position.InHorDistOf(list[i].Position, 8f);
-                        if (flag4)
-                        {
-                            return ThoughtState.ActiveAtStage(1);
-                        }
-                    }
-                }
-                List<Thing> list2 = p.Map.listerThings.ThingsOfDef(ThingDefOf.Radio_Industrial);
-                for (int j = 0; j < list2.Count; j++)
-                {
-                    CompPowerTrader compPowerTrader2 = list2[j].TryGetComp<CompPowerTrader>();
-                    bool flag5 = compPowerTrader2 == null || (compPowerTrader2.PowerOn && !flag);
-                    if (flag5)
-                    {
-                        bool flag6 = p.Position.InHorDistOf(list2[j].Position, 5f);
-                        if (flag6)
-                        {
-                            return ThoughtState.ActiveAtStage(0);
-                        }
-                    }
-                }
-                result = false;
+                if (ShouldActivateThought(p, industrialRadios[r], 5))
+                    return ThoughtState.ActiveAtStage(0);
             }
-            return result;
+
+            return false;
+        }
+
+        private bool ShouldActivateThought(Pawn p, Thing thing, int radius)
+        {
+            var comp = thing.TryGetComp<CompPowerTrader>();
+            if ((comp == null || comp.PowerOn) && p.Position.InHorDistOf(thing.Position, radius))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

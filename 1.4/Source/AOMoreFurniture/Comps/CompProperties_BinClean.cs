@@ -1,16 +1,15 @@
 ﻿using Verse;
 
-namespace AOMoreFurniture
+namespace VanillaFurnitureEC
 {
     public class CompProperties_BinClean : CompProperties
     {
-        public float Radius;
-
-        public int TimerInTicks;
-
         public CompProperties_BinClean()
         {
-            this.compClass = typeof(CompBinClean);
+            compClass = typeof(CompBinClean);
         }
+
+        public float radius;
+        public int timerInTicks;
     }
 }
