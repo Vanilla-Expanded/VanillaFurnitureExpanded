@@ -34,6 +34,9 @@
       </li>
       <li Class="CompProperties_Breakdownable" />
       <li Class="CompProperties_Flickable" />
+      <li Class="VFECore.CompProperties_AmbientSound">
+        <ambientSound>VFE_IndustrialRadio_Ambience</ambientSound>
+      </li>
     </comps>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
@@ -93,6 +96,9 @@
       </li>
       <li Class="CompProperties_Breakdownable" />
       <li Class="CompProperties_Flickable" />
+      <li Class="VFECore.CompProperties_AmbientSound">
+        <ambientSound>VFE_SpacerRadio_Ambience</ambientSound>
+      </li>
       <li>
         <compClass>CompGatherSpot</compClass>
       </li>
