@@ -90,6 +90,7 @@
         <texPath>Things/Seating/Bench/Bench_Blueprint_Atlas</texPath>
       </blueprintGraphicData>
       <isSittable>true</isSittable>
+      <paintable>true</paintable>
     </building>
     <costStuffCount>25</costStuffCount>
     <pathCost>30</pathCost>
@@ -140,6 +141,7 @@
     <defaultPlacingRot>South</defaultPlacingRot>
     <building>
       <isSittable>true</isSittable>
+      <paintable>true</paintable>
     </building>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <researchPrerequisites>

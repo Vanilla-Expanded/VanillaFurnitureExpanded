@@ -50,6 +50,7 @@
     <building>
       <bed_showSleeperBody>False</bed_showSleeperBody>
       <bed_healPerDay>4</bed_healPerDay>
+      <paintable>true</paintable>
     </building>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <fillPercent>0.6</fillPercent>

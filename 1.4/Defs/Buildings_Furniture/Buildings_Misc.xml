@@ -85,6 +85,9 @@
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
+    <building>
+      <paintable>true</paintable>
+    </building>
     <researchPrerequisites>
       <li>ComplexFurniture</li>
     </researchPrerequisites>
@@ -114,8 +117,12 @@
     </statBases>
     <size>(2,1)</size>
     <defaultPlacingRot>South</defaultPlacingRot>
-    <building>
+    <building Inherit="False">
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
       <maxItemsInCell>5</maxItemsInCell>
+      <storageGroupTag>Shelf</storageGroupTag>
+      <blueprintClass>Blueprint_Storage</blueprintClass>
       <fixedStorageSettings>
         <filter>
           <disallowNotEverStorable>true</disallowNotEverStorable>
@@ -187,6 +194,9 @@
         <radius>10</radius>
       </li>
     </comps>
+    <building>
+      <paintable>true</paintable>
+    </building>
   </ThingDef>
 
   <ThingDef ParentName="FurnitureBase">
@@ -238,5 +248,8 @@
       </li>
     </comps>
     <uiIconScale>1.2</uiIconScale>
+    <building>
+      <paintable>true</paintable>
+    </building>
   </ThingDef>
 </Defs>

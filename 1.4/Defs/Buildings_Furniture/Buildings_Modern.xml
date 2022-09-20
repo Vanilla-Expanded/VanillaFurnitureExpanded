@@ -50,6 +50,7 @@
     <building>
       <bed_showSleeperBody>False</bed_showSleeperBody>
       <bed_healPerDay>5</bed_healPerDay>
+      <paintable>true</paintable>
     </building>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <fillPercent>0.4</fillPercent>
@@ -116,6 +117,7 @@
     <building>
       <bed_showSleeperBody>False</bed_showSleeperBody>
       <bed_healPerDay>5</bed_healPerDay>
+      <paintable>true</paintable>
     </building>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <fillPercent>0.4</fillPercent>
@@ -187,6 +189,9 @@
       </li>
     </comps>
     <designationCategory>AOMorefurniture</designationCategory>
+    <building>
+      <paintable>true</paintable>
+    </building>
   </ThingDef>
 
 

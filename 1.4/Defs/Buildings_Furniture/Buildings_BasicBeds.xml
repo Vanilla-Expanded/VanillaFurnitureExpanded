@@ -40,6 +40,7 @@
     <building>
       <bed_showSleeperBody>True</bed_showSleeperBody>
       <bed_healPerDay>3</bed_healPerDay>
+      <paintable>true</paintable>
     </building>
     <fillPercent>0.4</fillPercent>
     <pathCost>60</pathCost>
@@ -96,6 +97,7 @@
     <building>
       <bed_showSleeperBody>True</bed_showSleeperBody>
       <bed_healPerDay>3</bed_healPerDay>
+      <paintable>true</paintable>
     </building>
     <fillPercent>0.3</fillPercent>
     <pathCost>60</pathCost>
