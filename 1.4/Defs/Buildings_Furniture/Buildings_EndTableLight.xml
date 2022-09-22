@@ -42,6 +42,7 @@
         <maxSimultaneous>1</maxSimultaneous>
         <mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
       </li>
+      <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Glower">
         <glowRadius>6</glowRadius>
         <glowColor>(217,217,208,0)</glowColor>
