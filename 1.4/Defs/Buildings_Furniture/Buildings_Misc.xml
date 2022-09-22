@@ -23,6 +23,12 @@
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>false</shortCircuitInRain>
         <basePowerConsumption>60</basePowerConsumption>
+        <powerUpgrades>
+          <li>
+            <researchProject>ColoredLights</researchProject>
+            <factor>0.5</factor>
+          </li>
+        </powerUpgrades>
       </li>
       <li Class="CompProperties_Schedule">
         <!-- Match plant growing times -->
@@ -33,6 +39,8 @@
       <li Class="CompProperties_Glower">
         <glowRadius>20</glowRadius>
         <glowColor>(252,187,113,0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
       </li>
     </comps>
     <placeWorkers>
