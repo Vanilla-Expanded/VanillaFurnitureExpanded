@@ -20,7 +20,7 @@ namespace VanillaFurnitureEC
                     learningBoost.Severity += 0.08f;
                 }
 
-                SoundDefOf.Computer_SFXOne.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
+                SoundDefOf.Computer_SFX.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
             }
             base.WatchTickAction();
         }

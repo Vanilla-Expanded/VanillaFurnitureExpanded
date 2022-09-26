@@ -2,113 +2,19 @@
 <Defs>
 
   <SoundDef>
-    <defName>Arcade_SFXOne</defName>
+    <defName>Arcade_SFX</defName>
     <context>MapOnly</context>
-    <eventNames />
-    <maxSimultaneous>2</maxSimultaneous>
+    <maxSimultaneous>4</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Arcade/SFX1</clipFolderPath>
+            <clipFolderPath>Arcade</clipFolderPath>
           </li>
         </grains>
-        <volumeRange>
-          <min>4.46512</min>
-          <max>4.2651</max>
-        </volumeRange>
-        <distRange>
-          <min>20</min>
-          <max>25</max>
-        </distRange>
-        <pitchRange>
-          <min>0.95</min>
-          <max>1</max>
-        </pitchRange>
-      </li>
-    </subSounds>
-  </SoundDef>
-
-  <SoundDef>
-    <defName>Arcade_SFXTwo</defName>
-    <context>MapOnly</context>
-    <eventNames />
-    <maxSimultaneous>2</maxSimultaneous>
-    <subSounds>
-      <li>
-        <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Arcade/SFX2</clipFolderPath>
-          </li>
-        </grains>
-        <volumeRange>
-          <min>4.46512</min>
-          <max>4.2651</max>
-        </volumeRange>
-        <distRange>
-          <min>20</min>
-          <max>30</max>
-        </distRange>
-        <pitchRange>
-          <min>0.95</min>
-          <max>1</max>
-        </pitchRange>
-      </li>
-    </subSounds>
-  </SoundDef>
-
-  <SoundDef>
-    <defName>Arcade_SFXThree</defName>
-    <context>MapOnly</context>
-    <eventNames />
-    <maxSimultaneous>2</maxSimultaneous>
-    <subSounds>
-      <li>
-        <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Arcade/SFX3</clipFolderPath>
-          </li>
-        </grains>
-        <volumeRange>
-          <min>4.16512</min>
-          <max>4.2</max>
-        </volumeRange>
-        <distRange>
-          <min>20</min>
-          <max>30</max>
-        </distRange>
-        <pitchRange>
-          <min>0.95</min>
-          <max>1</max>
-        </pitchRange>
-      </li>
-    </subSounds>
-  </SoundDef>
-
-  <SoundDef>
-    <defName>Arcade_SFXFour</defName>
-    <context>MapOnly</context>
-    <eventNames />
-    <maxSimultaneous>2</maxSimultaneous>
-    <subSounds>
-      <li>
-        <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Arcade/SFX4</clipFolderPath>
-          </li>
-        </grains>
-        <volumeRange>
-          <min>4.46512</min>
-          <max>4.2</max>
-        </volumeRange>
-        <distRange>
-          <min>20</min>
-          <max>30</max>
-        </distRange>
-        <pitchRange>
-          <min>0.95</min>
-          <max>1</max>
-        </pitchRange>
+        <volumeRange>4.46512~4.2651</volumeRange>
+        <pitchRange>0.95~1</pitchRange>
+        <distRange>20~25</distRange>
       </li>
     </subSounds>
   </SoundDef>
@@ -116,83 +22,35 @@
   <SoundDef>
     <defName>Piano_SFX</defName>
     <context>MapOnly</context>
-    <eventNames />
     <maxSimultaneous>2</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Piano/PianoNote</clipFolderPath>
+            <clipFolderPath>Piano</clipFolderPath>
           </li>
         </grains>
-        <volumeRange>
-          <min>5.16512</min>
-          <max>6.4651</max>
-        </volumeRange>
-        <distRange>
-          <min>15</min>
-          <max>25</max>
-        </distRange>
-        <pitchRange>
-          <min>0.7</min>
-          <max>1.1</max>
-        </pitchRange>
+        <volumeRange>5.16512~6.4651</volumeRange>
+        <pitchRange>0.7~1.1</pitchRange>
+        <distRange>15~25</distRange>
       </li>
     </subSounds>
   </SoundDef>
 
   <SoundDef>
-    <defName>Computer_SFXOne</defName>
+    <defName>Computer_SFX</defName>
     <context>MapOnly</context>
-    <eventNames />
-    <maxSimultaneous>3</maxSimultaneous>
+    <maxSimultaneous>4</maxSimultaneous>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Computer/ComputerSFXOne</clipFolderPath>
+            <clipFolderPath>Computer</clipFolderPath>
           </li>
         </grains>
-        <volumeRange>
-          <min>4.46512</min>
-          <max>5.2</max>
-        </volumeRange>
-        <distRange>
-          <min>20</min>
-          <max>30</max>
-        </distRange>
-        <pitchRange>
-          <min>0.9</min>
-          <max>1.05</max>
-        </pitchRange>
-      </li>
-    </subSounds>
-  </SoundDef>
-
-  <SoundDef>
-    <defName>Computer_SFXTwo</defName>
-    <context>MapOnly</context>
-    <eventNames />
-    <maxSimultaneous>1</maxSimultaneous>
-    <subSounds>
-      <li>
-        <grains>
-          <li Class="AudioGrain_Folder">
-            <clipFolderPath>Computer/ComputerSFXTwo</clipFolderPath>
-          </li>
-        </grains>
-        <volumeRange>
-          <min>4.46512</min>
-          <max>4.2</max>
-        </volumeRange>
-        <distRange>
-          <min>20</min>
-          <max>30</max>
-        </distRange>
-        <pitchRange>
-          <min>0.9</min>
-          <max>1.05</max>
-        </pitchRange>
+        <volumeRange>4.46512~5.2</volumeRange>
+        <pitchRange>0.9~1.05</pitchRange>
+        <distRange>20~30</distRange>
       </li>
     </subSounds>
   </SoundDef>

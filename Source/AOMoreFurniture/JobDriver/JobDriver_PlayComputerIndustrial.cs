@@ -21,14 +21,7 @@ namespace VanillaFurnitureEC
                     learningBoost.Severity += 0.04f;
                 }
 
-                if (Rand.Bool)
-                {
-                    SoundDefOf.Computer_SFXOne.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
-                }
-                else
-                {
-                    SoundDefOf.Computer_SFXTwo.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
-                }
+                SoundDefOf.Computer_SFX.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
             }
             base.WatchTickAction();
         }
