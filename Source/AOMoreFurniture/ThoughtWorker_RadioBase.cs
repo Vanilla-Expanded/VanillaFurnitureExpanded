@@ -10,14 +10,14 @@ namespace VanillaFurnitureEC
             if (!p.Spawned)
                 return false;
 
-            var spacerRadios = p.Map.listerThings.ThingsOfDef(ThingDefOf.Radio_Spacer);
+            var spacerRadios = p.Map.listerThings.ThingsOfDef(VFE_DefOf.Radio_Spacer);
             for (int r = 0; r < spacerRadios.Count; r++)
             {
                 if (ShouldActivateThought(p, spacerRadios[r], 8))
                     return ThoughtState.ActiveAtStage(1);
             }
 
-            var industrialRadios = p.Map.listerThings.ThingsOfDef(ThingDefOf.Radio_Industrial);
+            var industrialRadios = p.Map.listerThings.ThingsOfDef(VFE_DefOf.Radio_Industrial);
             for (int r = 0; r < industrialRadios.Count; r++)
             {
                 if (ShouldActivateThought(p, industrialRadios[r], 5))

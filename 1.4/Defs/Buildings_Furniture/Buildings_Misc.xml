@@ -181,7 +181,7 @@
       <Mass>2</Mass>
       <Flammability>1.0</Flammability>
       <Cleanliness>2</Cleanliness>
-      <Beauty>4</Beauty>
+      <Beauty>0</Beauty>
     </statBases>
     <stuffCategories>
       <li>Metallic</li>
@@ -200,6 +200,13 @@
       <li Class="VanillaFurnitureEC.CompProperties_BinClean">
         <timerInTicks>2000</timerInTicks>
         <radius>10</radius>
+		<capacity>100</capacity>
+		<beautyPerFilthStored>
+			<points>
+				<li>0, 0</li>
+				<li>1, -15</li>
+			</points>
+		</beautyPerFilthStored>
       </li>
     </comps>
     <building>
@@ -253,6 +260,13 @@
       <li Class="VanillaFurnitureEC.CompProperties_BinClean">
         <timerInTicks>1500</timerInTicks>
         <radius>20</radius>
+		<capacity>500</capacity>
+		<beautyPerFilthStored>
+			<points>
+				<li>0, 0</li>
+				<li>1, -15</li>
+			</points>
+		</beautyPerFilthStored>
       </li>
     </comps>
     <uiIconScale>1.2</uiIconScale>

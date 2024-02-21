@@ -11,5 +11,7 @@ namespace VanillaFurnitureEC
 
         public float radius;
         public int timerInTicks;
+        public float capacity;
+        public SimpleCurve beautyPerFilthStored;
     }
 }

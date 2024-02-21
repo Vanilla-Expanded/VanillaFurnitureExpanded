@@ -4,7 +4,7 @@ using Verse;
 namespace VanillaFurnitureEC
 {
     [DefOf]
-    public static class ThingDefOf
+    public static class VFE_DefOf
     {
         public static ThingDef Mote_FlyingDart;
 
@@ -12,9 +12,11 @@ namespace VanillaFurnitureEC
 
         public static ThingDef Radio_Spacer;
 
-        static ThingDefOf()
-        {
-            DefOfHelper.EnsureInitializedInCtor(typeof(ThingDefOf));
-        }
+        public static ThingDef Bin_Large;
+
+        public static ThingDef Bin_Small;
+
+        public static JobDef VFE_CleanBin;
+
     }
 }

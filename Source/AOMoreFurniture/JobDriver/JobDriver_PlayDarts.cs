@@ -26,7 +26,7 @@ namespace VanillaFurnitureEC
                 var vector = targetCell.ToVector3Shifted();
                 vector.z += 0.6f;
 
-                var moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDefOf.Mote_FlyingDart);
+                var moteThrown = (MoteThrown)ThingMaker.MakeThing(VFE_DefOf.Mote_FlyingDart);
                 moteThrown.Scale = 0.5f;
                 moteThrown.rotationRate = 0.05f;
                 moteThrown.exactPosition = thrower.DrawPos;
