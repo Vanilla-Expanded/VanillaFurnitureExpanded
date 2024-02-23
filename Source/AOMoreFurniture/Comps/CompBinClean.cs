@@ -24,6 +24,10 @@ namespace VanillaFurnitureEC
 
         private IEnumerable<Filth> AllFilth()
         {
+            if (innerContainer is null)
+            {
+                innerContainer = new ThingOwner<Thing>(this);
+            }
             return innerContainer.ToList().Cast<Filth>();
         }
 
