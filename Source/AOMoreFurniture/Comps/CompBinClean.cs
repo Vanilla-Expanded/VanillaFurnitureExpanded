@@ -105,6 +105,10 @@ namespace VanillaFurnitureEC
         {
             base.PostExposeData();
             Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
+            if (innerContainer is null)
+            {
+                innerContainer = new ThingOwner<Thing>(this);
+            }
             Scribe_Values.Look(ref cleanupTarget, "cleanupTarget", 0.9f);
         }
     }

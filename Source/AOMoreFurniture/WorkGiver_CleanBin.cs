@@ -11,7 +11,7 @@ namespace VanillaFurnitureEC
     {
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
-            return pawn.Map.listerThings.ThingsOfDef(VFE_DefOf.Bin_Small).Concat(pawn.Map.listerThings.ThingsOfDef(VFE_DefOf.Bin_Small)); ;
+            return pawn.Map.listerThings.ThingsOfDef(VFE_DefOf.Bin_Small).Concat(pawn.Map.listerThings.ThingsOfDef(VFE_DefOf.Bin_Large)); ;
         }
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
