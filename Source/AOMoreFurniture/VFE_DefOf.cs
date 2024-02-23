@@ -12,11 +12,6 @@ namespace VanillaFurnitureEC
 
         public static ThingDef Radio_Spacer;
 
-        public static ThingDef Bin_Large;
-
-        public static ThingDef Bin_Small;
-
         public static JobDef VFE_CleanBin;
-
     }
 }

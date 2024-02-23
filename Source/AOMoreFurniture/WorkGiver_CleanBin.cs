@@ -11,7 +11,18 @@ namespace VanillaFurnitureEC
     {
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
-            return pawn.Map.listerThings.ThingsOfDef(VFE_DefOf.Bin_Small).Concat(pawn.Map.listerThings.ThingsOfDef(VFE_DefOf.Bin_Large)); ;
+            var list = new List<Thing>();
+            var smallBin = DefDatabase<ThingDef>.GetNamedSilentFail("Bin_Small");
+            if (smallBin != null)
+            {
+                list.AddRange(pawn.Map.listerThings.ThingsOfDef(smallBin));
+            }
+            var largeBin = DefDatabase<ThingDef>.GetNamedSilentFail("Bin_Large");
+            if (largeBin != null)
+            {
+                list.AddRange(pawn.Map.listerThings.ThingsOfDef(largeBin));
+            }
+            return list;
         }
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
