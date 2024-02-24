@@ -28,7 +28,7 @@ namespace VanillaFurnitureEC
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             var compBin = t.TryGetComp<CompBinClean>();
-            if (compBin == null || compBin.ShouldClean is false)
+            if (compBin == null || (forced is false && compBin.ShouldClean is false || forced && compBin.AmountStored <= 0))
             {
                 return false;
             }
