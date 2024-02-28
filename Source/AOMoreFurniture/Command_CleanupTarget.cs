@@ -22,7 +22,7 @@ namespace VanillaFurnitureEC
             Widgets.Label(labelRect, "VFE.SetTargetCleanup".Translate(comp.cleanupTarget.ToStringPercent()));
             Text.Anchor = TextAnchor.UpperLeft;
             var sliderRect = new Rect(labelRect.x, labelRect.yMax, labelRect.width, 24);
-            comp.cleanupTarget = Widgets.HorizontalSlider_NewTemp(sliderRect, comp.cleanupTarget, 0, 1);
+            comp.cleanupTarget = Widgets.HorizontalSlider_NewTemp(sliderRect, comp.cleanupTarget, 0, 1, roundTo: 0.01f);
             return new GizmoResult(GizmoState.Clear);
         }
     }
