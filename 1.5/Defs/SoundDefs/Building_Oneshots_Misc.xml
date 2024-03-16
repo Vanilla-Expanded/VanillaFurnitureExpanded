@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SoundDef>
+    <defName>Arcade_SFX</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Arcade</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>4.46512~4.2651</volumeRange>
+        <pitchRange>0.95~1</pitchRange>
+        <distRange>20~25</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Piano_SFX</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Piano</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>5.16512~6.4651</volumeRange>
+        <pitchRange>0.7~1.1</pitchRange>
+        <distRange>15~25</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Computer_SFX</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Computer</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>4.46512~5.2</volumeRange>
+        <pitchRange>0.9~1.05</pitchRange>
+        <distRange>20~30</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>
