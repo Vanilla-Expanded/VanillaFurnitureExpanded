@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+	<!--===================== ComplexFurniture ======================-->
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>/Defs/ResearchProjectDef[defName = "ComplexFurniture"]/tab</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ResearchProjectDef[defName = "ComplexFurniture"]</xpath>
+			<value>
+				<tab>VanillaExpanded</tab>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ResearchProjectDef[defName = "ComplexFurniture"]/tab</xpath>
+			<value>
+				<tab>VanillaExpanded</tab>
+			</value>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName = "ComplexFurniture"]/baseCost</xpath>
+		<value>
+			<baseCost>400</baseCost>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName = "ComplexFurniture"]/researchViewX</xpath>
+		<value>
+			<researchViewX>1.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName = "ComplexFurniture"]/researchViewY</xpath>
+		<value>
+			<researchViewY>1.80</researchViewY>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>/Defs/ResearchProjectDef[defName = "ComplexFurniture"]/prerequisites</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ResearchProjectDef[defName = "ComplexFurniture"]</xpath>
+			<value>
+				<prerequisites>
+					<li>MF_BasicFurniture</li>
+				</prerequisites>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ResearchProjectDef[defName = "ComplexFurniture"]/prerequisites</xpath>
+			<value>
+				<li>MF_BasicFurniture</li>
+			</value>
+		</match>
+	</Operation>
+	<!--===================== TubeTelevision ======================-->
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>/Defs/ResearchProjectDef[defName = "TubeTelevision"]/tab</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ResearchProjectDef[defName = "TubeTelevision"]</xpath>
+			<value>
+				<tab>VanillaExpanded</tab>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ResearchProjectDef[defName = "TubeTelevision"]/tab</xpath>
+			<value>
+				<tab>VanillaExpanded</tab>
+			</value>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName = "TubeTelevision"]/description</xpath>
+		<value>
+			<description>Build basic electronic joy sources such as tube televisions, industrial radios, arcades and more.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName = "TubeTelevision"]/researchViewX</xpath>
+		<value>
+			<researchViewX>3.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName = "TubeTelevision"]/researchViewY</xpath>
+		<value>
+			<researchViewY>5.65</researchViewY>
+		</value>
+	</Operation>
+	<!--===================== FlatscreenTelevision ======================-->
+	<Operation Class="PatchOperationConditional">
+		<success>Always</success>
+		<xpath>/Defs/ResearchProjectDef[defName = "FlatscreenTelevision"]/tab</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ResearchProjectDef[defName = "FlatscreenTelevision"]</xpath>
+			<value>
+				<tab>VanillaExpanded</tab>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ResearchProjectDef[defName = "FlatscreenTelevision"]/tab</xpath>
+			<value>
+				<tab>VanillaExpanded</tab>
+			</value>
+		</match>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName = "FlatscreenTelevision"]/description</xpath>
+		<value>
+			<description>Build complex electronic joy sources such as flatscreen televisions, longwave radios and more.</description>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName = "FlatscreenTelevision"]/label</xpath>
+		<value>
+			<label>complex electronics</label>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName = "FlatscreenTelevision"]/researchViewX</xpath>
+		<value>
+			<researchViewX>4.00</researchViewX>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName = "FlatscreenTelevision"]/researchViewY</xpath>
+		<value>
+			<researchViewY>5.65</researchViewY>
+		</value>
+	</Operation>
+</Patch>
