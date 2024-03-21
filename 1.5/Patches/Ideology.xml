@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ideology</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualObligationTargetFilterDef[defName="RitualSpotOrCampfireParty"]/thingDefs</xpath>
+          <value>
+            <li>Stone_Campfire</li>
+            <li>Stone_DarklightCampfire</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualOutcomeEffectDef[defName="CelebrationPartyDanceDrum"]/comps/li[@Class="RitualOutcomeComp_RitualTargetDefs"]/defs</xpath>
+          <value>
+            <li>Stone_Campfire</li>
+            <li>Stone_DarklightCampfire</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualBehaviorDef[defName="CelebrationPartyDanceDrum"]/stages/li[defaultDuty="PartyDance"]/failTriggers</xpath>
+          <value>
+            <li Class="StageFailTrigger_TargetThingMissing">
+              <onlyIfTargetIsOfDef>Stone_Campfire</onlyIfTargetIsOfDef>
+              <desc>Campfire is missing.</desc>
+            </li>
+            <li Class="StageFailTrigger_TargetNotLit">
+              <onlyIfTargetIsOfDef>Stone_Campfire</onlyIfTargetIsOfDef>
+              <desc>Campfire is not lit.</desc>
+            </li>
+            <li Class="StageFailTrigger_NoThingPresent">
+              <onlyIfTargetIsOfDef>Stone_Campfire</onlyIfTargetIsOfDef>
+              <thingDef>Drum</thingDef>
+              <desc>No drums.</desc>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualBehaviorDef[defName="CelebrationPartyDanceDrum"]/stages/li[defaultDuty="PartyDance"]/failTriggers</xpath>
+          <value>
+            <li Class="StageFailTrigger_TargetThingMissing">
+              <onlyIfTargetIsOfDef>Stone_DarklightCampfire</onlyIfTargetIsOfDef>
+              <desc>Darklight campfire is missing.</desc>
+            </li>
+            <li Class="StageFailTrigger_TargetNotLit">
+              <onlyIfTargetIsOfDef>Stone_DarklightCampfire</onlyIfTargetIsOfDef>
+              <desc>Darklight campfire is not lit.</desc>
+            </li>
+            <li Class="StageFailTrigger_NoThingPresent">
+              <onlyIfTargetIsOfDef>Stone_DarklightCampfire</onlyIfTargetIsOfDef>
+              <thingDef>Drum</thingDef>
+              <desc>No drums.</desc>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RitualOutcomeEffectDef[defName="CelebrationPartyDanceDrum"]/comps/li[@Class="RitualOutcomeComp_RitualTargetDefs"]/defs</xpath>
+          <value>
+            <li>Stone_Campfire</li>
+            <li>Stone_DarklightCampfire</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Drum"]/placeWorkers</xpath>
+          <value>
+            <li>VFurnitureE_I.PlaceWorker_LinkToStoneCampfire</li>
+            <li>VFurnitureE_I.PlaceWorker_LinkToDarkStoneCampfire</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Stone_Campfire"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
+          <value>
+            <li>Stone_DarklightCampfire</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Campfire"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
+          <value>
+            <li>Stone_Campfire</li>
+            <li>Stone_DarklightCampfire</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

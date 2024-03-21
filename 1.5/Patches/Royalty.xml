@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royalty</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RoyalTitleDef[defName="Acolyte" or defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"][disablingPrecepts/li="SlabBed_Preferred"]/things</xpath>
+          <value>
+            <li>Bed_Kingsize</li>
+            <li>Bed_DoubleErgonomic</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RoyalTitleDef[defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"][things/li="EndTable"]/things</xpath>
+          <value>
+            <li>Table_LightEndTable</li>
+            <li>Table_RoyalEndTable</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RoyalTitleDef[defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"][things/li="Dresser"]/things</xpath>
+          <value>
+            <li>Table_RoyalDresser</li>
+          </value>
+        </li>
+        <!-- Make the piano use royalty music system -->
+        <li Class="PatchOperationAttributeSet">
+          <xpath>/Defs/ThingDef[defName="Joy_Piano"]</xpath>
+          <attribute>ParentName</attribute>
+          <value>MusicalInstrumentBase</value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Joy_Piano"]</xpath>
+          <value>
+            <interactionCellOffset>(0,0,1)</interactionCellOffset>
+            <soundPlayInstrument>Piano_Play</soundPlayInstrument>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Joy_Piano"]/building</xpath>
+          <value>
+            <instrumentRange>12</instrumentRange>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Joy_Piano"]/building/joyKind</xpath>
+          <value>
+            <joyKind>HighCulture</joyKind>
+          </value>
+        </li>
+        <!-- Remove the VFE jobs for the piano -->
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/JobDef[defName="Play_Piano"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/JoyGiverDef[defName="Play_Piano"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/JoyGiverDef[defName="Play_MusicalInstrument"]/thingDefs</xpath>
+          <value>
+            <li>Joy_Piano</li>
+          </value>
+        </li>
+        <!-- Allow for royalty -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/RoyalTitleDef[defName="Knight" or defName="Praetor" or defName="Baron"]/throneRoomRequirements/li[@Class="RoomRequirement_ThingAnyOf"][things/li="Harpsichord"]/things</xpath>
+          <value>
+            <li>Joy_Piano</li>
+          </value>
+        </li>
+        <!-- Make radio use the royalty music joy -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Radio_Industrial" or defName="Radio_Spacer"]/tradeTags</xpath>
+          <value>
+            <tradeTags>
+              <li>MusicalInstrument</li>
+            </tradeTags>
+          </value>
+        </li>
+        <!-- Campfire link with stone campfire-->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Campfire"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
+          <value>
+            <li>Stone_Campfire</li>
+          </value>
+        </li>
+        <!-- Heart link with stone campfire -->
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>Vanilla Factions Expanded - Vikings</li>
+          </mods>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="VFEV_Hearth"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
+                <value>
+                  <li>Stone_Campfire</li>
+                </value>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="Stone_Campfire"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
+                <value>
+                  <li>VFEV_Hearth</li>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>Ideology</li>
+          </mods>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationAdd">
+                <xpath>/Defs/RoyalTitleDef[defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"][things/li="EndTable"]/things</xpath>
+                <value>
+                  <li>Table_DarkLightEndTable</li>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
