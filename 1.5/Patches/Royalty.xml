@@ -109,21 +109,6 @@
             </operations>
           </match>
         </li>
-        <li Class="PatchOperationFindMod">
-          <mods>
-            <li>Ideology</li>
-          </mods>
-          <match Class="PatchOperationSequence">
-            <operations>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/RoyalTitleDef[defName="Knight" or defName="Praetor" or defName="Baron" or defName="Count" or @Name="BaseEmpireTitleNPC"]/bedroomRequirements/li[@Class="RoomRequirement_ThingAnyOf"][things/li="EndTable"]/things</xpath>
-                <value>
-                  <li>Table_DarkLightEndTable</li>
-                </value>
-              </li>
-            </operations>
-          </match>
-        </li>
       </operations>
     </match>
   </Operation>
