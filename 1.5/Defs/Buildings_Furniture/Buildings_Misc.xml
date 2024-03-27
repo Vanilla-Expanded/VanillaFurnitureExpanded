@@ -104,7 +104,7 @@
     <uiIconScale>0.7</uiIconScale>
   </ThingDef>
 
-  <ThingDef ParentName="ShelfBase">
+  <ThingDef ParentName="StorageShelfBase">
     <defName>Shelf_WeaponRack</defName>
     <label>weapon rack</label>
     <description>A heavy duty rack for storing weaponry. Weapons stored in this will not deteriorate, even if outside.</description>
