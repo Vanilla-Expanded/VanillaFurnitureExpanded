@@ -63,6 +63,7 @@
     <Compile Include="Comps\CompBinClean.cs" />
     <Compile Include="Comps\CompProperties_BinClean.cs" />
     <Compile Include="JobDriver_CleanBin.cs" />
+    <Compile Include="StaticCollections.cs" />
     <Compile Include="WorkGiver_CleanBin.cs" />
     <Compile Include="StatPart_Bin.cs" />
     <Compile Include="EffecterDefOf.cs" />

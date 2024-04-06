@@ -9,8 +9,6 @@ namespace VanillaFurnitureEC
     {
         public CompProperties_BinClean Props => (CompProperties_BinClean)props;
 
-        private int ticksCounted = 0;
-
         public ThingOwner innerContainer;
 
         public float cleanupTarget = 0.9f;
@@ -37,7 +35,7 @@ namespace VanillaFurnitureEC
 
         public override void CompTick()
         {
-            if (ticksCounted == Props.timerInTicks)
+            if (AmountStoredPct < 1f && parent.IsHashIntervalTick(Props.timerInTicks))
             {
                 var filthInHomeArea = parent.Map.listerFilthInHomeArea.FilthInHomeArea;
                 for (int i = 0; i < filthInHomeArea.Count; i++)
@@ -53,9 +51,7 @@ namespace VanillaFurnitureEC
                         }
                     }
                 }
-                ticksCounted = 0;
             }
-            ticksCounted++;
         }
 
         public override void PostDestroy(DestroyMode mode, Map previousMap)
@@ -86,14 +82,7 @@ namespace VanillaFurnitureEC
             }
         }
 
-        private bool CanAccept(Filth filth)
-        {
-            if (AmountStoredPct < 1f)
-            {
-                return Props.capacity - AmountStored >= filth.thickness;
-            }
-            return false;
-        }
+        private bool CanAccept(Filth filth) => Props.capacity - AmountStored >= filth.thickness;
 
         public void GetChildHolders(List<IThingHolder> outChildren)
         {

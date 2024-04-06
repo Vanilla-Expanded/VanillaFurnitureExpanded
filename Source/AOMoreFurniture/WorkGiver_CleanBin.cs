@@ -1,6 +1,5 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
-using System.Linq;
 using Verse;
 using Verse.AI;
 
@@ -12,16 +11,10 @@ namespace VanillaFurnitureEC
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
             var list = new List<Thing>();
-            var smallBin = DefDatabase<ThingDef>.GetNamedSilentFail("Bin_Small");
-            if (smallBin != null)
-            {
-                list.AddRange(pawn.Map.listerThings.ThingsOfDef(smallBin));
-            }
-            var largeBin = DefDatabase<ThingDef>.GetNamedSilentFail("Bin_Large");
-            if (largeBin != null)
-            {
-                list.AddRange(pawn.Map.listerThings.ThingsOfDef(largeBin));
-            }
+
+            foreach (var binDef in StaticCollections.compBinCleanDefs)
+                list.AddRange(pawn.Map.listerThings.ThingsOfDef(binDef));
+
             return list;
         }
 
