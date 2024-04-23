@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <ThingDef ParentName="LampBase">
@@ -29,12 +29,6 @@
             <factor>0.5</factor>
           </li>
         </powerUpgrades>
-      </li>
-      <li Class="CompProperties_Schedule">
-        <!-- Match plant growing times -->
-        <startTime>0.70</startTime>
-        <endTime>0.35</endTime>
-        <offMessage>Off during daylight hours</offMessage>
       </li>
       <li Class="CompProperties_Glower">
         <glowRadius>20</glowRadius>
