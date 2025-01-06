@@ -36,6 +36,7 @@
 			<Comfort>1</Comfort>
 			<ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
 			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+			<BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">2.1</BirthRitualQualityOffset>
 		</statBases>
 		<size>(1,2)</size>
 		<stuffCategories>
@@ -101,6 +102,7 @@
 			<Comfort>1.05</Comfort>
 			<ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
 			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+			<BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">2.1</BirthRitualQualityOffset>
 		</statBases>
 		<size>(2,2)</size>
 		<stuffCategories>
