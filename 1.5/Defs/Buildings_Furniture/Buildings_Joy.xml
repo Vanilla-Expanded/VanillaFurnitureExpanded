@@ -1,7 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  
+  <ThingDef ParentName="BuildingBase" Name="VFE_RadioBase" Abstract="True">
+    <building>
+      <joyKind>VFE_Music</joyKind>
+    </building>
+    <thingCategories>
+      <li>BuildingsJoy</li>
+    </thingCategories>
+    <passability>PassThroughOnly</passability>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <altitudeLayer>Building</altitudeLayer>
+    <tradeTags>
+      <li>Television</li>
+      <li>MusicalInstrument</li>
+    </tradeTags>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationCategory>Joy</designationCategory>
+    <comps>
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <fillPercent>0.2</fillPercent>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <pathCost>25</pathCost>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
 
-  <ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="VFE_RadioBase">
     <defName>Radio_Industrial</defName>
     <label>industrial radio</label>
     <description>An old device from a bygone era, it is able to pick up radio waves and play them back. Even on the rimworlds, there is often an old transmitter or lone radio station broadcasting something.</description>
@@ -17,53 +46,35 @@
         <rect>(0,0.75,1.0,0.5)</rect>
       </damageData>
     </graphicData>
-    <thingCategories>
-      <li>BuildingsJoy</li>
-    </thingCategories>
     <costList>
       <Steel>50</Steel>
       <ComponentIndustrial>4</ComponentIndustrial>
     </costList>
-    <passability>PassThroughOnly</passability>
-    <defaultPlacingRot>South</defaultPlacingRot>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>120</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Breakdownable" />
-      <li Class="CompProperties_Flickable" />
       <li Class="VFECore.CompProperties_AmbientSound">
         <ambientSound>VFE_IndustrialRadio_Ambience</ambientSound>
       </li>
     </comps>
-    <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <WorkToBuild>10000</WorkToBuild>
       <MaxHitPoints>100</MaxHitPoints>
       <Mass>10</Mass>
       <Flammability>1.0</Flammability>
+      <JoyGainFactor>0.3</JoyGainFactor>
     </statBases>
-    <tradeTags>
-      <li>Television</li>
-    </tradeTags>
-    <constructEffect>ConstructMetal</constructEffect>
-    <designationCategory>Joy</designationCategory>
     <researchPrerequisites>
       <li>TubeTelevision</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
-    <fillPercent>0.2</fillPercent>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <pathCost>25</pathCost>
-    <rotatable>true</rotatable>
-    <canOverlapZones>false</canOverlapZones>
-    <minifiedDef>MinifiedThing</minifiedDef>
     <specialDisplayRadius>5</specialDisplayRadius>
   </ThingDef>
 
-  <ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="VFE_RadioBase">
     <defName>Radio_Spacer</defName>
     <label>longwave radio</label>
     <description>A high tech radio reciever that is able to pick up very faint signals and play them back at crystal clear quality.</description>
@@ -79,54 +90,41 @@
         <rect>(0,0.75,1.0,0.5)</rect>
       </damageData>
     </graphicData>
-    <thingCategories>
-      <li>BuildingsJoy</li>
-    </thingCategories>
     <costList>
       <Steel>100</Steel>
       <ComponentIndustrial>10</ComponentIndustrial>
     </costList>
-    <passability>PassThroughOnly</passability>
-    <defaultPlacingRot>South</defaultPlacingRot>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>200</basePowerConsumption>
       </li>
-      <li Class="CompProperties_Breakdownable" />
-      <li Class="CompProperties_Flickable" />
       <li Class="VFECore.CompProperties_AmbientSound">
         <ambientSound>VFE_SpacerRadio_Ambience</ambientSound>
+      </li>
+      <li Class="VanillaFurnitureEC.CompProperties_CauseJoyHediff_Aoe">
+        <hediff>VFE_ListeningToMusic</hediff>
+        <range>12</range>
+        <checkInterval>300</checkInterval>
       </li>
       <li>
         <compClass>CompGatherSpot</compClass>
       </li>
     </comps>
-    <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <WorkToBuild>30000</WorkToBuild>
       <MaxHitPoints>100</MaxHitPoints>
       <Beauty>3</Beauty>
       <Mass>12</Mass>
       <Flammability>1.0</Flammability>
+      <JoyGainFactor>0.6</JoyGainFactor>
     </statBases>
-    <tradeTags>
-      <li>Television</li>
-    </tradeTags>
-    <constructEffect>ConstructMetal</constructEffect>
-    <designationCategory>Joy</designationCategory>
     <researchPrerequisites>
       <li>FlatscreenTelevision</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
-    <fillPercent>0.2</fillPercent>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <pathCost>25</pathCost>
-    <rotatable>true</rotatable>
-    <canOverlapZones>false</canOverlapZones>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <specialDisplayRadius>8</specialDisplayRadius>
+    <specialDisplayRadius>12</specialDisplayRadius>
     <uiIconScale>0.9</uiIconScale>
   </ThingDef>
 

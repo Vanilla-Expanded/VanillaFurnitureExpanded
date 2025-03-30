@@ -10,6 +10,7 @@
     <AssemblyName>VanillaFurnitureEC</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +35,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core">
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\System.Core.dll</HintPath>
@@ -62,6 +66,12 @@
     <Compile Include="Command_CleanupTarget.cs" />
     <Compile Include="Comps\CompBinClean.cs" />
     <Compile Include="Comps\CompProperties_BinClean.cs" />
+    <Compile Include="Comps\CompCauseJoyHediff_Aoe.cs" />
+    <Compile Include="Comps\CompProperties_CauseJoyHediff_Aoe.cs" />
+    <Compile Include="Comps\HediffCompProperties_CauseJoy.cs" />
+    <Compile Include="Comps\HediffComp_CauseJoy.cs" />
+    <Compile Include="JobDriver\JobDriver_UseLounger.cs" />
+    <Compile Include="JobDriver\JoyGiver_UseLounger.cs" />
     <Compile Include="JobDriver_CleanBin.cs" />
     <Compile Include="StaticCollections.cs" />
     <Compile Include="WorkGiver_CleanBin.cs" />
@@ -78,7 +88,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoundDefOf.cs" />
     <Compile Include="VFE_DefOf.cs" />
-    <Compile Include="ThoughtWorker_RadioBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

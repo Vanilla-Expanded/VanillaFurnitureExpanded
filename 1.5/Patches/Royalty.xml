@@ -71,15 +71,6 @@
             <li>Joy_Piano</li>
           </value>
         </li>
-        <!-- Make radio use the royalty music joy -->
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="Radio_Industrial" or defName="Radio_Spacer"]/tradeTags</xpath>
-          <value>
-            <tradeTags>
-              <li>MusicalInstrument</li>
-            </tradeTags>
-          </value>
-        </li>
         <!-- Campfire link with stone campfire-->
         <li Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="Campfire"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>

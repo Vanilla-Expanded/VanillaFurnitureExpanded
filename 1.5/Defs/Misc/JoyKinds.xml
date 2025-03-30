@@ -5,5 +5,8 @@
     <label>electronic play</label>
   </JoyKindDef>
 
-
+  <JoyKindDef>
+    <defName>VFE_Music</defName>
+    <label>music</label>
+  </JoyKindDef>
 </Defs>
