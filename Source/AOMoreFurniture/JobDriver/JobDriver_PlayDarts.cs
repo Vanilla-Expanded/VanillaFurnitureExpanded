@@ -9,7 +9,7 @@ namespace VanillaFurnitureEC
     {
         protected override void WatchTickAction()
         {
-            if (pawn.IsHashIntervalTick(400 - Rand.RangeInclusive(0, 100)))
+            if (pawn.IsHashIntervalTick(400))
             {
                 ThrowDart(pawn, TargetA.Cell);
             }
@@ -33,8 +33,8 @@ namespace VanillaFurnitureEC
                 moteThrown.exactRotation = (vector - moteThrown.exactPosition).AngleFlat();
                 moteThrown.SetVelocity((vector - moteThrown.exactPosition).AngleFlat(), 5);
                 moteThrown.MoveAngle = (vector - moteThrown.exactPosition).AngleFlat();
-                moteThrown.airTimeLeft = (moteThrown.exactPosition - vector).MagnitudeHorizontal() / (5.2f);
-                GenSpawn.Spawn(moteThrown, position, map, WipeMode.Vanish);
+                moteThrown.airTimeLeft = (moteThrown.exactPosition - vector).MagnitudeHorizontal() / 5.2f;
+                GenSpawn.Spawn(moteThrown, position, map);
             }
         }
     }

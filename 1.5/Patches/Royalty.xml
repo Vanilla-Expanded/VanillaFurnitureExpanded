@@ -45,12 +45,6 @@
             <instrumentRange>12</instrumentRange>
           </value>
         </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="Joy_Piano"]/building/joyKind</xpath>
-          <value>
-            <joyKind>HighCulture</joyKind>
-          </value>
-        </li>
         <!-- Remove the VFE jobs for the piano -->
         <li Class="PatchOperationRemove">
           <xpath>/Defs/JobDef[defName="Play_Piano"]</xpath>
@@ -71,34 +65,21 @@
             <li>Joy_Piano</li>
           </value>
         </li>
-        <!-- Campfire link with stone campfire-->
+        <!-- Add firepits to all vanilla fire meditation linkables. -->
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Campfire"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
+          <!-- The patch will cause no errors as long as at least one of the defs was matches, so no need for separate per-DLC patches. -->
+          <xpath>Defs/ThingDef[@Name="TorchBase" or defName="TorchWallLamp" or defName="Campfire" or defName="Darktorch" or defName="DarktorchFungus" or defName="Brazier" or defName="DarklightBrazier" or defName="SanguphageMeetingTorch"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class = "FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
           <value>
             <li>Stone_Campfire</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Stone_DarklightCampfire</li>
           </value>
         </li>
-        <!-- Heart link with stone campfire -->
-        <li Class="PatchOperationFindMod">
-          <mods>
-            <li>Vanilla Factions Expanded - Vikings</li>
-          </mods>
-          <match Class="PatchOperationSequence">
-            <operations>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="VFEV_Hearth"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
-                <value>
-                  <li>Stone_Campfire</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="Stone_Campfire"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_BuildingDefsLit"]/defs</xpath>
-                <value>
-                  <li>VFEV_Hearth</li>
-                </value>
-              </li>
-            </operations>
-          </match>
+        <!-- Animal sarcophagus linking with normal grave/sarcophagus -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="Grave" or defName="Sarcophagus"]/comps/li[@Class="CompProperties_MeditationFocus"]/offsets/li[@Class="FocusStrengthOffset_NearbyGraves"]/defs</xpath>
+          <value>
+            <li>VFE_AnimalSarcophagus</li>
+          </value>
         </li>
       </operations>
     </match>

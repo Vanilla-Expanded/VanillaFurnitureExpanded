@@ -1,113 +1,199 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<ThingDef ParentName="BedWithQualityBase">
-		<defName>Bed_StoneSlab</defName>
-		<label>slab bed</label>
-		<description>A large slab of smoothed stone, very uncomfortable and only marginally better than sleeping on the floor.</description>
-		<graphicData>
-			<texPath>Things/Bedroom/BedSlab/BedSlab</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(2,2)</drawSize>
-			<damageData>
-				<rect>(0,0.05,1,1.95)</rect>
-			</damageData>
-		</graphicData>
-		<comps>
-			<li Class="CompProperties_AffectedByFacilities">
-				<linkableFacilities>
-					<li>EndTable</li>
-					<li>Dresser</li>
-				</linkableFacilities>
-			</li>
-		</comps>
-		<statBases>
-			<MaxHitPoints>200</MaxHitPoints>
-			<Flammability>0</Flammability>
-			<Beauty>1</Beauty>
-			<WorkToBuild>1800</WorkToBuild>
-			<Mass>80</Mass>
-			<BedRestEffectiveness>1</BedRestEffectiveness>
-			<Comfort>0.5</Comfort>
-			<ImmunityGainSpeedFactor>0.95</ImmunityGainSpeedFactor>
-			<SurgerySuccessChanceFactor>0.98</SurgerySuccessChanceFactor>
-		</statBases>
-		<size>(1,2)</size>
-		<stuffCategories>
-			<li>Stony</li>
-		</stuffCategories>
-		<costStuffCount>30</costStuffCount>
-		<building>
-			<bed_showSleeperBody>True</bed_showSleeperBody>
-			<bed_healPerDay>3</bed_healPerDay>
-			<paintable>true</paintable>
-		</building>
-		<fillPercent>0.4</fillPercent>
-		<pathCost>60</pathCost>
-		<staticSunShadowHeight>0.17</staticSunShadowHeight>
-		<castEdgeShadows>True</castEdgeShadows>
-		<techLevel>Neolithic</techLevel>
-		<uiIconScale>0.90</uiIconScale>
-		<designationCategory>AOMorefurniture</designationCategory>
-	</ThingDef>
-	<ThingDef ParentName="BedWithQualityBase">
-		<defName>Bed_Simple</defName>
-		<label>simple bed</label>
-		<description>A somewhat comfy net and pillow rested on a sturdy frame.</description>
-		<graphicData>
-			<texPath>Things/Bedroom/SimpleBed/SimpleBed</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-			<drawSize>(2,2)</drawSize>
-			<damageData>
-				<rect>(0,0.05,1,1.95)</rect>
-			</damageData>
-		</graphicData>
-		<comps>
-			<li Class="CompProperties_AffectedByFacilities">
-				<linkableFacilities>
-					<li>EndTable</li>
-					<li>Dresser</li>
-					<li>Table_LightEndTable</li>
-					<li>Table_RoyalDresser</li>
-					<li>Table_RoyalEndTable</li>
-					<li>Table_Wardrobe</li>
-				</linkableFacilities>
-			</li>
-		</comps>
-		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-			<Beauty>0.5</Beauty>
-			<WorkToBuild>600</WorkToBuild>
-			<Mass>30</Mass>
-			<BedRestEffectiveness>0.970</BedRestEffectiveness>
-			<Comfort>0.7</Comfort>
-			<ImmunityGainSpeedFactor>1.03</ImmunityGainSpeedFactor>
-			<SurgerySuccessChanceFactor>0.98</SurgerySuccessChanceFactor>
-			<BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">1</BirthRitualQualityOffset>
-		</statBases>
-		<size>(1,2)</size>
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
-		</stuffCategories>
-		<costStuffCount>40</costStuffCount>
-		<building>
-			<bed_showSleeperBody>True</bed_showSleeperBody>
-			<bed_healPerDay>3</bed_healPerDay>
-			<paintable>true</paintable>
-		</building>
-		<fillPercent>0.3</fillPercent>
-		<pathCost>60</pathCost>
-		<staticSunShadowHeight>0.17</staticSunShadowHeight>
-		<castEdgeShadows>True</castEdgeShadows>
-		<techLevel>Medieval</techLevel>
-		<researchPrerequisites>
-			<li>MF_BasicFurniture</li>
-		</researchPrerequisites>
-		<uiIconScale>0.90</uiIconScale>
-		<designationCategory>AOMorefurniture</designationCategory>
-	</ThingDef>
+
+    <!-- Chiseled beds -->
+
+    <ThingDef ParentName="BedBase" Name="VFE_ChiseledBedBase" Abstract="True">
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>EndTable</li>
+                    <li>Dresser</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+                    <li>Table_LightEndTable</li> <!-- TODO: Remove in 1.6 -->
+                    <li>Table_Wardrobe</li>
+                    <li>Table_RoyalDresser</li>
+                    <li>Table_RoyalEndTable</li>
+                    <li>VFE_RoyalWardrobe</li>
+                    <li MayRequire="VanillaExpanded.VFESpacer">Table_IlluminatedEndTable</li>
+                    <li MayRequire="VanillaExpanded.VFESpacer">Table_IlluminatedDresser</li>
+                    <li MayRequire="OskarPotocki.VFE.Empire">VFEE_RoyalMirror</li>
+                    <li MayRequire="VanillaExpanded.VPlantsEMushrooms">VPE_Plant_Lullabloom</li>
+                </linkableFacilities>
+            </li>
+        </comps>
+        <statBases>
+            <Flammability>0</Flammability>
+            <Beauty>3</Beauty>
+            <BedRestEffectiveness>0.95</BedRestEffectiveness>
+            <Comfort>0.3</Comfort>
+            <ImmunityGainSpeedFactor>1</ImmunityGainSpeedFactor>
+            <SurgerySuccessChanceFactor>0.9</SurgerySuccessChanceFactor>
+        </statBases>
+        <stuffCategories>
+            <li>Stony</li>
+        </stuffCategories>
+        <building>
+            <bed_showSleeperBody>True</bed_showSleeperBody>
+            <bed_healPerDay>3</bed_healPerDay>
+            <bed_slabBed>True</bed_slabBed>
+            <paintable>true</paintable>
+        </building>
+        <researchPrerequisites>
+            <li MayRequire="OskarPotocki.VFE.Tribals">VFET_Furniture</li>
+        </researchPrerequisites>
+        <fillPercent>0.3</fillPercent>
+        <pathCost>42</pathCost>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
+        <techLevel>Neolithic</techLevel>
+        <!-- Furniture? -->
+        <designationCategory>Furniture</designationCategory>
+        <uiIconScale>0.90</uiIconScale>
+    </ThingDef>
+
+    <ThingDef ParentName="VFE_ChiseledBedBase">
+        <defName>Bed_StoneSlab</defName>
+        <label>chiseled bed</label>
+        <description>A simple yet beautiful stone slab used for sleeping. It offers minimal comfort but is durable and fireproof.</description>
+        <graphicData>
+            <texPath>NewThings/Beds/ChiseledBed/ChiseledBed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <rect>(0,0.05,1,1.95)</rect>
+            </damageData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>160</MaxHitPoints>
+            <Mass>40</Mass>
+            <WorkToBuild>3000</WorkToBuild>
+        </statBases>
+        <size>(1,2)</size>
+        <costStuffCount>45</costStuffCount>
+    </ThingDef>
+
+    <ThingDef ParentName="VFE_ChiseledBedBase">
+        <defName>VFE_Bed_StoneSlabDouble</defName>
+        <label>chiseled double bed</label>
+        <description>A simple yet beautiful stone slab used for sleeping that fits two people. It offers minimal comfort but is durable and fireproof.</description>
+        <graphicData>
+            <texPath>NewThings/Beds/ChiseledBedDouble/ChiseledBedDouble</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2.05,2.05)</drawSize>
+            <damageData>
+                <rect>(0,0.05,2,1.95)</rect>
+            </damageData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>240</MaxHitPoints>
+            <Mass>80</Mass>
+            <WorkToBuild>5750</WorkToBuild>
+        </statBases>
+        <size>(2,2)</size>
+        <costStuffCount>85</costStuffCount>
+    </ThingDef>
+
+    <!-- Simple beds -->
+    
+    <ThingDef ParentName="BedBase" Name="VFE_SimpleBedBase" Abstract="True">
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>EndTable</li>
+                    <li>Dresser</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+                    <li>Table_LightEndTable</li> <!-- TODO: Remove in 1.6 -->
+                    <li>Table_Wardrobe</li>
+                    <li>Table_RoyalDresser</li>
+                    <li>Table_RoyalEndTable</li>
+                    <li>VFE_RoyalWardrobe</li>
+                    <li MayRequire="VanillaExpanded.VFESpacer">Table_IlluminatedEndTable</li>
+                    <li MayRequire="VanillaExpanded.VFESpacer">Table_IlluminatedDresser</li>
+                    <li MayRequire="OskarPotocki.VFE.Empire">VFEE_RoyalMirror</li>
+                    <li MayRequire="VanillaExpanded.VPlantsEMushrooms">VPE_Plant_Lullabloom</li>
+                </linkableFacilities>
+            </li>
+        </comps>
+        <statBases>
+            <Flammability>1.0</Flammability>
+            <BedRestEffectiveness>0.95</BedRestEffectiveness>
+            <Comfort>0.6</Comfort>
+            <ImmunityGainSpeedFactor>1.03</ImmunityGainSpeedFactor>
+            <SurgerySuccessChanceFactor>0.95</SurgerySuccessChanceFactor>
+            <BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">2</BirthRitualQualityOffset>
+        </statBases>
+        <building>
+            <bed_showSleeperBody>True</bed_showSleeperBody>
+            <bed_healPerDay>3</bed_healPerDay>
+            <paintable>true</paintable>
+        </building>
+        <fillPercent>0.35</fillPercent>
+        <pathCost>42</pathCost>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
+        <techLevel>Medieval</techLevel>
+        <!-- Furniture? -->
+        <researchPrerequisites>
+            <li>MF_BasicFurniture</li>
+        </researchPrerequisites>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <uiIconScale>0.90</uiIconScale>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+    <ThingDef ParentName="VFE_SimpleBedBase">
+        <defName>Bed_Simple</defName>
+        <label>simple bed</label>
+        <description>A somewhat comfy net and pillow rested on a sturdy frame. Due to the simple construction, quality is not a factor in this bed.</description>
+        <graphicData>
+            <texPath>NewThings/Beds/SimpleBed/SimpleBed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <rect>(0,0.05,1,1.95)</rect>
+            </damageData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <WorkToBuild>600</WorkToBuild>
+            <Mass>25</Mass>
+        </statBases>
+        <size>(1,2)</size>
+        <costStuffCount>40</costStuffCount>
+    </ThingDef>
+
+    <ThingDef ParentName="VFE_SimpleBedBase">
+        <defName>VFE_Bed_SimpleDouble</defName>
+        <label>simple double bed</label>
+        <description>A somewhat comfy net and pillow rested on a sturdy frame that fits two people. Due to the simple construction, quality is not a factor in this bed.</description>
+        <graphicData>
+            <texPath>NewThings/Beds/SimpleBedDouble/SimpleBedDouble</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2.05,2.05)</drawSize>
+            <damageData>
+                <rect>(0,0.05,2,1.95)</rect>
+            </damageData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>190</MaxHitPoints>
+            <WorkToBuild>1200</WorkToBuild>
+            <Mass>45</Mass>
+        </statBases>
+        <size>(2,2)</size>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>80</costStuffCount>
+    </ThingDef>
 </Defs>

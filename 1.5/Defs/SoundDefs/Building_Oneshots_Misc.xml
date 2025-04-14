@@ -2,7 +2,7 @@
 <Defs>
 
   <SoundDef>
-    <defName>Arcade_SFX</defName>
+    <defName>VFE_Arcade_SFX</defName>
     <context>MapOnly</context>
     <maxSimultaneous>4</maxSimultaneous>
     <subSounds>
@@ -38,7 +38,7 @@
   </SoundDef>
 
   <SoundDef>
-    <defName>Computer_SFX</defName>
+    <defName>VFE_Computer_SFX</defName>
     <context>MapOnly</context>
     <maxSimultaneous>4</maxSimultaneous>
     <subSounds>

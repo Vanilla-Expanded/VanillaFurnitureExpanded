@@ -3,46 +3,42 @@
   <ThingDef ParentName="FurnitureWithQualityBase">
     <defName>Seat_Cushion</defName>
     <label>sitting cushion</label>
-    <description>A simple cushion for sitting on, popular amongst the tribes. Can be used at tables, work stations, and elsewhere.</description>
+    <description>A soft cushion designed for sitting. More comfortable than a stool but still a simple seating option.</description>
     <graphicData>
-      <texPath>Things/Seating/SittingCushion</texPath>
+      <texPath>NewThings/Furniture/SittingCushion/SittingCushion</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <damageData>
-        <rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
-        <rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
-        <rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
-        <rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
+        <rect>(0.125,0.125,0.75,0.75)</rect>
       </damageData>
       <shadowData>
-        <volume>(0.18, 0.23, 0.18)</volume>
+        <volume>(0.75, 0.23, 0.75)</volume>
       </shadowData>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
-      <MaxHitPoints>35</MaxHitPoints>
-      <WorkToBuild>450</WorkToBuild>
-      <Mass>1</Mass>
+      <MaxHitPoints>30</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>3</Mass>
       <Flammability>1.0</Flammability>
-      <Beauty>0</Beauty>
-      <Comfort>0.5</Comfort>
+      <Beauty>3</Beauty>
+      <Comfort>0.7</Comfort>
     </statBases>
     <socialPropernessMatters>true</socialPropernessMatters>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
-    <costStuffCount>25</costStuffCount>
-    <pathCost>20</pathCost>
-    <fillPercent>0.10</fillPercent>
+    <costStuffCount>30</costStuffCount>
+    <pathCost>24</pathCost>
+    <fillPercent>0.07</fillPercent>
     <building>
       <isSittable>true</isSittable>
     </building>
     <uiIconOffset>(0, -0.05)</uiIconOffset>
-    <designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>Furniture</designationCategory>
+<!--    <researchPrerequisites>-->
+<!--      <li MayRequire="OskarPotocki.VFE.Tribals">VFET_Furniture</li>-->
+<!--    </researchPrerequisites>-->
   </ThingDef>
 
   <ThingDef ParentName="FurnitureWithQualityBase">
@@ -50,24 +46,17 @@
     <label>bench</label>
     <description>A simple long platform on which multiple people may sit at the same time, not very comfortable but much better than nothing. Can be used at tables, work stations, and elsewhere.</description>
     <graphicData>
-      <texPath>Things/Seating/Bench/Bench_Atlas</texPath>
+      <texPath>NewThings/Linked/Bench_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <linkType>Basic</linkType>
       <linkFlags>
         <li>Custom7</li>
       </linkFlags>
       <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
-        <edgeTop>Damage/Edge</edgeTop>
-        <edgeBot>Damage/Edge</edgeBot>
-        <edgeLeft>Damage/Edge</edgeLeft>
-        <edgeRight>Damage/Edge</edgeRight>
+        <rect>(0.30,0.15,0.4,0.6)</rect>
       </damageData>
     </graphicData>
-    <uiIconPath>Things/Seating/Bench/Bench_MenuIcon</uiIconPath>
+    <uiIconPath>NewThings/Linked/Bench_MenuIcon</uiIconPath>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <MaxHitPoints>75</MaxHitPoints>
@@ -87,7 +76,7 @@
     </stuffCategories>
     <building>
       <blueprintGraphicData>
-        <texPath>Things/Seating/Bench/Bench_Blueprint_Atlas</texPath>
+        <texPath>NewThings/Linked/Bench_Blueprint_Atlas</texPath>
       </blueprintGraphicData>
       <isSittable>true</isSittable>
       <paintable>true</paintable>
@@ -98,17 +87,19 @@
     <researchPrerequisites>
       <li>MF_BasicFurniture</li>
     </researchPrerequisites>
+    <minifiedDef /> <!-- Not minifiable -->
+    <thingCategories Inherit="false" /> <!-- thingCategories shouldn't be used if not minifiable -->
     <uiIconOffset>(0, -0.05)</uiIconOffset>
-    <designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>Furniture</designationCategory>
   </ThingDef>
 
 
   <ThingDef ParentName="ArtableFurnitureBase">
     <defName>Seat_SquareChair</defName>
-    <label>square chair</label>
-    <description>A comfortable and attractive chair not specifically used for dining. Can be used at tables, work stations, and elsewhere.</description>
+    <label>school chair</label>
+    <description>A simple long platform on which multiple people may sit at the same time, not very comfortable but much better than nothing. Can be used at tables, work stations, and elsewhere.</description>
     <graphicData>
-      <texPath>Things/Seating/SquareChair/Chair</texPath>
+      <texPath>NewThings/Furniture/SchoolChair/SchoolChair</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(1,1)</drawSize>
       <damageData>
@@ -123,18 +114,31 @@
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
-      <MaxHitPoints>170</MaxHitPoints>
+      <MaxHitPoints>100</MaxHitPoints>
       <WorkToBuild>8000</WorkToBuild>
       <Mass>5</Mass>
       <Flammability>1.0</Flammability>
       <Beauty>8</Beauty>
-      <Comfort>0.70</Comfort>
+      <Comfort>0.60</Comfort>
     </statBases>
     <socialPropernessMatters>true</socialPropernessMatters>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
     </stuffCategories>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <comps>
+<!--      <li Class="CompProperties_InspectString">-->
+<!--        <compClass>CompInspectStringBlackboard</compClass>-->
+<!--        <inspectString>Learning rate</inspectString>-->
+<!--      </li>-->
+      <li Class="CompProperties_Facility" MayRequire="Ludeon.RimWorld.Biotech">
+        <maxSimultaneous>2</maxSimultaneous>
+        <maxDistance>6</maxDistance>
+      </li>
+    </comps>
     <costStuffCount>45</costStuffCount>
     <pathCost>30</pathCost>
     <fillPercent>0.35</fillPercent>
@@ -147,7 +151,7 @@
     <researchPrerequisites>
       <li>ComplexFurniture</li>
     </researchPrerequisites>
-    <designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory>Furniture</designationCategory>
   </ThingDef>
 
 </Defs>

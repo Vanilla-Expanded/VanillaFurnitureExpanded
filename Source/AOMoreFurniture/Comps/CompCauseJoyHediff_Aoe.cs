@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using RimWorld;
 using Verse;
+using Verse.Sound;
 
 namespace VanillaFurnitureEC;
 
@@ -81,94 +82,8 @@ public class CompCauseJoyHediff_Aoe : ThingComp
         else Log.ErrorOnce($"{nameof(CompCauseJoyHediff_Aoe)} has a hediff in props which is not {nameof(HediffWithComps)}", -837742526);
     }
 
-    private bool benchmarkDone;
-
     private bool IsPawnAffected(Pawn target)
     {
-        if (!benchmarkDone)
-        {
-            benchmarkDone = true;
-            Log.Error("$Doing benchmark.");
-            var stopwatch = Stopwatch.StartNew();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = powerTrader is { PowerOn: false };
-            }
-            stopwatch.Stop();
-            Log.Error($"Power benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
-            stopwatch.Restart();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = target.Dead;
-            }
-            stopwatch.Stop();
-            stopwatch.Restart();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = target.health == null;
-            }
-            stopwatch.Stop();
-            Log.Error($"Null health benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
-            stopwatch.Restart();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = target.health.capacities.CapableOf(PawnCapacityDefOf.Hearing);
-            }
-            stopwatch.Stop();
-            Log.Error($"Hearing benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
-            stopwatch.Restart();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = target.GetRoom() != (TempWorkingRoom ??= parent.GetRoom());
-            }
-            stopwatch.Stop();
-            Log.Error($"GetRoom benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
-            stopwatch.Restart();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = target.PositionHeld.DistanceTo(parent.PositionHeld) <= Props.range;
-            }
-            stopwatch.Stop();
-            Log.Error($"Distance benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
-            stopwatch.Restart();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = target.PositionHeld.DistanceToSquared(parent.PositionHeld) <= Props.range * Props.range;
-            }
-            stopwatch.Stop();
-            Log.Error($"Squared benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
-            var rangeSquared = Props.range * Props.range;
-            stopwatch.Restart();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = target.PositionHeld.DistanceToSquared(parent.PositionHeld) <= rangeSquared;
-            }
-            stopwatch.Stop();
-            Log.Error($"Squared cached benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
-            stopwatch.Restart();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = target.needs.joy == null;
-            }
-            stopwatch.Stop();
-            Log.Error($"Joy benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
-            stopwatch.Restart();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = target.RaceProps.Humanlike;
-            }
-            stopwatch.Stop();
-            Log.Error($"Humanlike benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
-            stopwatch.Restart();
-            for (var i = 0; i < 10000000; i++)
-            {
-                _ = target.Awake();
-            }
-            stopwatch.Stop();
-            Log.Error($"Awake benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
-            Log.Error("Benchmark ended.");
-        }
-
         // All check are done in specific order, from the fastest check to slowest (based on my small benchmark).
 
         // If there's a power trader, make sure it's powered
@@ -194,5 +109,88 @@ public class CompCauseJoyHediff_Aoe : ThingComp
 
         // Make sure the pawn is in the same room
         return target.GetRoom() == (TempWorkingRoom ??= parent.GetRoom());
+    }
+
+    private void Benchmark(Pawn target)
+    {
+        Log.Error("$Doing benchmark.");
+        var stopwatch = Stopwatch.StartNew();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = powerTrader is { PowerOn: false };
+        }
+        stopwatch.Stop();
+        Log.Error($"Power benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
+        stopwatch.Restart();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = target.Dead;
+        }
+        stopwatch.Stop();
+        stopwatch.Restart();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = target.health == null;
+        }
+        stopwatch.Stop();
+        Log.Error($"Null health benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
+        stopwatch.Restart();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = target.health.capacities.CapableOf(PawnCapacityDefOf.Hearing);
+        }
+        stopwatch.Stop();
+        Log.Error($"Hearing benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
+        stopwatch.Restart();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = target.GetRoom() != (TempWorkingRoom ??= parent.GetRoom());
+        }
+        stopwatch.Stop();
+        Log.Error($"GetRoom benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
+        stopwatch.Restart();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = target.PositionHeld.DistanceTo(parent.PositionHeld) <= Props.range;
+        }
+        stopwatch.Stop();
+        Log.Error($"Distance benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
+        stopwatch.Restart();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = target.PositionHeld.DistanceToSquared(parent.PositionHeld) <= Props.range * Props.range;
+        }
+        stopwatch.Stop();
+        Log.Error($"Squared benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
+        var rangeSquared = Props.range * Props.range;
+        stopwatch.Restart();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = target.PositionHeld.DistanceToSquared(parent.PositionHeld) <= rangeSquared;
+        }
+        stopwatch.Stop();
+        Log.Error($"Squared cached benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
+        stopwatch.Restart();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = target.needs.joy == null;
+        }
+        stopwatch.Stop();
+        Log.Error($"Joy benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
+        stopwatch.Restart();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = target.RaceProps.Humanlike;
+        }
+        stopwatch.Stop();
+        Log.Error($"Humanlike benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
+        stopwatch.Restart();
+        for (var i = 0; i < 10000000; i++)
+        {
+            _ = target.Awake();
+        }
+        stopwatch.Stop();
+        Log.Error($"Awake benchmark: {stopwatch.Elapsed.TotalMilliseconds}");
+        Log.Error("Benchmark ended.");
     }
 }

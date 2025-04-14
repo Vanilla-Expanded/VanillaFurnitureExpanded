@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <!-- TODO: Remove this file in 1.6 -->
+
   <ThingDef ParentName="TableBase">
     <defName>Table_LightEndTable</defName>
     <label>lamp end table</label>
@@ -52,6 +54,7 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>30</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
         <powerUpgrades>
           <li>
             <researchProject>ColoredLights</researchProject>
@@ -62,6 +65,49 @@
     </comps>
     <staticSunShadowHeight>0</staticSunShadowHeight>
     <castEdgeShadows>false</castEdgeShadows>
-    <designationCategory>AOMorefurniture</designationCategory>
+    <designationCategory Inherit="False" />
+  </ThingDef>
+
+  <ThingDef ParentName="LampBase">
+    <defName>Light_Streetlamp</defName>
+    <label>outdoor lamp</label>
+    <description>A tall electrical lamp that lights an area, able to be placed outside without catching fire, making it ideal for road lighting and only turns on at night.</description>
+    <fillPercent>0.30</fillPercent>
+    <graphicData>
+      <texPath>Things/Other/LampOutdoor</texPath>
+      <drawSize>(2,3.5)</drawSize>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <costList>
+      <Steel>40</Steel>
+    </costList>
+    <statBases>
+      <Mass>20</Mass>
+    </statBases>
+    <size>(1,1)</size>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>60</basePowerConsumption>
+        <powerUpgrades>
+          <li>
+            <researchProject>ColoredLights</researchProject>
+            <factor>0.5</factor>
+          </li>
+        </powerUpgrades>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>20</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <uiIconOffset>(0, 0.2)</uiIconOffset>
+    <designationCategory Inherit="False" />
   </ThingDef>
 </Defs>

@@ -1,5 +1,4 @@
-﻿using System;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 using Verse.AI;
 
@@ -7,18 +6,27 @@ namespace VanillaFurnitureEC;
 
 public class JobDriver_UseLounger : JobDriver_LayDown
 {
-    public override bool CanSleep => true;
+    public bool canSleep = false;
 
-    public override bool CanRest => true;
+    public override bool CanSleep => canSleep;
+
+    public override bool CanRest => canSleep;
 
     public override bool LookForOtherJobs => false;
+
+    public override void Notify_Starting()
+    {
+        base.Notify_Starting();
+
+        canSleep = pawn.needs?.rest?.CurLevelPercentage <= 0.3f;
+    }
 
     public override bool TryMakePreToilReservations(bool errorOnFailed)
         => pawn.Reserve(TargetA, job, job.def.joyMaxParticipants, 0, errorOnFailed: errorOnFailed);
 
     public override Toil LayDownToil(bool hasBed)
     {
-        var toil = base.LayDownToil(hasBed);
+        var toil = Toils_LayDown.LayDown(TargetIndex.A, hasBed, LookForOtherJobs, CanSleep, CanRest, PawnPosture.LayingInBedFaceUp);
 
         toil.tickAction += () => JoyUtility.JoyTickCheckEnd(pawn, joySource: TargetThingA as Building);
         toil.defaultDuration = job.def.joyDuration;
@@ -31,6 +39,18 @@ public class JobDriver_UseLounger : JobDriver_LayDown
 
     public override string GetReport()
     {
-        throw new NotImplementedException("Lounger is not fully implemented yet");
+        var reportStringOverride = GetReportStringOverride();
+        if (!reportStringOverride.NullOrEmpty())
+            return reportStringOverride;
+        if (asleep)
+            "VFE_SleepingWhileSunbathing".Translate();
+        return job.def.reportString;
+    }
+
+    public override void ExposeData()
+    {
+        base.ExposeData();
+
+        Scribe_Values.Look(ref canSleep, nameof(canSleep));
     }
 }

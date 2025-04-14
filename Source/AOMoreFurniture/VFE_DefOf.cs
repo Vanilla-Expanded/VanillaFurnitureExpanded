@@ -6,12 +6,24 @@ namespace VanillaFurnitureEC
     [DefOf]
     public static class VFE_DefOf
     {
+        // Buildings
+        public static ThingDef Joy_RouletteTable;
+        public static ThingDef Stone_Campfire;
+        public static ThingDef Stone_DarklightCampfire;
+
+        // Motes
         public static ThingDef Mote_FlyingDart;
 
-        public static ThingDef Radio_Industrial;
-
-        public static ThingDef Radio_Spacer;
-
+        // Jobs
         public static JobDef VFE_CleanBin;
+
+        // JoyGivers
+        public static JoyGiverDef Play_ComputerModern;
+        public static JoyGiverDef Play_ComputerIndustrial;
+
+        static VFE_DefOf()
+        {
+            DefOfHelper.EnsureInitializedInCtor(typeof(VFE_DefOf));
+        }
     }
 }

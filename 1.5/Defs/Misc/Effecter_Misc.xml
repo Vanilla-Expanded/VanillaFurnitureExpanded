@@ -2,7 +2,7 @@
 <Defs>
 
   <EffecterDef>
-    <defName>Joy_HoldChips</defName>
+    <defName>VFE_Joy_HoldChips</defName>
     <children>
       <li>
         <subEffecterClass>SubEffecter_InteractSymbol</subEffecterClass>

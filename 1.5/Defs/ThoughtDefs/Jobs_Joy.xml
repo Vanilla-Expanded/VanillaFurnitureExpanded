@@ -3,13 +3,13 @@
 
   <JobDef>
     <defName>Play_Roulette</defName>
-    <driverClass>VanillaFurnitureEC.JobDriver_PlayRoulette</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_ExtendedSitFacingBuilding</driverClass>
     <reportString>playing roulette.</reportString>
     <joyDuration>4000</joyDuration>
-    <joyMaxParticipants>3</joyMaxParticipants>
+    <joyMaxParticipants>4</joyMaxParticipants>
     <joySkill>Social</joySkill>
-    <joyXpPerTick>0.02</joyXpPerTick>
-    <joyKind>Social</joyKind>
+    <joyXpPerTick>0.002</joyXpPerTick>
+    <joyKind>Gaming_Cerebral</joyKind>
     <taleOnCompletion>PlayedGame</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
@@ -23,7 +23,7 @@
       <li>Joy_RouletteTable</li>
     </thingDefs>
     <jobDef>Play_Roulette</jobDef>
-    <joyKind>Social</joyKind>
+    <joyKind>Gaming_Cerebral</joyKind>
     <requiredCapacities>
       <li>Sight</li>
       <li>Manipulation</li>
@@ -32,33 +32,31 @@
 
   <JobDef>
     <defName>Play_Arcade</defName>
-    <driverClass>VanillaFurnitureEC.JobDriver_PlayArcadeSounds</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_ExtendedSitFacingBuilding</driverClass>
     <reportString>playing arcade game.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
-    <joySkill>Shooting</joySkill>
-    <joyXpPerTick>0.002</joyXpPerTick>
-    <joyKind>Gaming_Electronic</joyKind>
+    <joyKind>Gaming_Cerebral</joyKind>
     <taleOnCompletion>PlayedGame</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
   <JoyGiverDef>
     <defName>Play_Arcade</defName>
-    <giverClass>JoyGiver_WatchBuilding</giverClass>
+    <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
     <baseChance>2</baseChance>
     <desireSit>false</desireSit>
     <thingDefs>
       <li>Joy_Arcade</li>
     </thingDefs>
     <jobDef>Play_Arcade</jobDef>
-    <joyKind>Gaming_Electronic</joyKind>
+    <joyKind>Gaming_Cerebral</joyKind>
     <requiredCapacities>
       <li>Sight</li>
-      <li>Manipulation</li>
     </requiredCapacities>
   </JoyGiverDef>
 
+  <!-- Piano defs removed if Royalty is active, as we use its JobDef/JoyGiverDef -->
   <JobDef>
     <defName>Play_Piano</defName>
     <driverClass>VanillaFurnitureEC.JobDriver_PlayPiano</driverClass>
@@ -66,7 +64,7 @@
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joySkill>Artistic</joySkill>
-    <joyXpPerTick>0.05</joyXpPerTick>
+    <joyXpPerTick>0.004</joyXpPerTick>
     <joyKind>Meditative</joyKind>
     <taleOnCompletion>PlayedGame</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
@@ -94,7 +92,7 @@
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>2</joyMaxParticipants>
     <joySkill>Shooting</joySkill>
-    <joyXpPerTick>0.03</joyXpPerTick>
+    <joyXpPerTick>0.004</joyXpPerTick>
     <joyKind>Gaming_Dexterity</joyKind>
     <taleOnCompletion>PlayedGame</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
@@ -118,13 +116,13 @@
 
   <JobDef>
     <defName>Play_PunchingBag</defName>
-    <driverClass>VanillaFurnitureEC.JobDriver_PlayPunchingBag</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_ExtendedSitFacingBuilding</driverClass>
     <reportString>using punching bag.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joySkill>Melee</joySkill>
-    <joyXpPerTick>0.03</joyXpPerTick>
-    <joyKind>Meditative</joyKind>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyKind>VFE_StrengthPlay</joyKind>
     <taleOnCompletion>Tale_UsedPunchingBag</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
@@ -138,7 +136,7 @@
       <li>Joy_PunchingBag</li>
     </thingDefs>
     <jobDef>Play_PunchingBag</jobDef>
-    <joyKind>Meditative</joyKind>
+    <joyKind>VFE_StrengthPlay</joyKind>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
@@ -147,59 +145,82 @@
 
   <JobDef>
     <defName>Play_ComputerIndustrial</defName>
-    <driverClass>VanillaFurnitureEC.JobDriver_PlayComputerIndustrial</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_ExtendedSitFacingBuilding</driverClass>
     <reportString>using computer.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joySkill>Crafting</joySkill>
-    <joyXpPerTick>0.01</joyXpPerTick>
-    <joyKind>Gaming_Electronic</joyKind>
+    <joyXpPerTick>0.002</joyXpPerTick>
+    <joyKind>VFE_ComputerUsage</joyKind>
     <taleOnCompletion>Tale_UsedComputer</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
   <JoyGiverDef>
     <defName>Play_ComputerIndustrial</defName>
-    <giverClass>JoyGiver_WatchBuilding</giverClass>
+    <!-- JoyGiver_InteractBuildingInteractionCell doesn't include a check for <requireChairs>, so we need a custom one. -->
+    <giverClass>VanillaFurnitureEC.JoyGiver_InteractBuildingInteractionCellSit</giverClass>
     <baseChance>0.5</baseChance>
     <requireChair>true</requireChair>
     <thingDefs>
       <li>Joy_InudstrialComputer</li>
     </thingDefs>
     <jobDef>Play_ComputerIndustrial</jobDef>
-    <joyKind>Gaming_Electronic</joyKind>
+    <joyKind>VFE_ComputerUsage</joyKind>
     <requiredCapacities>
       <li>Sight</li>
-      <li>Manipulation</li>
     </requiredCapacities>
   </JoyGiverDef>
 
   <JobDef>
     <defName>Play_ComputerModern</defName>
-    <driverClass>VanillaFurnitureEC.JobDriver_PlayComputerModern</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_ExtendedSitFacingBuilding</driverClass>
     <reportString>using computer.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joySkill>Crafting</joySkill>
-    <joyXpPerTick>0.03</joyXpPerTick>
-    <joyKind>Gaming_Electronic</joyKind>
+    <joyXpPerTick>0.004</joyXpPerTick>
+    <joyKind>VFE_ComputerUsage</joyKind>
     <taleOnCompletion>Tale_UsedComputer</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
   <JoyGiverDef>
     <defName>Play_ComputerModern</defName>
-    <giverClass>JoyGiver_WatchBuilding</giverClass>
+    <!-- JoyGiver_InteractBuildingInteractionCell doesn't include a check for <requireChairs>, so we need a custom one. -->
+    <giverClass>VanillaFurnitureEC.JoyGiver_InteractBuildingInteractionCellSit</giverClass>
     <baseChance>0.5</baseChance>
     <requireChair>true</requireChair>
     <thingDefs>
       <li>Joy_ModernComputer</li>
     </thingDefs>
     <jobDef>Play_ComputerModern</jobDef>
-    <joyKind>Gaming_Electronic</joyKind>
+    <joyKind>VFE_ComputerUsage</joyKind>
     <requiredCapacities>
       <li>Sight</li>
-      <li>Manipulation</li>
     </requiredCapacities>
+  </JoyGiverDef>
+
+  <JobDef>
+    <defName>VFE_Sunbathing</defName>
+    <driverClass>VanillaFurnitureEC.JobDriver_UseLounger</driverClass>
+    <reportString>sunbathing.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>1</joyMaxParticipants>
+    <joyKind>Meditative</joyKind>
+<!--    <taleOnCompletion>Tale_UsedComputer</taleOnCompletion>-->
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JoyGiverDef>
+    <defName>VFE_Sunbathing</defName>
+    <giverClass>VanillaFurnitureEC.JoyGiver_UseLounger</giverClass>
+    <baseChance>0.5</baseChance>
+    <requireChair>true</requireChair>
+    <thingDefs>
+      <li>VFE_Lounger</li>
+    </thingDefs>
+    <jobDef>VFE_Sunbathing</jobDef>
+    <joyKind>Meditative</joyKind>
   </JoyGiverDef>
 </Defs>

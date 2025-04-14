@@ -6,7 +6,7 @@ namespace VanillaFurnitureEC
     [DefOf]
     public static class EffecterDefOf
     {
-        public static EffecterDef Joy_HoldChips;
+        public static EffecterDef VFE_Joy_HoldChips;
 
         public static EffecterDef Joy_PlayPiano;
 

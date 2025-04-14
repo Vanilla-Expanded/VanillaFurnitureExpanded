@@ -10,7 +10,7 @@ namespace VanillaFurnitureEC
         {
             if (pawn.IsHashIntervalTick(400 + Rand.RangeInclusive(0, 100)))
             {
-                SoundDefOf.Arcade_SFX.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
+                SoundDefOf.VFE_Arcade_SFX.PlayOneShot(new TargetInfo(pawn.Position, pawn.Map, false));
             }
             base.WatchTickAction();
         }

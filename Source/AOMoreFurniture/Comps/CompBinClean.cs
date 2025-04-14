@@ -40,8 +40,7 @@ namespace VanillaFurnitureEC
                 var filthInHomeArea = parent.Map.listerFilthInHomeArea.FilthInHomeArea;
                 for (int i = 0; i < filthInHomeArea.Count; i++)
                 {
-                    var filth = filthInHomeArea[i] as Filth;
-                    if (filth != null && CanAccept(filth))
+                    if (filthInHomeArea[i] is Filth filth && CanAccept(filth))
                     {
                         if (filth.Position.InHorDistOf(parent.Position, Props.radius))
                         {

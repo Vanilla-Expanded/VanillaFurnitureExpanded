@@ -5,15 +5,19 @@
     <defName>Table_1x1c</defName>
     <label>table (1x1)</label>
     <graphicData>
-      <texPath>Things/Tables/Table1x1</texPath>
+      <texPath>NewThings/Furniture/Tables/Table1x1</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(1,1)</drawSize>
       <damageData>
+        <rect>(0.1,0.1,0.8,0.9)</rect>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
         <cornerBL>Damage/Corner</cornerBL>
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
+      <shadowData>
+        <volume>(0.65, 0.2, 0.65)</volume>
+      </shadowData>
     </graphicData>
     <uiIconScale>0.8</uiIconScale>
     <statBases>
@@ -22,61 +26,130 @@
       <Mass>3</Mass>
       <Flammability>1.0</Flammability>
       <Beauty>0.5</Beauty>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">3</StyleDominance>
     </statBases>
+    <pathCost>42</pathCost>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <comps>
+      <li Class="CompProperties_Styleable" />
+    </comps>
     <rotatable>false</rotatable>
-    <researchPrerequisites>
-      <li>MF_BasicFurniture</li>
-    </researchPrerequisites>
     <size>(1,1)</size>
-    <costStuffCount>20</costStuffCount>
-    <designationCategory>AOMorefurniture</designationCategory>
+    <costStuffCount>15</costStuffCount>
+    <!-- Need to remove edge shadows/static sun shadow heights to make the game use shadowData -->
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <designationCategory>Furniture</designationCategory>
   </ThingDef>
 
   <ThingDef ParentName="TableGatherSpotBase">
     <defName>Table_Counter</defName>
-    <label>countertop</label>
-    <description>A smooth, waist high surface for eating off of, commonly found in kitchens and bars.</description>
+    <label>counter</label>
+    <description>People eat off tables when chairs are placed facing them.</description>
     <graphicData>
-      <texPath>Things/Tables/Counter/Counter_Atlas</texPath>
+      <texPath>NewThings/Linked/Counter_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <linkType>CornerFiller</linkType>
-      <shaderType>CutoutComplex</shaderType>
       <linkFlags>
         <li>Custom6</li>
       </linkFlags>
       <damageData>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
-        <edgeTop>Damage/Edge</edgeTop>
-        <edgeBot>Damage/Edge</edgeBot>
-        <edgeLeft>Damage/Edge</edgeLeft>
-        <edgeRight>Damage/Edge</edgeRight>
+        <rect>(0.1,0.0,0.8,0.95)</rect>
       </damageData>
     </graphicData>
-    <uiIconPath>Things/Tables/Counter/Counter_MenuIcon</uiIconPath>
+    <uiIconPath>NewThings/Linked/Counter_MenuIcon</uiIconPath>
     <building>
       <blueprintGraphicData>
-        <texPath>Things/Tables/Counter/Counter_Blueprint_Atlas</texPath>
+        <texPath>NewThings/Linked/Counter_Blueprint_Atlas</texPath>
       </blueprintGraphicData>
     </building>
     <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <WorkToBuild>500</WorkToBuild>
-      <Mass>3</Mass>
+      <MaxHitPoints>65</MaxHitPoints>
+      <WorkToBuild>750</WorkToBuild>
+      <Mass>4</Mass>
       <Flammability>1.0</Flammability>
-      <Beauty>0.5</Beauty>
+      <Beauty>2</Beauty>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">4</StyleDominance>
     </statBases>
     <placingDraggableDimensions>1</placingDraggableDimensions>
     <rotatable>false</rotatable>
+    <pathCost>42</pathCost>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
     <researchPrerequisites>
       <li>ComplexFurniture</li>
     </researchPrerequisites>
     <size>(1,1)</size>
-    <costStuffCount>15</costStuffCount>
-    <designationCategory>AOMorefurniture</designationCategory>
+    <costStuffCount>20</costStuffCount>
+    <designationCategory>Furniture</designationCategory>
   </ThingDef>
 
+  <!-- Technically not usable a table in the traditional sense, but may as well include it with all the other basic tables. -->
+
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>VFE_CoffeeTable</defName>
+    <label>coffee table</label>
+    <description>A small table which makes nearby armchairs and couches a little bit more comfortable. Must be placed directly adjacent to the couch or an armchair. Placing more than one coffee table near the same couch has no effect.</description>
+    <graphicData>
+      <texPath>NewThings/Furniture/CoffeeTable/CoffeeTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rectN>(0.21,0.18,1.58,0.69)</rectN>
+        <rectS>(0.21,0.18,1.58,0.69)</rectS>
+        <!-- East/West rotations aren't exactly symmetrical. -->
+        <rectE>(0.07,0.23,0.83,1.55)</rectE>
+        <rectW>(0.1,0.23,0.83,1.55)</rectW>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+      <shadowData>
+        <volume>(0.8, 0.3, 1.8)</volume>
+      </shadowData>
+      <drawSize>(2,1)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>750</WorkToBuild>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+    </statBases>
+    <building>
+      <paintable>true</paintable>
+    </building>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>35</costStuffCount>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <size>(2,1)</size>
+    <comps>
+      <li Class="CompProperties_Facility">
+        <statOffsets>
+          <Comfort>0.05</Comfort>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+<!--        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>-->
+        <maxDistance>1.9</maxDistance>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <castEdgeShadows>false</castEdgeShadows>
+    <pathCost>42</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <canOverlapZones>false</canOverlapZones>
+    <designationCategory>Furniture</designationCategory>
+  </ThingDef>
 
 </Defs>

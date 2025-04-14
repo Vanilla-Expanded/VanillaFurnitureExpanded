@@ -8,6 +8,7 @@
     <priorityInType>97</priorityInType>
     <fixedBillGiverDefs>
       <li>Stone_Campfire</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Stone_DarklightCampfire</li>
     </fixedBillGiverDefs>
     <verb>cook</verb>
     <gerund>cooking at</gerund>
@@ -25,6 +26,7 @@
     <priorityInType>30</priorityInType>
     <fixedBillGiverDefs>
       <li>Stone_Campfire</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Stone_DarklightCampfire</li>
     </fixedBillGiverDefs>
     <verb>work at</verb>
     <gerund>working at</gerund>

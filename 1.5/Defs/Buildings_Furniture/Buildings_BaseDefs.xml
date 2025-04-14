@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef Name="VFE_WardrobeBase" ParentName="ArtableFurnitureBase" Abstract="True">
+        <graphicData>
+            <texPath>NewThings/Furniture/Wardrobe/Wardrobe</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,3)</drawSize>
+        </graphicData>
+        <statBases>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.6</fillPercent>
+        <castEdgeShadows>true</castEdgeShadows>
+        <pathCost>42</pathCost>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <size>(2,1)</size>
+        <staticSunShadowHeight>0.5</staticSunShadowHeight>
+        <surfaceType>Item</surfaceType>
+        <canOverlapZones>false</canOverlapZones>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <Comfort>0.05</Comfort>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+                <maxDistance>6</maxDistance>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>ComplexFurniture</li>
+        </researchPrerequisites>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+</Defs>

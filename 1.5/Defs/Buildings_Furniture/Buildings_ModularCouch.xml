@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="FurnitureWithQualityBase">
+        <defName>VFE_ModularCouch</defName>
+        <label>modular couch</label>
+        <description>A compact, cushioned seat designed to be combined with others to create larger couches or corner seating arrangements. Ideal for large rec rooms, lounges, or social areas.</description>
+        <graphicData>
+            <texPath>NewThings/Furniture/ModularCouch</texPath>
+<!--            <graphicClass>Graphic_Indexed</graphicClass>-->
+            <graphicClass>VanillaFurnitureEC.Graphic_IndexedPadded</graphicClass>
+            <drawSize>(1.01,1.01)</drawSize>
+        </graphicData>
+<!--        <drawerType>RealtimeOnly</drawerType>-->
+        <uiIconPath>NewThings/Furniture/ModularCouch/ModularCouch_Omnidirectional</uiIconPath>
+        <altitudeLayer>Building</altitudeLayer>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>12000</WorkToBuild>
+            <Mass>1</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>5</Beauty>
+            <Comfort>0.85</Comfort>
+        </statBases>
+        <comps>
+            <li Class="VanillaFurnitureEC.CompProperties_CustomizableGraphic">
+                <iconPath>NewThings/UI/CustomizeCouch</iconPath>
+                <defaultIndex>10</defaultIndex>
+            </li>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>VFE_CoffeeTable</li>
+                </linkableFacilities>
+            </li>
+        </comps>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <costStuffCount>90</costStuffCount>
+        <pathCost>20</pathCost>
+        <fillPercent>0.10</fillPercent>
+        <building>
+            <isSittable>true</isSittable>
+        </building>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+</Defs>

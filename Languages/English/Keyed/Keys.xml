@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-	<VFE.FilthStored>Amount of filth stored: {0}\nContainer filled: {1}</VFE.FilthStored>
-	<VFE.FilthStoredBeauty>Container filled ({1}): {0}</VFE.FilthStoredBeauty>
-	<VFE.SetTargetCleanup>Container cleanup threshold: {0}</VFE.SetTargetCleanup>
+    <VFE.FilthStored>Amount of filth stored: {0}\nContainer filled: {1}</VFE.FilthStored>
+    <VFE.FilthStoredBeauty>Container filled ({1}): {0}</VFE.FilthStoredBeauty>
+    <VFE.SetTargetCleanup>Container cleanup threshold: {0}</VFE.SetTargetCleanup>
+
+    <!-- Alerts -->
+    <VFE.ComputerNeedChairs>Computer needs a chair</VFE.ComputerNeedChairs>
+    <VFE.ComputerNeedChairsDesc>One of your computers does not have any adjacent chair.\n\nBuild adjacent chair or stool to allow your colonists to use the computer.</VFE.ComputerNeedChairsDesc>
+
+    <VFE.RouletteTableOnWall>Roulette needs space</VFE.RouletteTableOnWall>
+    <VFE.RouletteTableOnWallDesc>One of your roulette tables is adjacent to an obstruction that will prevent colonists from using it.\n\nA roulette table needs clear space around it on all sides to be usable.</VFE.RouletteTableOnWallDesc>
 </LanguageData>

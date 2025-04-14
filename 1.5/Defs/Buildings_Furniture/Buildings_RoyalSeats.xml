@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="ArtableFurnitureBase">
+        <defName>Seat_RoyalChair</defName>
+        <label>royal chair</label>
+        <description>A luxurious, high-backed dining chair adorned with fine upholstery and intricate craftsmanship. Can be used at tables, work stations, and elsewhere.</description>
+        <graphicData>
+            <texPath>NewThings/Furniture/RoyalChair/RoyalChair</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(1,1)</drawSize>
+            <damageData>
+                <rectN>(0.25,0.234375,0.5,0.28125)</rectN>
+                <rectS>(0.25,0.234375,0.5,0.28125)</rectS>
+                <rectE>(0.28125,0.25,0.453125,0.25)</rectE>
+                <rectW>(0.28125,0.25,0.453125,0.25)</rectW>
+            </damageData>
+            <shadowData>
+                <volume>(0.23, 0.26, 0.23)</volume>
+            </shadowData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <WorkToBuild>15000</WorkToBuild>
+            <Mass>8</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>30</Beauty>
+            <Comfort>0.85</Comfort>
+        </statBases>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <costStuffCount>50</costStuffCount>
+        <costList>
+            <Gold>30</Gold>
+        </costList>
+        <pathCost>30</pathCost>
+        <fillPercent>0.35</fillPercent>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <building>
+            <isSittable>true</isSittable>
+            <paintable>true</paintable>
+        </building>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <researchPrerequisites>
+            <li>MF_RoyalFurniture</li>
+        </researchPrerequisites>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+    <ThingDef ParentName="FurnitureWithQualityBase">
+        <defName>Seat_RoyalArmchair</defName>
+        <label>royal armchair</label>
+        <description>A grand, exquisitely crafted armchair with deep cushions, fine upholstery, and ornate detailing. Can be used at tables, work stations, and elsewhere.</description>
+        <graphicData>
+            <texPath>NewThings/Furniture/RoyalArmchair/RoyalArmchair</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2.6,2.6)</drawSize>
+            <damageData>
+                <rectN>(0,0,1,0.703125)</rectN>
+                <rectS>(0.09375,0,0.84375,1)</rectS>
+                <rectE>(0,0,0.84375,0.625)</rectE>
+                <rectW>(0.15625,0,0.84375,0.625)</rectW>
+            </damageData>
+            <shadowData>
+                <volume>(0.3, 0.33, 0.3)</volume>
+            </shadowData>
+        </graphicData>
+        <uiIconScale>0.8</uiIconScale>
+        <altitudeLayer>Building</altitudeLayer>
+        <statBases>
+            <MaxHitPoints>140</MaxHitPoints>
+            <WorkToBuild>25000</WorkToBuild>
+            <Mass>25</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>40</Beauty>
+            <Comfort>0.95</Comfort>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>VFE_CoffeeTable</li>
+                </linkableFacilities>
+            </li>
+        </comps>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <costStuffCount>130</costStuffCount>
+        <costList>
+            <Gold>50</Gold>
+        </costList>
+        <pathCost>30</pathCost>
+        <fillPercent>0.40</fillPercent>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <building>
+            <isSittable>true</isSittable>
+        </building>
+        <researchPrerequisites>
+            <li>MF_RoyalFurniture</li>
+        </researchPrerequisites>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+</Defs>

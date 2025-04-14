@@ -63,17 +63,31 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alert_ComputerNoChair.cs" />
+    <Compile Include="Alert_RouletteTableOnWall.cs" />
     <Compile Include="Command_CleanupTarget.cs" />
+    <Compile Include="Command_ActionSameThingAndStyleDef.cs" />
     <Compile Include="Comps\CompBinClean.cs" />
     <Compile Include="Comps\CompProperties_BinClean.cs" />
     <Compile Include="Comps\CompCauseJoyHediff_Aoe.cs" />
     <Compile Include="Comps\CompProperties_CauseJoyHediff_Aoe.cs" />
+    <Compile Include="Comps\CompCustomizableGraphic.cs" />
+    <Compile Include="Comps\CompProperties_CustomizableGraphic.cs" />
+    <Compile Include="Comps\Graphic_IndexedPadded.cs" />
+    <Compile Include="Comps\Graphic_SinglePadded.cs" />
     <Compile Include="Comps\HediffCompProperties_CauseJoy.cs" />
     <Compile Include="Comps\HediffComp_CauseJoy.cs" />
+    <Compile Include="ExtendedSitFacingJoyDataExtension.cs" />
+    <Compile Include="JobDriver\JobDriver_CleanBin.cs" />
+    <Compile Include="JobDriver\JobDriver_ExtendedSitFacingBuilding.cs" />
     <Compile Include="JobDriver\JobDriver_UseLounger.cs" />
+    <Compile Include="JobDriver\JobDriver_WatchBuilding_PeriodicSound.cs" />
+    <Compile Include="JobDriver\JoyGiver_InteractBuildingInteractionCellSit.cs" />
     <Compile Include="JobDriver\JoyGiver_UseLounger.cs" />
-    <Compile Include="JobDriver_CleanBin.cs" />
+    <Compile Include="PlaceWorkers\PlaceWorker_LinkToFirepits.cs" />
+    <Compile Include="PlaceWorkers\PlaceWorker_SameRoomRadius.cs" />
     <Compile Include="StaticCollections.cs" />
+    <Compile Include="TempDebug.cs" />
     <Compile Include="WorkGiver_CleanBin.cs" />
     <Compile Include="StatPart_Bin.cs" />
     <Compile Include="EffecterDefOf.cs" />
@@ -84,7 +98,6 @@
     <Compile Include="JobDriver\JobDriver_PlayDarts.cs" />
     <Compile Include="JobDriver\JobDriver_PlayPiano.cs" />
     <Compile Include="JobDriver\JobDriver_PlayPunchingBag.cs" />
-    <Compile Include="JobDriver\JobDriver_PlayRoulette.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoundDefOf.cs" />
     <Compile Include="VFE_DefOf.cs" />

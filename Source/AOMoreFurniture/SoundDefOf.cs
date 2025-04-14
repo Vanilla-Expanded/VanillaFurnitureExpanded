@@ -6,9 +6,9 @@ namespace VanillaFurnitureEC
     [DefOf]
     public static class SoundDefOf
     {
-        public static SoundDef Arcade_SFX;
+        public static SoundDef VFE_Arcade_SFX;
 
-        public static SoundDef Computer_SFX;
+        public static SoundDef VFE_Computer_SFX;
 
         static SoundDefOf()
         {
