@@ -22,9 +22,122 @@
             <Comfort>0.85</Comfort>
         </statBases>
         <comps>
-            <li Class="VanillaFurnitureEC.CompProperties_CustomizableGraphic">
+            <li Class="VFECore.CompProperties_CustomizableGraphic">
+                <!-- Use the default label. -->
+                <gizmoDescription>Set the visuals for the couch to create a seamless seating arrangement.</gizmoDescription>
                 <iconPath>NewThings/UI/CustomizeCouch</iconPath>
                 <defaultIndex>10</defaultIndex>
+                <defaultGraphicData>
+                    <!-- The graphics in the same order as the actual files. -->
+                    <!-- If name is omitted, the file name will be used instead. -->
+                    <!-- If sorting priority is omitted, a value of 0 will be used instead. -->
+                    <!-- The float menu is sorted by putting entries with the highest priority at the top. -->
+                    <li>
+                        <name>Down-left (Inner)</name>
+                        <sortingPriority>497</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Down-left (Outer)</name>
+                        <sortingPriority>797</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Down-left (Straight)</name>
+                        <sortingPriority>999</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Down-middle (Straight)</name>
+                        <sortingPriority>998</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Down-right (Inner)</name>
+                        <sortingPriority>496</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Down-right (Outer)</name>
+                        <sortingPriority>796</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Down-right (Straight)</name>
+                        <sortingPriority>997</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Left-down (Straight)</name>
+                        <sortingPriority>967</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Left-middle (Straight)</name>
+                        <sortingPriority>968</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Left-up (Straight)</name>
+                        <sortingPriority>969</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Omnidirectional</name>
+                        <sortingPriority>100000</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Right-down (Straight)</name>
+                        <sortingPriority>987</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Right-middle (Straight)</name>
+                        <sortingPriority>988</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Right-up (Straight)</name>
+                        <sortingPriority>989</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Up-left (Inner)</name>
+                        <sortingPriority>498</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Up-left (Outer)</name>
+                        <sortingPriority>798</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Up-left (Straight)</name>
+                        <sortingPriority>979</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Up-middle (Straight)</name>
+                        <sortingPriority>978</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Up-right (Inner)</name>
+                        <sortingPriority>499</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Up-right (Outer)</name>
+                        <sortingPriority>799</sortingPriority>
+                    </li>
+                    <li>
+                        <name>Up-right (Straight)</name>
+                        <sortingPriority>977</sortingPriority>
+                    </li>
+                </defaultGraphicData>
+                <styledGraphicData>
+                    <!-- Styled graphic data. -->
+                    <!-- Empty, but exists for convenience of making XML patches (so they don't need to add this node themselves, check if it exists, etc.). -->
+                    <!-- Styled graphics don't need to match 1-to-1 with unstyled ones, and can have different graphic amount of orders. -->
+
+                    <!-- Example styled data: -->
+                    <!--
+                    <li>
+                        The key is your ThingStyleDef
+                        <key>CustomStyleName</key>
+                        The value is the same data as defaultGraphicData, except for this specific style.
+                        <value>
+                            <li>
+                                <name>Custom graphic style name</name>
+                                <sortingPriority>12345</sortingPriority>
+                            </li>
+                            And fill in the remaining entries like the one above, as needed.
+                        </value>
+                    </li>
+                    -->
+                </styledGraphicData>
             </li>
             <li Class="CompProperties_AffectedByFacilities">
                 <linkableFacilities>
