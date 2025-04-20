@@ -157,5 +157,6 @@
             <isSittable>true</isSittable>
         </building>
         <designationCategory>Furniture</designationCategory>
+        <placingDraggableDimensions>1</placingDraggableDimensions>
     </ThingDef>
 </Defs>
