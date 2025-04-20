@@ -66,13 +66,10 @@
     <Compile Include="Alert_ComputerNoChair.cs" />
     <Compile Include="Alert_RouletteTableOnWall.cs" />
     <Compile Include="Command_CleanupTarget.cs" />
-    <Compile Include="Command_ActionSameThingAndStyleDef.cs" />
     <Compile Include="Comps\CompBinClean.cs" />
     <Compile Include="Comps\CompProperties_BinClean.cs" />
     <Compile Include="Comps\CompCauseJoyHediff_Aoe.cs" />
     <Compile Include="Comps\CompProperties_CauseJoyHediff_Aoe.cs" />
-    <Compile Include="Comps\CompCustomizableGraphic.cs" />
-    <Compile Include="Comps\CompProperties_CustomizableGraphic.cs" />
     <Compile Include="Comps\Graphic_IndexedPadded.cs" />
     <Compile Include="Comps\Graphic_SinglePadded.cs" />
     <Compile Include="Comps\HediffCompProperties_CauseJoy.cs" />
