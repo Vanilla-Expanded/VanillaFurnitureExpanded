@@ -112,6 +112,9 @@
         <volume>(0.23, 0.26, 0.23)</volume>
       </shadowData>
     </graphicData>
+    <descriptionHyperlinks MayRequire="Ludeon.RimWorld.Biotech">
+      <ThingDef>SchoolDesk</ThingDef>
+    </descriptionHyperlinks>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
@@ -130,13 +133,13 @@
       <li>PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
     <comps>
-<!--      <li Class="CompProperties_InspectString">-->
-<!--        <compClass>CompInspectStringBlackboard</compClass>-->
-<!--        <inspectString>Learning rate</inspectString>-->
-<!--      </li>-->
       <li Class="CompProperties_Facility" MayRequire="Ludeon.RimWorld.Biotech">
         <maxSimultaneous>2</maxSimultaneous>
-        <maxDistance>6</maxDistance>
+        <!-- TODO: Replace with interaction spot linking only. -->
+        <maxDistance>1.25</maxDistance>
+        <statOffsets>
+          <VEF_BuildingLearningRateOffset>0.05</VEF_BuildingLearningRateOffset>
+        </statOffsets>
       </li>
     </comps>
     <costStuffCount>45</costStuffCount>
