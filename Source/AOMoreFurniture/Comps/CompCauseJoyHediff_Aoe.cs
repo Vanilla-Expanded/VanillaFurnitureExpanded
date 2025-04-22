@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using RimWorld;
 using Verse;
-using Verse.Sound;
 
 namespace VanillaFurnitureEC;
 
