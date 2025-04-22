@@ -24,6 +24,22 @@ public class JobDriver_ExtendedSitFacingBuilding : JobDriver_SitFacingBuilding
 
     protected override void ModifyPlayToil(Toil toil)
     {
+        // If no joy from cell, replace the original tickAction.
+        // We could always replace it, but I feel that doing it this
+        // way is more compatible in case the vanilla JobDriver is
+        // updated, and we forget to update this method.
+        if (!joyData.allowComfortFromCell)
+        {
+            toil.tickAction = () =>
+            {
+                // Same tickAction as original, but missing comfort gain.
+                // Perhaps a reverse harmony patch would be better to copy the original method?
+                // Honestly, feels like too much work for such a simple thing.
+                pawn.rotationTracker.FaceTarget(TargetA);
+                JoyUtility.JoyTickCheckEnd(pawn, job.doUntilGatheringEnded ? JoyTickFullJoyAction.None : JoyTickFullJoyAction.EndJob, 1f, (Building)TargetThingA);
+            };
+        }
+
         // Play a sound every couple of ticks, both sound and delay specified by the 
         toil.tickAction += () =>
         {
@@ -37,25 +53,23 @@ public class JobDriver_ExtendedSitFacingBuilding : JobDriver_SitFacingBuilding
         // Add research points when finished the job.
         toil.AddFinishAction(() =>
         {
-            // Make sure that we're supposed to add research and that the job was finished.
-            // I've tried adding extra toil, but it did not trigger if added after the original last one.
-            if (joyData != null && (pawn.jobs.curDriver.ticksLeftThisToil <= 0 || pawn.needs.joy.CurLevelPercentage >= 0.99f))
+            if (joyData == null && joyData.researchOnFinished > 0)
+                return;
+
+            var project = Find.ResearchManager?.GetProject();
+            if (project != null)
             {
-                var project = Find.ResearchManager?.GetProject();
-                if (project != null)
+                // Total, multiplied by the percentage of the job that was finished
+                var amount = joyData.researchOnFinished * (job.def.joyDuration - pawn.jobs.curDriver.ticksLeftThisToil) / job.def.joyDuration;
+                if (amount > 0)
                 {
-                    // Total, multiplied by the percentage of the job that was finished
-                    var amount = joyData.researchOnFinished * (job.def.joyDuration - pawn.jobs.curDriver.ticksLeftThisToil) / job.def.joyDuration;
-                    if (amount > 0)
+                    if (pawn != null)
                     {
-                        if (pawn != null)
-                        {
-                            if (pawn.Faction != null)
-                                amount /= project.CostFactor(pawn.Faction.def.techLevel);
-                            pawn.records.AddTo(RecordDefOf.ResearchPointsResearched, amount);
-                        }
-                        Find.ResearchManager.AddProgress(project, amount, pawn);
+                        if (pawn.Faction != null)
+                            amount /= project.CostFactor(pawn.Faction.def.techLevel);
+                        pawn.records.AddTo(RecordDefOf.ResearchPointsResearched, amount);
                     }
+                    Find.ResearchManager.AddProgress(project, amount, pawn);
                 }
             }
         });

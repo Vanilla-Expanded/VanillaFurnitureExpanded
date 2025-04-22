@@ -78,7 +78,6 @@
     <Compile Include="JobDriver\JobDriver_CleanBin.cs" />
     <Compile Include="JobDriver\JobDriver_ExtendedSitFacingBuilding.cs" />
     <Compile Include="JobDriver\JobDriver_UseLounger.cs" />
-    <Compile Include="JobDriver\JobDriver_WatchBuilding_PeriodicSound.cs" />
     <Compile Include="JobDriver\JoyGiver_InteractBuildingInteractionCellSit.cs" />
     <Compile Include="JobDriver\JoyGiver_UseLounger.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_LinkToFirepits.cs" />
@@ -89,12 +88,8 @@
     <Compile Include="StatPart_Bin.cs" />
     <Compile Include="EffecterDefOf.cs" />
     <Compile Include="HediffDefOf.cs" />
-    <Compile Include="JobDriver\JobDriver_PlayArcadeSounds.cs" />
-    <Compile Include="JobDriver\JobDriver_PlayComputerIndustrial.cs" />
-    <Compile Include="JobDriver\JobDriver_PlayComputerModern.cs" />
     <Compile Include="JobDriver\JobDriver_PlayDarts.cs" />
     <Compile Include="JobDriver\JobDriver_PlayPiano.cs" />
-    <Compile Include="JobDriver\JobDriver_PlayPunchingBag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoundDefOf.cs" />
     <Compile Include="VFE_DefOf.cs" />

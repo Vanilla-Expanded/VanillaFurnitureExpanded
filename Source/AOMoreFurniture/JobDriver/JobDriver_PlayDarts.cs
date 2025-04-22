@@ -1,24 +1,22 @@
-﻿using System;
-using RimWorld;
-using UnityEngine;
-using Verse;
+﻿using Verse;
+using Verse.AI;
 
 namespace VanillaFurnitureEC
 {
-    internal class JobDriver_PlayDarts : JobDriver_WatchBuilding
+    internal class JobDriver_PlayDarts : JobDriver_ExtendedSitFacingBuilding
     {
-        protected override void WatchTickAction()
+        protected override void ModifyPlayToil(Toil toil)
         {
-            if (pawn.IsHashIntervalTick(400))
+            toil.tickAction += () =>
             {
-                ThrowDart(pawn, TargetA.Cell);
-            }
-            base.WatchTickAction();
+                if (pawn.IsHashIntervalTick(400))
+                    ThrowDart(pawn, TargetA.Cell);
+            };
         }
 
-        private void ThrowDart(Pawn thrower, IntVec3 targetCell)
+        private static void ThrowDart(Pawn thrower, IntVec3 targetCell)
         {
-            Map map = thrower.Map;
+            var map = thrower.Map;
             var position = thrower.Position;
 
             if (position.ShouldSpawnMotesAt(map) || !map.moteCounter.SaturatedLowPriority)

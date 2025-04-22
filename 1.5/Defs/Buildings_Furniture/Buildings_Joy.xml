@@ -549,6 +549,10 @@
     <interactionCellOffset>(0,0,5)</interactionCellOffset>
     <canOverlapZones>false</canOverlapZones>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
+    <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+      <allowComfortFromCell>false</allowComfortFromCell>
+    </li>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -603,6 +607,12 @@
     <uiIconOffset>(0,0.05)</uiIconOffset>
     <uiIconScale>0.55</uiIconScale>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <modExtensions>
+      <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
+      <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+        <allowComfortFromCell>false</allowComfortFromCell>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="BedBase">

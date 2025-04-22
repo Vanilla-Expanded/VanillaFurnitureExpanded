@@ -100,7 +100,7 @@
 
   <JoyGiverDef>
     <defName>Play_DartsBoard</defName>
-    <giverClass>JoyGiver_WatchBuilding</giverClass>
+    <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
     <baseChance>2</baseChance>
     <thingDefs>
       <li>Joy_DartsBoard</li>
