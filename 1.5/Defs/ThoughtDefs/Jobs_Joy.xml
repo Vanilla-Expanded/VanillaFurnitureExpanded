@@ -65,7 +65,7 @@
     <joyMaxParticipants>1</joyMaxParticipants>
     <joySkill>Artistic</joySkill>
     <joyXpPerTick>0.004</joyXpPerTick>
-    <joyKind>Meditative</joyKind>
+    <joyKind>HighCulture</joyKind>
     <taleOnCompletion>PlayedGame</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
@@ -79,7 +79,7 @@
       <li>Joy_Piano</li>
     </thingDefs>
     <jobDef>Play_Piano</jobDef>
-    <joyKind>Meditative</joyKind>
+    <joyKind>HighCulture</joyKind>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
