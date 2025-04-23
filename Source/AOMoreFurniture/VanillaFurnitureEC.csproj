@@ -70,8 +70,6 @@
     <Compile Include="Comps\CompProperties_BinClean.cs" />
     <Compile Include="Comps\CompCauseJoyHediff_Aoe.cs" />
     <Compile Include="Comps\CompProperties_CauseJoyHediff_Aoe.cs" />
-    <Compile Include="Comps\Graphic_IndexedPadded.cs" />
-    <Compile Include="Comps\Graphic_SinglePadded.cs" />
     <Compile Include="Comps\HediffCompProperties_CauseJoy.cs" />
     <Compile Include="Comps\HediffComp_CauseJoy.cs" />
     <Compile Include="ExtendedSitFacingJoyDataExtension.cs" />
@@ -83,7 +81,6 @@
     <Compile Include="PlaceWorkers\PlaceWorker_LinkToFirepits.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_SameRoomRadius.cs" />
     <Compile Include="StaticCollections.cs" />
-    <Compile Include="TempDebug.cs" />
     <Compile Include="WorkGiver_CleanBin.cs" />
     <Compile Include="StatPart_Bin.cs" />
     <Compile Include="EffecterDefOf.cs" />
