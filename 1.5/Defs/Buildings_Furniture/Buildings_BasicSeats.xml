@@ -135,8 +135,6 @@
     <comps>
       <li Class="CompProperties_Facility" MayRequire="Ludeon.RimWorld.Biotech">
         <maxSimultaneous>2</maxSimultaneous>
-        <!-- TODO: Replace with interaction spot linking only. -->
-        <maxDistance>1.25</maxDistance>
         <statOffsets>
           <VEF_BuildingLearningRateOffset>0.05</VEF_BuildingLearningRateOffset>
         </statOffsets>
@@ -155,6 +153,11 @@
       <li>ComplexFurniture</li>
     </researchPrerequisites>
     <designationCategory>Furniture</designationCategory>
+    <modExtensions>
+      <li Class="VFECore.FacilityExtension">
+        <linkOnInteractionSpots>true</linkOnInteractionSpots>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 </Defs>
