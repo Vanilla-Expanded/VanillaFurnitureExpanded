@@ -415,6 +415,12 @@
       <li>MF_ModernFurniture</li>
     </researchPrerequisites>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <modExtensions>
+      <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
+      <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+        <effecter>Joy_PlayPiano</effecter>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="ArtableFurnitureBase">
@@ -635,6 +641,12 @@
         <rect>(0,0.05,1,1.95)</rect>
       </damageData>
     </graphicData>
+    <comps Inherit="False">
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>VanillaFurnitureEC.CompAssignableToPawn_Lounger</compClass>
+      </li>
+    </comps>
     <statBases>
       <MaxHitPoints>130</MaxHitPoints>
       <Mass>35</Mass>

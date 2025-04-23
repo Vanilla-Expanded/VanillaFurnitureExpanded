@@ -9,6 +9,7 @@ namespace VanillaFurnitureEC
         // Buildings
         public static ThingDef Joy_RouletteTable;
         public static ThingDef Stone_Campfire;
+        [MayRequireIdeology]
         public static ThingDef Stone_DarklightCampfire;
 
         // Motes

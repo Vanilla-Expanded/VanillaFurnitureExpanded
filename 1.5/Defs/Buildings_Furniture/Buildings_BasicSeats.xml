@@ -112,8 +112,8 @@
         <volume>(0.23, 0.26, 0.23)</volume>
       </shadowData>
     </graphicData>
-    <descriptionHyperlinks MayRequire="Ludeon.RimWorld.Biotech">
-      <ThingDef>SchoolDesk</ThingDef>
+    <descriptionHyperlinks>
+      <ThingDef MayRequire="Ludeon.RimWorld.Biotech">SchoolDesk</ThingDef>
     </descriptionHyperlinks>
     <altitudeLayer>Building</altitudeLayer>
     <statBases>
