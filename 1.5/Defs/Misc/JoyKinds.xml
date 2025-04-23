@@ -9,4 +9,10 @@
     <defName>VFE_StrengthPlay</defName>
     <label>strength play</label>
   </JoyKindDef>
+
+  <!-- TODO: Remove in the future when we rework Spacer to no longer use it. -->
+  <JoyKindDef>
+    <defName>Gaming_Electronic</defName>
+    <label>electronic play</label>
+  </JoyKindDef>
 </Defs>
