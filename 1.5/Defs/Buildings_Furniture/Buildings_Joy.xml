@@ -550,9 +550,11 @@
     <canOverlapZones>false</canOverlapZones>
     <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
     <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
-    <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
-      <allowComfortFromCell>false</allowComfortFromCell>
-    </li>
+    <modExtensions>
+      <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+        <allowComfortFromCell>false</allowComfortFromCell>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
