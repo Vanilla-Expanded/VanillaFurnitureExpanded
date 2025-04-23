@@ -6,8 +6,7 @@
         <description>A compact, cushioned seat designed to be combined with others to create larger couches or corner seating arrangements. Ideal for large rec rooms, lounges, or social areas.</description>
         <graphicData>
             <texPath>NewThings/Furniture/ModularCouch</texPath>
-<!--            <graphicClass>Graphic_Indexed</graphicClass>-->
-            <graphicClass>VanillaFurnitureEC.Graphic_IndexedPadded</graphicClass>
+            <graphicClass>Graphic_Indexed</graphicClass>
             <drawSize>(1.01,1.01)</drawSize>
         </graphicData>
 <!--        <drawerType>RealtimeOnly</drawerType>-->
