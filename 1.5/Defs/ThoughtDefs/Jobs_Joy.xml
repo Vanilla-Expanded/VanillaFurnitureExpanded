@@ -59,7 +59,7 @@
   <!-- Piano defs removed if Royalty is active, as we use its JobDef/JoyGiverDef -->
   <JobDef>
     <defName>Play_Piano</defName>
-    <driverClass>VanillaFurnitureEC.JobDriver_PlayPiano</driverClass>
+    <driverClass>VanillaFurnitureEC.JobDriver_ExtendedSitFacingBuilding</driverClass>
     <reportString>playing piano.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
