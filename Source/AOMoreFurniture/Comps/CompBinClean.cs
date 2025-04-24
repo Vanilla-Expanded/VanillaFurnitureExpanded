@@ -107,36 +107,18 @@ namespace VanillaFurnitureEC
         {
             base.PostExposeData();
 
-            // Backwards compatibility to support change from ThingOwner to ThingOwner<Filth>.
-            // Just keep a single "Scribe_Deep.Look(ref innerContainer, "innerContainer", this)"
-            // once removing backwards compatibility in 1.6.
+            Scribe_Deep.Look(ref innerContainer, "container", this);
+            innerContainer ??= new ThingOwner<Filth>(this);
+            Scribe_Values.Look(ref cleanupTarget, "cleanupTarget", 0.9f);
+
+            // Backwards compatibility to support change from ThingOwner<Thing> to ThingOwner<Filth>, remove in 1.6.
             if (Scribe.mode == LoadSaveMode.LoadingVars)
             {
                 ThingOwner container = null;
                 Scribe_Deep.Look(ref container, "innerContainer", this);
-
-                switch (container)
-                {
-                    case ThingOwner<Filth> filth:
-                        innerContainer = filth;
-                        break;
-                    // Handle backwards compatibility by transferring all
-                    // filth from ThingOwner<Thing> to ThingOwner<Filth>
-                    case ThingOwner<Thing> thingOwner:
-                    {
-                        innerContainer = new ThingOwner<Filth>(this);
-                        thingOwner.TryTransferAllToContainer(innerContainer);
-                        break;
-                    }
-                }
+                if (container is { Any: true })
+                    container.TryTransferAllToContainer(innerContainer);
             }
-            else
-            {
-                Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
-            }
-
-            innerContainer ??= new ThingOwner<Filth>(this);
-            Scribe_Values.Look(ref cleanupTarget, "cleanupTarget", 0.9f);
         }
     }
 }
