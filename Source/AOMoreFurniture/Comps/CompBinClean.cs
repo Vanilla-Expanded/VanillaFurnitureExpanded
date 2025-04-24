@@ -9,25 +9,18 @@ namespace VanillaFurnitureEC
     {
         public CompProperties_BinClean Props => (CompProperties_BinClean)props;
 
-        public ThingOwner innerContainer;
+        public ThingOwner<Filth> innerContainer;
 
         public float cleanupTarget = 0.9f;
 
         public CompBinClean()
         {
-            innerContainer = new ThingOwner<Thing>(this);
+            innerContainer = new ThingOwner<Filth>(this);
         }
 
-        public float AmountStored => AllFilth().Sum(x => x.thickness);
+        public int AmountStored => AllFilth().Sum(x => x.thickness);
 
-        private IEnumerable<Filth> AllFilth()
-        {
-            if (innerContainer is null)
-            {
-                innerContainer = new ThingOwner<Thing>(this);
-            }
-            return innerContainer.ToList().Cast<Filth>();
-        }
+        private IEnumerable<Filth> AllFilth() => innerContainer ??= new ThingOwner<Filth>(this);
 
         public float AmountStoredPct => AmountStored / Props.capacity;
 
@@ -35,18 +28,22 @@ namespace VanillaFurnitureEC
 
         public override void CompTick()
         {
-            if (AmountStoredPct < 1f && parent.IsHashIntervalTick(Props.timerInTicks))
+            if (parent.IsHashIntervalTick(Props.timerInTicks))
             {
-                var filthInHomeArea = parent.Map.listerFilthInHomeArea.FilthInHomeArea;
-                for (int i = 0; i < filthInHomeArea.Count; i++)
+                var amountStored = AmountStored;
+                if (amountStored < Props.capacity)
                 {
-                    if (filthInHomeArea[i] is Filth filth && CanAccept(filth))
+                    var filthInHomeArea = parent.Map.listerFilthInHomeArea.FilthInHomeArea;
+                    for (int i = 0; i < filthInHomeArea.Count; i++)
                     {
-                        if (filth.Position.InHorDistOf(parent.Position, Props.radius))
+                        if (filthInHomeArea[i] is Filth filth && CanAccept(filth, amountStored))
                         {
-                            filth.DeSpawn();
-                            innerContainer.TryAdd(filth);
-                            break;
+                            if (filth.Position.InHorDistOf(parent.Position, Props.radius))
+                            {
+                                filth.DeSpawn();
+                                innerContainer.TryAdd(filth);
+                                break;
+                            }
                         }
                     }
                 }
@@ -81,7 +78,7 @@ namespace VanillaFurnitureEC
             }
         }
 
-        private bool CanAccept(Filth filth) => Props.capacity - AmountStored >= filth.thickness;
+        private bool CanAccept(Filth filth, int amountStored) => Props.capacity - amountStored >= filth.thickness;
 
         public void GetChildHolders(List<IThingHolder> outChildren)
         {
@@ -96,11 +93,36 @@ namespace VanillaFurnitureEC
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
-            if (innerContainer is null)
+
+            // Backwards compatibility to support change from ThingOwner to ThingOwner<Filth>.
+            // Just keep a single "Scribe_Deep.Look(ref innerContainer, "innerContainer", this)"
+            // once removing backwards compatibility in 1.6.
+            if (Scribe.mode == LoadSaveMode.LoadingVars)
             {
-                innerContainer = new ThingOwner<Thing>(this);
+                ThingOwner container = null;
+                Scribe_Deep.Look(ref container, "innerContainer", this);
+
+                switch (container)
+                {
+                    case ThingOwner<Filth> filth:
+                        innerContainer = filth;
+                        break;
+                    // Handle backwards compatibility by transferring all
+                    // filth from ThingOwner<Thing> to ThingOwner<Filth>
+                    case ThingOwner<Thing> thingOwner:
+                    {
+                        innerContainer = new ThingOwner<Filth>(this);
+                        thingOwner.TryTransferAllToContainer(innerContainer);
+                        break;
+                    }
+                }
             }
+            else
+            {
+                Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
+            }
+
+            innerContainer ??= new ThingOwner<Filth>(this);
             Scribe_Values.Look(ref cleanupTarget, "cleanupTarget", 0.9f);
         }
     }
