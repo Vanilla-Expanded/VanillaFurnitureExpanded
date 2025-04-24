@@ -1,6 +1,5 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
-using System.Linq;
 using Verse;
 
 namespace VanillaFurnitureEC
@@ -18,9 +17,23 @@ namespace VanillaFurnitureEC
             innerContainer = new ThingOwner<Filth>(this);
         }
 
-        public int AmountStored => AllFilth().Sum(x => x.thickness);
+        public int AmountStored
+        {
+            get
+            {
+                var sum = 0;
+                var filth = AllFilth();
+                for (var j = 0; j < filth.Count; j++)
+                    sum += filth[j].thickness;
+                return sum;
+            }
+        }
 
-        private IEnumerable<Filth> AllFilth() => innerContainer ??= new ThingOwner<Filth>(this);
+        private List<Filth> AllFilth()
+        {
+            innerContainer ??= new ThingOwner<Filth>(this);
+            return innerContainer.InnerListForReading;
+        }
 
         public float AmountStoredPct => AmountStored / Props.capacity;
 
