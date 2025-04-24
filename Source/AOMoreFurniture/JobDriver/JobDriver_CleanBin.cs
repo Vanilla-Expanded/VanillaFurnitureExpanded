@@ -19,13 +19,13 @@ namespace VanillaFurnitureEC
         protected override IEnumerable<Toil> MakeNewToils()
         {
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
-            Toil clean = ToilMaker.MakeToil("MakeNewToils");
-            clean.initAction = delegate
+            var clean = ToilMaker.MakeToil();
+            clean.initAction = () =>
             {
                 workDone = 0f;
                 totalWork = 150f;
             };
-            clean.tickAction = delegate
+            clean.tickAction = () =>
             {
                 workDone++;
                 if (workDone >= totalWork)
@@ -38,12 +38,9 @@ namespace VanillaFurnitureEC
                 }
             };
             clean.defaultCompleteMode = ToilCompleteMode.Never;
-            clean.WithEffect(RimWorld.EffecterDefOf.Clean, TargetIndex.A);
+            clean.WithEffect(EffecterDefOf.Clean, TargetIndex.A);
             clean.WithProgressBar(TargetIndex.A, () => workDone / totalWork, interpolateBetweenActorAndTarget: true);
-            clean.PlaySustainerOrSound(delegate
-            {
-                return RimWorld.SoundDefOf.Interact_CleanFilth;
-            });
+            clean.PlaySustainerOrSound(() => SoundDefOf.Interact_CleanFilth);
             yield return clean;
         }
 

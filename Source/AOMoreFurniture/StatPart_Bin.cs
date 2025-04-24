@@ -8,7 +8,7 @@ namespace VanillaFurnitureEC
     {
         public override string ExplanationPart(StatRequest req)
         {
-            var comp = req.Thing?.TryGetComp<CompBinClean>();
+            var comp = req.Thing.TryGetComp<CompBinClean>();
             if (comp != null)
             {
                 var beautyOffset = BeautyOffset(comp);
@@ -19,7 +19,7 @@ namespace VanillaFurnitureEC
 
         public override void TransformValue(StatRequest req, ref float val)
         {
-            var comp = req.Thing?.TryGetComp<CompBinClean>();
+            var comp = req.Thing.TryGetComp<CompBinClean>();
             if (comp != null)
             {
                 val += BeautyOffset(comp);

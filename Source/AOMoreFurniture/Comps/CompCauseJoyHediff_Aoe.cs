@@ -14,7 +14,7 @@ public class CompCauseJoyHediff_Aoe : ThingComp
 
     public override void PostSpawnSetup(bool respawningAfterLoad)
     {
-        powerTrader = parent.TryGetComp<CompPowerTrader>();
+        powerTrader = parent.GetComp<CompPowerTrader>();
     }
 
     public override void CompTick()
