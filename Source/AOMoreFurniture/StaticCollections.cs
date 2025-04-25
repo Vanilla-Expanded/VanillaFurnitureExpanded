@@ -9,5 +9,8 @@ namespace VanillaFurnitureEC
     {
         public static List<ThingDef> compBinCleanDefs = DefDatabase<ThingDef>.AllDefsListForReading
             .Where(def => def.comps.Any(comp => comp is CompProperties_BinClean)).ToList();
+
+        public static HashSet<ThingDef> noUnownedBedOverlayDefs = DefDatabase<ThingDef>.AllDefsListForReading
+            .Where(def => def.HasModExtension<NoUnownedBedOverlayExtension>()).ToHashSet();
     }
 }

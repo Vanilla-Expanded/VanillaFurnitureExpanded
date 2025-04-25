@@ -644,7 +644,7 @@
     <comps Inherit="False">
       <li Class="CompProperties_AssignableToPawn">
         <drawAssignmentOverlay>false</drawAssignmentOverlay>
-        <compClass>VanillaFurnitureEC.CompAssignableToPawn_Lounger</compClass>
+        <compClass>CompAssignableToPawn_Bed</compClass>
       </li>
     </comps>
     <statBases>
@@ -688,5 +688,8 @@
     <!-- It feels weird if it's forced before all vanilla buildings. -->
     <uiOrder>2999</uiOrder>
     <size>(1,2)</size>
+    <modExtensions>
+      <li Class="VanillaFurnitureEC.NoUnownedBedOverlayExtension"/>
+    </modExtensions>
   </ThingDef>
 </Defs>
