@@ -85,6 +85,7 @@
     <Compile Include="JobDriver\JoyGiver_InteractBuildingInteractionCellSit.cs" />
     <Compile Include="JobDriver\JoyGiver_UseLounger.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_LinkToFirepits.cs" />
+    <Compile Include="PlaceWorkers\PlaceWorker_NotOnWall.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_SameRoomRadius.cs" />
     <Compile Include="StaticCollections.cs" />
     <Compile Include="VFECore.cs" />

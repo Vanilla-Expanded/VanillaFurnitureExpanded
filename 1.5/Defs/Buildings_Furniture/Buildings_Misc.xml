@@ -315,6 +315,11 @@
                 <rect>0.4,0.7,0.2,0.2</rect>
             </damageData>
         </graphicData>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+        <building>
+            <isEdifice>false</isEdifice>
+        </building>
+        <clearBuildingArea>false</clearBuildingArea>
         <costList>
             <Steel>15</Steel>
         </costList>
@@ -324,6 +329,9 @@
             <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
         </statBases>
         <uiOrder>2990</uiOrder>
+        <placeWorkers>
+            <li>VanillaFurnitureEC.PlaceWorker_NotOnWall</li>
+        </placeWorkers>
         <comps>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
@@ -363,7 +371,14 @@
                 <cornerBR>Damage/Corner</cornerBR>
             </damageData>
         </graphicData>
+        <!-- Conduits layer is under ideology slabs, but over floor layer. -->
+        <!-- It allows for spots to be visible over the lamp. -->
+        <altitudeLayer>Conduits</altitudeLayer>
         <passability>Standable</passability>
+        <building>
+            <isEdifice>false</isEdifice>
+        </building>
+        <clearBuildingArea>false</clearBuildingArea>
         <costList>
             <Steel>20</Steel>
         </costList>
@@ -374,6 +389,9 @@
             <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
         </statBases>
         <uiOrder>2990</uiOrder>
+        <placeWorkers>
+            <li>VanillaFurnitureEC.PlaceWorker_NotOnWall</li>
+        </placeWorkers>
         <comps>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
