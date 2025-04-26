@@ -15,10 +15,6 @@
                     <li>Table_RoyalDresser</li>
                     <li>Table_RoyalEndTable</li>
                     <li>VFE_RoyalWardrobe</li>
-                    <li MayRequire="VanillaExpanded.VFESpacer">Table_IlluminatedEndTable</li>
-                    <li MayRequire="VanillaExpanded.VFESpacer">Table_IlluminatedDresser</li>
-                    <li MayRequire="OskarPotocki.VFE.Empire">VFEE_RoyalMirror</li>
-                    <li MayRequire="VanillaExpanded.VPlantsEMushrooms">VPE_Plant_Lullabloom</li>
                 </linkableFacilities>
             </li>
         </comps>
@@ -110,10 +106,6 @@
                     <li>Table_RoyalDresser</li>
                     <li>Table_RoyalEndTable</li>
                     <li>VFE_RoyalWardrobe</li>
-                    <li MayRequire="VanillaExpanded.VFESpacer">Table_IlluminatedEndTable</li>
-                    <li MayRequire="VanillaExpanded.VFESpacer">Table_IlluminatedDresser</li>
-                    <li MayRequire="OskarPotocki.VFE.Empire">VFEE_RoyalMirror</li>
-                    <li MayRequire="VanillaExpanded.VPlantsEMushrooms">VPE_Plant_Lullabloom</li>
                 </linkableFacilities>
             </li>
         </comps>

@@ -3,7 +3,7 @@
 
     <!-- Ergonomic beds -->
 
-    <ThingDef Name="VFE_ErgonomicBed" ParentName="ArtableBedBase" Abstract="True">
+    <ThingDef Name="VFE_ErgonomicBedBase" ParentName="ArtableBedBase" Abstract="True">
         <statBases>
             <Flammability>1.0</Flammability>
             <Beauty>2</Beauty>
@@ -28,10 +28,11 @@
                     <li>EndTable</li>
                     <li>Dresser</li>
                     <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
-                    <li>Table_LightEndTable</li>
+                    <li>Table_LightEndTable</li> <!-- TODO: Remove in 1.6 -->
                     <li>Table_RoyalDresser</li>
                     <li>Table_RoyalEndTable</li>
                     <li>Table_Wardrobe</li>
+                    <li>VFE_RoyalWardrobe</li>
                 </linkableFacilities>
             </li>
         </comps>
@@ -48,7 +49,7 @@
         <designationCategory>Furniture</designationCategory>
     </ThingDef>
 
-    <ThingDef ParentName="VFE_ErgonomicBed">
+    <ThingDef ParentName="VFE_ErgonomicBedBase">
         <defName>Bed_Ergonomic</defName>
         <label>ergonomic bed</label>
         <description>A modern, adjustable bed designed for maximum comfort and proper spinal support.</description>
@@ -76,7 +77,7 @@
         <uiIconScale>0.90</uiIconScale>
     </ThingDef>
 
-    <ThingDef ParentName="VFE_ErgonomicBed">
+    <ThingDef ParentName="VFE_ErgonomicBedBase">
         <defName>Bed_DoubleErgonomic</defName>
         <label>ergonomic double bed</label>
         <description>A modern, adjustable bed designed for maximum comfort and proper spinal support. Fits two people.</description>

@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
+
+    <!-- Bed linkables -->
+
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[@Name = "BasicBedBase" or defName = "HospitalBed" or defName="Bedroll" or defName="BedrollDouble"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
         <value>
@@ -10,6 +13,43 @@
             <li>VFE_RoyalWardrobe</li>
         </value>
     </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Spacer Module</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName = "Bed_AdvBed" or defName = "Bed_AdvDoubleBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                    <value>
+                        <li>Table_LightEndTable</li> <!-- TODO: Remove in 1.6 -->
+                        <li>VFE_RoyalWardrobe</li> <!-- Possibly consider moving it into the mod itself? -->
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Medieval 2</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName = "VFEM2_FurBed" or defName = "VFEM2_DoubleFurBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                    <value>
+                        <li>Table_LightEndTable</li> <!-- TODO: Remove in 1.6 -->
+                        <li>VFE_RoyalWardrobe</li> <!-- Possibly consider moving it into the mod itself? -->
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- File cabinet -->
+
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[defName = "SimpleResearchBench"]/comps</xpath>
         <nomatch Class="PatchOperationAdd">
@@ -44,27 +84,12 @@
             </match>
         </match>
     </Operation>
+
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName = "HiTechResearchBench"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
         <value>
             <li>Misc_FileCabinet</li>
         </value>
     </Operation>
-    <!-- TODO: Remove in 1.6 -->
-    <Operation Class="PatchOperationFindMod">
-        <success>Always</success>
-        <mods>
-            <li>Vanilla Furniture Expanded - Spacer Module</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName = "Bed_AdvBed" or defName = "Bed_AdvDoubleBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-                    <value>
-                        <li>Table_LightEndTable</li>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
+
 </Patch>
