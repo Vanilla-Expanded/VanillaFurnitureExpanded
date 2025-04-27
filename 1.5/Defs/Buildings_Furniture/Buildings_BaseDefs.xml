@@ -3,7 +3,6 @@
 
     <ThingDef Name="VFE_WardrobeBase" ParentName="ArtableFurnitureBase" Abstract="True">
         <graphicData>
-            <texPath>NewThings/Furniture/Wardrobe/Wardrobe</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
             <drawSize>(3,3)</drawSize>
         </graphicData>
