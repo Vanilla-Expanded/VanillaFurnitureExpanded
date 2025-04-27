@@ -1,0 +1,3 @@
+For some reason, the original high quality radio music has issues when used in a sustainer. It only allows for the last sustainer playing that sound to be audible, rather than the closest one.
+
+The current, modified audio file was achieved by slightly lowering quality of the original file. Using different formats, like .wav of .mp3 did not help the issue. As for the quality, this was the highest I could achieve before sustainers started breaking again.
