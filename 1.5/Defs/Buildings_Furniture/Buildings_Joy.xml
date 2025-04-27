@@ -44,7 +44,7 @@
     <label>industrial radio</label>
     <description>An industrial-era radio for playing music and spoken broadcasts. Even on the rimworlds, there is often an old transmitter running something at least marginally interesting. Provides passive music recreation to those that can hear it.</description>
     <graphicData>
-      <texPath>NewThings/Recreation/IndustrialRadio/IndustrialRadio</texPath>
+      <texPath>NewThings/Joy/IndustrialRadio/IndustrialRadio</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(1,1)</drawSize>
       <shadowData>
@@ -86,7 +86,7 @@
     <label>longwave radio</label>
     <description>A state-of-the-art, high-fidelity radio that uses advanced longwave transmission to deliver crystal-clear music, broadcasts, and interstellar transmissions. Even on the rimworlds, someone out there is always transmitting something - whether it’s news, music, or distant voices from the void..</description>
     <graphicData>
-      <texPath>NewThings/Recreation/LongwaveRadio/LongwaveRadio</texPath>
+      <texPath>NewThings/Joy/LongwaveRadio/LongwaveRadio</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(1,1)</drawSize>
       <shadowData>
@@ -139,7 +139,7 @@
     <label>arcade machine</label>
     <description>A bulky, coin-operated arcade cabinet with an aging CRT screen and colorful buttons. Though outdated, it still provides hours of digital entertainment. Classic games never truly die.</description>
     <graphicData>
-      <texPath>NewThings/Recreation/Arcade/Arcade</texPath>
+      <texPath>NewThings/Joy/Arcade/Arcade</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <shadowData>
@@ -264,7 +264,7 @@
     <label>old computer</label>
     <description>A bulky, outdated computer standing on a small desk. The screen flickers, the keys stick, and it hums with age, but it still runs simple programs. There's always some archaic software waiting to be used.</description>
     <graphicData>
-      <texPath>NewThings/Recreation/IndustrialComputer/IndustrialComputer</texPath>
+      <texPath>NewThings/Joy/IndustrialComputer/IndustrialComputer</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <shadowData>
@@ -315,7 +315,7 @@
     <label>modern computer</label>
     <description>A sleek, high-performance computing station housed on a sturdy desk. Equipped with a fast processor, an ergonomic keyboard, and a crisp, flat-panel display, it offers a vast range of software: whether for research, entertainment, or light interstellar networking.</description>
     <graphicData>
-      <texPath>NewThings/Recreation/ModernComputer/ModernComputer</texPath>
+      <texPath>NewThings/Joy/ModernComputer/ModernComputer</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <shadowData>
@@ -368,7 +368,7 @@
     <label>upright piano</label>
     <description>A compact upright piano designed for musical recreation. A great way to develop artistic skills and entertain others.</description>
     <graphicData>
-      <texPath>NewThings/Recreation/UprightPiano/Piano</texPath>
+      <texPath>NewThings/Joy/UprightPiano/Piano</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(3.03,3.03)</drawSize>
@@ -428,7 +428,7 @@
     <label>roulette table</label>
     <description>A sophisticated gambling table designed for playing roulette. A thrilling mix of chance and strategy, making it a centerpiece of any high-end casino or social space.</description>
     <graphicData>
-      <texPath>NewThings/Recreation/RouletteTable/RouletteTable</texPath>
+      <texPath>NewThings/Joy/RouletteTable/RouletteTable</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(4,4)</drawSize>
@@ -494,7 +494,7 @@
     <label>darts board</label>
     <description>A simple dartboard mounted on a stand. A fun way to practice accuracy and hand-eye coordination. It trains shooting ability.</description>
     <graphicData>
-      <texPath>NewThings/Recreation/Dartboard/Dartboard</texPath>
+      <texPath>NewThings/Joy/Dartboard/Dartboard</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(2,2)</drawSize>
@@ -568,7 +568,7 @@
     <label>punching bag</label>
     <description>A sturdy, stand-mounted punching bag for combat training and stress relief. It trains melee combat ability.</description>
     <graphicData>
-      <texPath>NewThings/Recreation/PunchingBag/PunchingBag</texPath>
+      <texPath>NewThings/Joy/PunchingBag/PunchingBag</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(2,2)</drawSize>
@@ -633,7 +633,7 @@
     <canOverlapZones>false</canOverlapZones>
     <defaultPlacingRot>South</defaultPlacingRot>
     <graphicData>
-      <texPath>NewThings/Recreation/Lounger/Lounger</texPath>
+      <texPath>NewThings/Joy/Lounger/Lounger</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(2,2)</drawSize>
