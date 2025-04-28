@@ -106,7 +106,7 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
       <shadowData>
-        <volume>(0.8, 0.3, 1.8)</volume>
+        <volume>(1.59, 0.3, 0.74)</volume>
       </shadowData>
       <drawSize>(2,1)</drawSize>
     </graphicData>
@@ -135,7 +135,6 @@
           <Comfort>0.05</Comfort>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
-<!--        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>-->
         <maxDistance>1.9</maxDistance>
       </li>
     </comps>
