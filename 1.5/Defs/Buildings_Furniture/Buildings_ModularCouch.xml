@@ -157,5 +157,8 @@
         </building>
         <designationCategory>Furniture</designationCategory>
         <placingDraggableDimensions>1</placingDraggableDimensions>
+        <researchPrerequisites>
+            <li>MF_ModernFurniture</li>
+        </researchPrerequisites>
     </ThingDef>
 </Defs>

@@ -48,7 +48,7 @@
             <paintable>true</paintable>
         </building>
         <researchPrerequisites>
-            <li>ComplexFurniture</li>
+            <li>MF_ModernFurniture</li>
         </researchPrerequisites>
         <designationCategory>Misc</designationCategory>
         <defaultPlacingRot>South</defaultPlacingRot>

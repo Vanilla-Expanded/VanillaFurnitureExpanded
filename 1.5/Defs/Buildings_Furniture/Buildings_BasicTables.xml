@@ -149,6 +149,9 @@
     <socialPropernessMatters>true</socialPropernessMatters>
     <canOverlapZones>false</canOverlapZones>
     <designationCategory>Furniture</designationCategory>
+    <researchPrerequisites>
+      <li>MF_ModernFurniture</li>
+    </researchPrerequisites>
   </ThingDef>
 
 </Defs>
