@@ -97,7 +97,7 @@
   <ThingDef ParentName="ArtableFurnitureBase">
     <defName>Seat_SquareChair</defName>
     <label>school chair</label>
-    <description>A simple long platform on which multiple people may sit at the same time, not very comfortable but much better than nothing. Can be used at tables, work stations, and elsewhere.</description>
+    <description>An uncomfortable school chair. Can be used at tables, work stations, and elsewhere. Improves the learning rate when adjacent to the school desk.</description>
     <graphicData>
       <texPath>NewThings/Furniture/SchoolChair/SchoolChair</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
