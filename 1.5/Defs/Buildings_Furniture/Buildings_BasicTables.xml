@@ -46,7 +46,7 @@
   <ThingDef ParentName="TableGatherSpotBase">
     <defName>Table_Counter</defName>
     <label>counter</label>
-    <description>People eat off tables when chairs are placed facing them.</description>
+    <description>People eat off counters when chairs are placed facing them</description>
     <graphicData>
       <texPath>NewThings/Linked/Counter_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
