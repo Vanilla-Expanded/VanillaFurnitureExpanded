@@ -19,8 +19,7 @@ namespace VanillaFurnitureEC
         public static JobDef VFE_CleanBin;
 
         // JoyGivers
-        public static JoyGiverDef Play_ComputerModern;
-        public static JoyGiverDef Play_ComputerIndustrial;
+        public static JoyGiverDef VFE_Play_Computer;
 
         static VFE_DefOf()
         {

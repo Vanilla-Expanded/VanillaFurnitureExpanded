@@ -43,11 +43,17 @@ public class JobDriver_ExtendedSitFacingBuilding : JobDriver_SitFacingBuilding
         // Play a sound every couple of ticks, both sound and delay specified by the 
         toil.tickAction += () =>
         {
-            if (joyData?.sound == null || Find.TickManager.TicksGame < nextSoundTick)
+            if (joyData == null)
                 return;
 
-            nextSoundTick = Find.TickManager.TicksGame + joyData.soundRefireDelay.RandomInRange;
-            joyData.sound.PlayOneShot(new TargetInfo(TargetThingA));
+            if (joyData.sound != null && Find.TickManager.TicksGame >= nextSoundTick)
+            {
+                nextSoundTick = Find.TickManager.TicksGame + joyData.soundRefireDelay.RandomInRange;
+                joyData.sound.PlayOneShot(new TargetInfo(TargetThingA));
+            }
+
+            if (joyData.extraJoySkill != null)
+                pawn.skills.GetSkill(joyData.extraJoySkill).Learn(joyData.extraJoyXpPerTick);
         };
 
         // Add research points when finished the job.

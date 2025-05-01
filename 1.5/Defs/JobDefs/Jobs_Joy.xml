@@ -142,59 +142,30 @@
     </requiredCapacities>
   </JoyGiverDef>
 
-
   <JobDef>
-    <defName>Play_ComputerIndustrial</defName>
+    <defName>VFE_Play_Computer</defName>
     <driverClass>VanillaFurnitureEC.JobDriver_ExtendedSitFacingBuilding</driverClass>
     <reportString>using computer.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
-    <joySkill>Crafting</joySkill>
-    <joyXpPerTick>0.002</joyXpPerTick>
+    <!-- Skill XP gain per tick handled per-building using our DefModExtension. -->
+    <!-- Handled this way so the 2 JobDeds and JoyGiverDefs could be consolidated into 1. -->
     <joyKind>VFE_ComputerUsage</joyKind>
     <taleOnCompletion>Tale_UsedComputer</taleOnCompletion>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
   <JoyGiverDef>
-    <defName>Play_ComputerIndustrial</defName>
+    <defName>VFE_Play_Computer</defName>
     <!-- JoyGiver_InteractBuildingInteractionCell doesn't include a check for <requireChairs>, so we need a custom one. -->
     <giverClass>VanillaFurnitureEC.JoyGiver_InteractBuildingInteractionCellSit</giverClass>
     <baseChance>0.5</baseChance>
     <requireChair>true</requireChair>
     <thingDefs>
       <li>Joy_InudstrialComputer</li>
-    </thingDefs>
-    <jobDef>Play_ComputerIndustrial</jobDef>
-    <joyKind>VFE_ComputerUsage</joyKind>
-    <requiredCapacities>
-      <li>Sight</li>
-    </requiredCapacities>
-  </JoyGiverDef>
-
-  <JobDef>
-    <defName>Play_ComputerModern</defName>
-    <driverClass>VanillaFurnitureEC.JobDriver_ExtendedSitFacingBuilding</driverClass>
-    <reportString>using computer.</reportString>
-    <joyDuration>4000</joyDuration>
-    <joyMaxParticipants>1</joyMaxParticipants>
-    <joySkill>Crafting</joySkill>
-    <joyXpPerTick>0.004</joyXpPerTick>
-    <joyKind>VFE_ComputerUsage</joyKind>
-    <taleOnCompletion>Tale_UsedComputer</taleOnCompletion>
-    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
-  </JobDef>
-
-  <JoyGiverDef>
-    <defName>Play_ComputerModern</defName>
-    <!-- JoyGiver_InteractBuildingInteractionCell doesn't include a check for <requireChairs>, so we need a custom one. -->
-    <giverClass>VanillaFurnitureEC.JoyGiver_InteractBuildingInteractionCellSit</giverClass>
-    <baseChance>0.5</baseChance>
-    <requireChair>true</requireChair>
-    <thingDefs>
       <li>Joy_ModernComputer</li>
     </thingDefs>
-    <jobDef>Play_ComputerModern</jobDef>
+    <jobDef>VFE_Play_Computer</jobDef>
     <joyKind>VFE_ComputerUsage</joyKind>
     <requiredCapacities>
       <li>Sight</li>

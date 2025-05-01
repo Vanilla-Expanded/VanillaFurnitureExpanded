@@ -311,6 +311,8 @@
       <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
         <sound>VFE_Computer_SFX</sound>
         <soundRefireDelay>400~500</soundRefireDelay>
+        <extraJoySkill>Intellectual</extraJoySkill>
+        <extraJoyXpPerTick>0.002</extraJoyXpPerTick>
       </li>
     </modExtensions>
   </ThingDef>
@@ -364,6 +366,8 @@
         <sound>VFE_Computer_SFX</sound>
         <soundRefireDelay>400~500</soundRefireDelay>
         <researchOnFinished>10</researchOnFinished>
+        <extraJoySkill>Intellectual</extraJoySkill>
+        <extraJoyXpPerTick>0.004</extraJoyXpPerTick>
       </li>
     </modExtensions>
   </ThingDef>

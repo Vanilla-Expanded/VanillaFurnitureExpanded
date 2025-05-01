@@ -1,4 +1,5 @@
-﻿using Verse;
+﻿using RimWorld;
+using Verse;
 
 namespace VanillaFurnitureEC;
 
@@ -9,4 +10,6 @@ public class ExtendedSitFacingJoyDataExtension : DefModExtension
     public EffecterDef effecter;
     public float researchOnFinished;
     public bool allowComfortFromCell = true;
+    public SkillDef extraJoySkill;
+    public float extraJoyXpPerTick;
 }

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -8,9 +7,6 @@ namespace VanillaFurnitureEC;
 [StaticConstructorOnStartup]
 public class Alert_ComputerNoChair : Alert
 {
-    // Just in case, remove null JoyGivers
-    private static readonly List<JoyGiverDef> JoyGivers = new[] { VFE_DefOf.Play_ComputerModern, VFE_DefOf.Play_ComputerIndustrial }.Where(x => x != null).ToList();
-
     private readonly List<Thing> badBuildingsResult = [];
 
     private List<Thing> BadBuildings
@@ -20,17 +16,14 @@ public class Alert_ComputerNoChair : Alert
             badBuildingsResult.Clear();
             var maps = Find.Maps;
 
-            foreach (var joyGiver in JoyGivers)
+            foreach (var def in VFE_DefOf.VFE_Play_Computer.thingDefs)
             {
-                foreach (var def in joyGiver.thingDefs)
+                foreach (var map in maps)
                 {
-                    foreach (var map in maps)
+                    foreach (var building in map.listerThings.ThingsOfDef(def))
                     {
-                        foreach (var building in map.listerThings.ThingsOfDef(def))
-                        {
-                            if (building.Faction == Faction.OfPlayer && !JoyBuildingUsable(building))
-                                badBuildingsResult.Add(building);
-                        }
+                        if (building.Faction == Faction.OfPlayer && !JoyBuildingUsable(building))
+                            badBuildingsResult.Add(building);
                     }
                 }
             }
