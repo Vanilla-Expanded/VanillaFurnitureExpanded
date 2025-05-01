@@ -17,7 +17,7 @@
   <JoyGiverDef>
     <defName>Play_Roulette</defName>
     <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
-    <baseChance>3</baseChance>
+    <baseChance>4</baseChance>
     <requireChair>false</requireChair>
     <thingDefs>
       <li>Joy_RouletteTable</li>
@@ -44,7 +44,7 @@
   <JoyGiverDef>
     <defName>Play_Arcade</defName>
     <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
-    <baseChance>2</baseChance>
+    <baseChance>3.5</baseChance>
     <desireSit>false</desireSit>
     <thingDefs>
       <li>Joy_Arcade</li>
@@ -73,7 +73,7 @@
   <JoyGiverDef>
     <defName>Play_Piano</defName>
     <giverClass>JoyGiver_WatchBuilding</giverClass>
-    <baseChance>1</baseChance>
+    <baseChance>2</baseChance>
     <desireSit>false</desireSit>
     <thingDefs>
       <li>Joy_Piano</li>
@@ -101,7 +101,7 @@
   <JoyGiverDef>
     <defName>Play_DartsBoard</defName>
     <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
-    <baseChance>2</baseChance>
+    <baseChance>3</baseChance>
     <thingDefs>
       <li>Joy_DartsBoard</li>
     </thingDefs>
@@ -130,7 +130,7 @@
   <JoyGiverDef>
     <defName>Play_PunchingBag</defName>
     <giverClass>JoyGiver_InteractBuildingSitAdjacent</giverClass>
-    <baseChance>1</baseChance>
+    <baseChance>2</baseChance>
     <requireChair>false</requireChair>
     <thingDefs>
       <li>Joy_PunchingBag</li>
@@ -159,7 +159,7 @@
     <defName>VFE_Play_Computer</defName>
     <!-- JoyGiver_InteractBuildingInteractionCell doesn't include a check for <requireChairs>, so we need a custom one. -->
     <giverClass>VanillaFurnitureEC.JoyGiver_InteractBuildingInteractionCellSit</giverClass>
-    <baseChance>0.5</baseChance>
+    <baseChance>3.5</baseChance>
     <requireChair>true</requireChair>
     <thingDefs>
       <li>Joy_InudstrialComputer</li>
@@ -185,7 +185,7 @@
   <JoyGiverDef>
     <defName>VFE_Play_Sunbathing</defName>
     <giverClass>VanillaFurnitureEC.JoyGiver_UseLounger</giverClass>
-    <baseChance>0.5</baseChance>
+    <baseChance>1</baseChance>
     <thingDefs>
       <li>VFE_Lounger</li>
     </thingDefs>
