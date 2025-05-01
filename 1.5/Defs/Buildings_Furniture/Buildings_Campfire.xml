@@ -47,7 +47,8 @@
             <li>WoodLog</li>
           </thingDefs>
         </fuelFilter>
-        <initialFuelPercent>0</initialFuelPercent>
+        <initialFuelPercent>0.000000000001</initialFuelPercent>
+        <minimumFueledThreshold>0.0000000001</minimumFueledThreshold>
         <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
       </li>
       <li Class="CompProperties_HeatPusher">
