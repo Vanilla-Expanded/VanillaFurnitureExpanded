@@ -103,6 +103,8 @@
       <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
       <destroySound>BuildingDestroyed_Wood_Small</destroySound>
     </building>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <researchPrerequisites>
       <li MayRequire="OskarPotocki.VFE.Tribals">VFET_Fire</li>
     </researchPrerequisites>
