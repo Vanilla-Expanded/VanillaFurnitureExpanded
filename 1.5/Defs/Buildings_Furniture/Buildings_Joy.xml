@@ -27,6 +27,9 @@
     <comps>
       <li Class="CompProperties_Breakdownable" />
       <li Class="CompProperties_Flickable" />
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
     </comps>
     <statBases>
       <Flammability>1.0</Flammability>
@@ -66,6 +69,11 @@
       </li>
       <li Class="VFECore.CompProperties_AmbientSound">
         <ambientSound>VFE_IndustrialRadio_Ambience</ambientSound>
+      </li>
+      <li Class="VanillaFurnitureEC.CompProperties_CauseJoyHediff_Aoe">
+        <hediff>VFE_ListeningToMusic</hediff>
+        <range>6</range>
+        <checkInterval>300</checkInterval>
       </li>
     </comps>
     <statBases>
@@ -115,9 +123,6 @@
         <hediff>VFE_ListeningToMusic</hediff>
         <range>12</range>
         <checkInterval>300</checkInterval>
-      </li>
-      <li>
-        <compClass>CompGatherSpot</compClass>
       </li>
     </comps>
     <statBases>
