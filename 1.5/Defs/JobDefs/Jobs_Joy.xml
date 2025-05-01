@@ -173,25 +173,23 @@
   </JoyGiverDef>
 
   <JobDef>
-    <defName>VFE_Sunbathing</defName>
+    <defName>VFE_Play_Sunbathing</defName>
     <driverClass>VanillaFurnitureEC.JobDriver_UseLounger</driverClass>
     <reportString>sunbathing.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyKind>Meditative</joyKind>
-<!--    <taleOnCompletion>Tale_UsedComputer</taleOnCompletion>-->
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
 
   <JoyGiverDef>
-    <defName>VFE_Sunbathing</defName>
+    <defName>VFE_Play_Sunbathing</defName>
     <giverClass>VanillaFurnitureEC.JoyGiver_UseLounger</giverClass>
     <baseChance>0.5</baseChance>
-    <requireChair>true</requireChair>
     <thingDefs>
       <li>VFE_Lounger</li>
     </thingDefs>
-    <jobDef>VFE_Sunbathing</jobDef>
+    <jobDef>VFE_Play_Sunbathing</jobDef>
     <joyKind>Meditative</joyKind>
   </JoyGiverDef>
 </Defs>
