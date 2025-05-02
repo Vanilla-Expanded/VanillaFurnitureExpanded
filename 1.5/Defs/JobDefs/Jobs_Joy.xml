@@ -90,7 +90,7 @@
     <driverClass>VanillaFurnitureEC.JobDriver_PlayDarts</driverClass>
     <reportString>playing darts.</reportString>
     <joyDuration>4000</joyDuration>
-    <joyMaxParticipants>2</joyMaxParticipants>
+    <joyMaxParticipants>1</joyMaxParticipants>
     <joySkill>Shooting</joySkill>
     <joyXpPerTick>0.004</joyXpPerTick>
     <joyKind>Gaming_Dexterity</joyKind>
@@ -185,7 +185,7 @@
   <JoyGiverDef>
     <defName>VFE_Play_Sunbathing</defName>
     <giverClass>VanillaFurnitureEC.JoyGiver_UseLounger</giverClass>
-    <baseChance>1</baseChance>
+    <baseChance>1.5</baseChance>
     <thingDefs>
       <li>VFE_Lounger</li>
     </thingDefs>
