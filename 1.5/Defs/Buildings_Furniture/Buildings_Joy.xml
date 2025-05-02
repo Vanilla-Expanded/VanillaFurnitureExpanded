@@ -650,6 +650,7 @@
         <rect>(0,0.05,1,1.95)</rect>
       </damageData>
     </graphicData>
+    <uiIconPath>NewThings/Joy/Lounger/Lounger_east</uiIconPath>
     <comps Inherit="False">
       <li Class="CompProperties_AssignableToPawn">
         <drawAssignmentOverlay>false</drawAssignmentOverlay>
