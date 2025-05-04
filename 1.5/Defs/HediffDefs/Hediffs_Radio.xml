@@ -18,6 +18,11 @@
       <li Class="HediffCompProperties_DisappearsOnDeath"/>
       <li Class="VanillaFurnitureEC.HediffCompProperties_CauseJoy"/>
     </comps>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
   </HediffDef>
 
 </Defs>
