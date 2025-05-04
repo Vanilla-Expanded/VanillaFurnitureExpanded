@@ -314,6 +314,7 @@
             <damageData>
                 <rect>0.4,0.7,0.2,0.2</rect>
             </damageData>
+            <drawSize>1.5,1.5</drawSize>
         </graphicData>
         <altitudeLayer>BuildingOnTop</altitudeLayer>
         <building>
@@ -351,8 +352,8 @@
                 <darklightToggle>true</darklightToggle>
             </li>
         </comps>
-        <uiIconScale>2</uiIconScale>
-        <uiIconOffset>(0, 0.4)</uiIconOffset>
+        <uiIconScale>1.25</uiIconScale>
+        <uiIconOffset>(0, 0.5)</uiIconOffset>
         <designationCategory>Furniture</designationCategory>
     </ThingDef>
 
