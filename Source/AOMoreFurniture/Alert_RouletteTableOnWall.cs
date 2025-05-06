@@ -17,11 +17,13 @@ public class Alert_RouletteTableOnWall : Alert
             var maps = Find.Maps;
             var faction = Faction.OfPlayer;
 
-            foreach (var map in maps)
+            for (var mapIndex = 0; mapIndex < maps.Count; mapIndex++)
             {
+                var map = maps[mapIndex];
                 var tables = map.listerThings.ThingsOfDef(VFE_DefOf.Joy_RouletteTable);
-                foreach (var table in tables)
+                for (var buildingIndex = 0; buildingIndex < tables.Count; buildingIndex++)
                 {
+                    var table = tables[buildingIndex];
                     if (table.Faction == faction && JoyGiver_PlayBilliards.ThingHasStandableSpaceOnAllSides(table))
                         badTableResults.Add(table);
                 }

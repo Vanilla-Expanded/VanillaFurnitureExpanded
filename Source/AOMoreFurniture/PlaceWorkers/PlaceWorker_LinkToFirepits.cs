@@ -7,13 +7,14 @@ namespace VanillaFurnitureEC;
 
 public class PlaceWorker_LinkToFirepits : PlaceWorker
 {
-    private static readonly ThingDef[] Firepits = new[] {VFE_DefOf.Stone_Campfire, VFE_DefOf.Stone_DarklightCampfire}.Where(x => x != null).ToArray();
+    private static readonly ThingDef[] Firepits = new[] { VFE_DefOf.Stone_Campfire, VFE_DefOf.Stone_DarklightCampfire }.Where(x => x != null).ToArray();
     public const float Range = 11.9f;
 
     public override void DrawGhost(ThingDef def, IntVec3 center, Rot4 rot, Color ghostCol, Thing thing = null)
     {
-        foreach (var firepit in Firepits)
+        for (var buildingIndex = 0; buildingIndex < Firepits.Length; buildingIndex++)
         {
+            var firepit = Firepits[buildingIndex];
             var placeWorker = firepit.PlaceWorkers.OfType<PlaceWorker_LinkToCampfire>().FirstOrDefault();
             float range;
             if (placeWorker == null)

@@ -16,12 +16,16 @@ public class Alert_ComputerNoChair : Alert
             badBuildingsResult.Clear();
             var maps = Find.Maps;
 
-            foreach (var def in VFE_DefOf.VFE_Play_Computer.thingDefs)
+            for (var defIndex = 0; defIndex < VFE_DefOf.VFE_Play_Computer.thingDefs.Count; defIndex++)
             {
-                foreach (var map in maps)
+                var def = VFE_DefOf.VFE_Play_Computer.thingDefs[defIndex];
+                for (var mapIndex = 0; mapIndex < maps.Count; mapIndex++)
                 {
-                    foreach (var building in map.listerThings.ThingsOfDef(def))
+                    var map = maps[mapIndex];
+                    var list = map.listerThings.ThingsOfDef(def);
+                    for (var buildingIndex = 0; buildingIndex < list.Count; buildingIndex++)
                     {
+                        var building = list[buildingIndex];
                         if (building.Faction == Faction.OfPlayer && !JoyBuildingUsable(building))
                             badBuildingsResult.Add(building);
                     }

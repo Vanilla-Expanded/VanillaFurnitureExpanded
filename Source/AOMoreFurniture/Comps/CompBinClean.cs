@@ -66,8 +66,10 @@ namespace VanillaFurnitureEC
         public override void PostDestroy(DestroyMode mode, Map previousMap)
         {
             base.PostDestroy(mode, previousMap);
-            foreach (var filth in AllFilth())
+            var filthList = AllFilth();
+            for (var i = 0; i < filthList.Count; i++)
             {
+                var filth = filthList[i];
                 if (Rand.Chance(0.1f))
                 {
                     FilthMaker.TryMakeFilth(parent.Position, previousMap, filth.def, filth.thickness);

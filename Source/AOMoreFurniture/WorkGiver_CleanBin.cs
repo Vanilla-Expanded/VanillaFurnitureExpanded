@@ -12,8 +12,11 @@ namespace VanillaFurnitureEC
         {
             var list = new List<Thing>();
 
-            foreach (var binDef in StaticCollections.compBinCleanDefs)
+            for (var index = 0; index < StaticCollections.compBinCleanDefs.Count; index++)
+            {
+                var binDef = StaticCollections.compBinCleanDefs[index];
                 list.AddRange(pawn.Map.listerThings.ThingsOfDef(binDef));
+            }
 
             return list;
         }

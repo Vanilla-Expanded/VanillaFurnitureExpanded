@@ -31,8 +31,10 @@ public class CompCauseJoyHediff_Aoe : ThingComp
 
         try
         {
-            foreach (var pawn in parent.MapHeld.mapPawns.AllPawnsSpawned)
+            var pawnList = parent.MapHeld.mapPawns.AllPawnsSpawned;
+            for (var index = 0; index < pawnList.Count; index++)
             {
+                var pawn = pawnList[index];
                 if (IsPawnAffected(pawn))
                     GiveOrUpdateHediff(pawn);
                 if (pawn.carryTracker.CarriedThing is Pawn otherPawn && IsPawnAffected(otherPawn))
