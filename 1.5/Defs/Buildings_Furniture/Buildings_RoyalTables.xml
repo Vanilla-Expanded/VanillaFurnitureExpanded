@@ -153,8 +153,9 @@
         <statBases>
             <MaxHitPoints>200</MaxHitPoints>
             <WorkToBuild>4200</WorkToBuild>
-            <Mass>35</Mass>
+            <Mass>30</Mass>
             <Beauty>90</Beauty>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">40</StyleDominance>
         </statBases>
         <size>(3,3)</size>
         <costStuffCount>125</costStuffCount>
