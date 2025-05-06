@@ -24,7 +24,7 @@ public class Alert_RouletteTableOnWall : Alert
                 for (var buildingIndex = 0; buildingIndex < tables.Count; buildingIndex++)
                 {
                     var table = tables[buildingIndex];
-                    if (table.Faction == faction && JoyGiver_PlayBilliards.ThingHasStandableSpaceOnAllSides(table))
+                    if (table.Faction == faction && !JoyGiver_PlayBilliards.ThingHasStandableSpaceOnAllSides(table))
                         badTableResults.Add(table);
                 }
             }
