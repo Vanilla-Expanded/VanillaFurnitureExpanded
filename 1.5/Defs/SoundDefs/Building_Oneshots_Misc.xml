@@ -54,4 +54,24 @@
       </li>
     </subSounds>
   </SoundDef>
+
+  <SoundDef>
+    <defName>VFE_Roulette_SFX</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Roulette</clipFolderPath>
+          </li>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Joy/PokerChips</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>7~7</volumeRange>
+        <pitchRange>0.97~1.03</pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
 </Defs>

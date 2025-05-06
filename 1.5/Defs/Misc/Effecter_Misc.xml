@@ -10,10 +10,10 @@
       </li>
       <li>
         <subEffecterClass>SubEffecter_SoundIntermittent</subEffecterClass>
-        <soundDef>PokerChips</soundDef>
+        <soundDef>VFE_Roulette_SFX</soundDef>
         <intermittentSoundInterval>
-          <min>650</min>
-          <max>1500</max>
+          <min>400</min>
+          <max>1200</max>
         </intermittentSoundInterval>
       </li>
     </children>
