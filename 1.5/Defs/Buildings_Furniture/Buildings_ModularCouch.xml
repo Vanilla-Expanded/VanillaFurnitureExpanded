@@ -154,6 +154,7 @@
         <fillPercent>0.40</fillPercent>
         <building>
             <isSittable>true</isSittable>
+            <paintable>true</paintable>
         </building>
         <designationCategory>Furniture</designationCategory>
         <placingDraggableDimensions>1</placingDraggableDimensions>

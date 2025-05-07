@@ -33,6 +33,7 @@
     <fillPercent>0.07</fillPercent>
     <building>
       <isSittable>true</isSittable>
+      <paintable>true</paintable>
     </building>
     <uiIconOffset>(0, -0.05)</uiIconOffset>
     <designationCategory>Furniture</designationCategory>

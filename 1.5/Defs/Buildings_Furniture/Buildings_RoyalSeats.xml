@@ -103,6 +103,7 @@
         <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
         <building>
             <isSittable>true</isSittable>
+            <paintable>true</paintable>
         </building>
         <researchPrerequisites>
             <li>MF_RoyalFurniture</li>

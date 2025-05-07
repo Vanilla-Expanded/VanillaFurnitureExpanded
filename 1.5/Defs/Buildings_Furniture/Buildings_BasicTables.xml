@@ -31,9 +31,6 @@
     <pathCost>42</pathCost>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.4</fillPercent>
-    <comps>
-      <li Class="CompProperties_Styleable" />
-    </comps>
     <rotatable>false</rotatable>
     <size>(1,1)</size>
     <costStuffCount>15</costStuffCount>
