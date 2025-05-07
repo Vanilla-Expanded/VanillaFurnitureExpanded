@@ -656,6 +656,9 @@
         <drawAssignmentOverlay>false</drawAssignmentOverlay>
         <compClass>CompAssignableToPawn_Bed</compClass>
       </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
     </comps>
     <statBases>
       <MaxHitPoints>130</MaxHitPoints>
