@@ -15,4 +15,15 @@
 
     <VFE.RouletteTableOnWall>Roulette needs space</VFE.RouletteTableOnWall>
     <VFE.RouletteTableOnWallDesc>One of your roulette tables is adjacent to an obstruction that will prevent colonists from using it.\n\nA roulette table needs clear space around it on all sides to be usable.</VFE.RouletteTableOnWallDesc>
+
+    <!-- Sunbathing tooltip -->
+    <VFE.SunbathingPossibleForPawn>Sunbathing possible for {PAWNLIST}</VFE.SunbathingPossibleForPawn>
+    <VFE.SunbathingPossibleGeneric>Sunbathing possible, assuming temperature is comfortable and colonists enjoy outdoor activities</VFE.SunbathingPossibleGeneric>
+    <VFE.SunbathingNotPossible>Sunbathing not possible:</VFE.SunbathingNotPossible>
+    <VFE.SunbathingNotPossible.UnderRoof>under a roof</VFE.SunbathingNotPossible.UnderRoof>
+    <VFE.SunbathingNotPossible.BadWeather>bad weather</VFE.SunbathingNotPossible.BadWeather>
+    <VFE.SunbathingNotPossible.NotSunny>not sunny enough</VFE.SunbathingNotPossible.NotSunny>
+    <VFE.SunbathingNotPossible.PawnOutdoors>{PAWN_labelShort} doesn't enjoy outdoors</VFE.SunbathingNotPossible.PawnOutdoors>
+    <VFE.SunbathingNotPossible.PawnComfortableTemperature>not comfortable temperature for {PAWN_labelShort}</VFE.SunbathingNotPossible.PawnComfortableTemperature>
+
 </LanguageData>

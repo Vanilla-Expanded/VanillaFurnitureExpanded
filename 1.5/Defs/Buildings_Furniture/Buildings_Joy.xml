@@ -659,6 +659,9 @@
       <li>
         <compClass>CompQuality</compClass>
       </li>
+      <li Class="CompProperties_InspectString">
+        <compClass>VanillaFurnitureEC.CompInspectStringLounger</compClass>
+      </li>
     </comps>
     <statBases>
       <MaxHitPoints>130</MaxHitPoints>
