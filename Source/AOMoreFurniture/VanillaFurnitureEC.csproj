@@ -67,10 +67,11 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alert_ComputerNoChair.cs" />
-    <Compile Include="Alert_RouletteTableOnWall.cs" />
+    <Compile Include="Alerts\Alert_ComputerNoChair.cs" />
+    <Compile Include="Alerts\Alert_RouletteTableOnWall.cs" />
     <Compile Include="Command_CleanupTarget.cs" />
     <Compile Include="Comps\CompBinClean.cs" />
+    <Compile Include="Comps\CompInspectStringLounger.cs" />
     <Compile Include="Comps\CompProperties_BinClean.cs" />
     <Compile Include="Comps\CompCauseJoyHediff_Aoe.cs" />
     <Compile Include="Comps\CompProperties_CauseJoyHediff_Aoe.cs" />
