@@ -131,7 +131,7 @@
       <li>Woody</li>
     </stuffCategories>
     <placeWorkers>
-      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
     <comps>
       <li Class="CompProperties_Facility" MayRequire="Ludeon.RimWorld.Biotech">
