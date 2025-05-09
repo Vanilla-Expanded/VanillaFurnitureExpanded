@@ -420,4 +420,58 @@
         <designationCategory>Furniture</designationCategory>
     </ThingDef>
 
+    <ThingDef ParentName="LampBase">
+        <defName>Light_Streetlamp</defName>
+        <label>outdoor lamp</label>
+        <description>An electrical standing lamp that lights an area, good for large outdoor spaces. Will automatically turn off during the day to prevent power consumption.</description>
+        <fillPercent>0.20</fillPercent>
+        <graphicData>
+            <texPath>NewThings/Light/OutdoorLamp</texPath>
+            <drawSize>(2,3.5)</drawSize>
+        </graphicData>
+        <!-- Currently disabled until we've got a way to make it work without -->
+<!--        <uiIconPath>NewThings/Light/OutdoorLamp_MenuIcon</uiIconPath>-->
+        <tickerType>Rare</tickerType>
+        <costList>
+            <Steel>25</Steel>
+        </costList>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>4</Mass>
+            <Flammability>1</Flammability>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+            <WorkToBuild>350</WorkToBuild>
+        </statBases>
+        <size>(1,1)</size>
+        <pathCost>14</pathCost>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>false</shortCircuitInRain>
+                <basePowerConsumption>40</basePowerConsumption>
+                <powerUpgrades>
+                    <li>
+                        <researchProject>ColoredLights</researchProject>
+                        <factor>0.5</factor>
+                    </li>
+                </powerUpgrades>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>20</glowRadius>
+                <glowColor>(252,187,113,0)</glowColor>
+                <colorPickerEnabled>true</colorPickerEnabled>
+                <darklightToggle>true</darklightToggle>
+            </li>
+            <li Class="VanillaFurnitureEC.CompProperties_ScheduleActiveAtSunlightRange">
+                <minLight>0</minLight>
+                <maxLight>0.5</maxLight>
+                <offMessage>Off due to sufficient sunlight.</offMessage>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_NotUnderRoof</li>
+        </placeWorkers>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
 </Defs>
