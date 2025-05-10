@@ -172,6 +172,7 @@
             <Comfort>0.85</Comfort>
         </statBases>
         <socialPropernessMatters>true</socialPropernessMatters>
+        <uiOrder>2440</uiOrder>
         <stuffCategories>
             <li>Fabric</li>
             <li>Leathery</li>

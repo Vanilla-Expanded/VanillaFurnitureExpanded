@@ -15,6 +15,7 @@
       </shadowData>
     </graphicData>
     <altitudeLayer>Building</altitudeLayer>
+    <uiOrder>2415</uiOrder>
     <statBases>
       <MaxHitPoints>30</MaxHitPoints>
       <WorkToBuild>3000</WorkToBuild>
@@ -70,6 +71,7 @@
     <placingDraggableDimensions>1</placingDraggableDimensions>
     <rotatable>false</rotatable>
     <socialPropernessMatters>true</socialPropernessMatters>
+    <uiOrder>2405</uiOrder>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
@@ -126,6 +128,7 @@
       <Comfort>0.60</Comfort>
     </statBases>
     <socialPropernessMatters>true</socialPropernessMatters>
+    <uiOrder>2405</uiOrder>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>

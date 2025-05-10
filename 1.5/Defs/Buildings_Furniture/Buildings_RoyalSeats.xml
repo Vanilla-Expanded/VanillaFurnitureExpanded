@@ -30,6 +30,7 @@
             <Comfort>0.85</Comfort>
         </statBases>
         <socialPropernessMatters>true</socialPropernessMatters>
+        <uiOrder>2410</uiOrder>
         <stuffCategories>
             <li>Fabric</li>
             <li>Leathery</li>
@@ -89,6 +90,7 @@
             </li>
         </comps>
         <socialPropernessMatters>true</socialPropernessMatters>
+        <uiOrder>2420</uiOrder>
         <stuffCategories>
             <li>Fabric</li>
             <li>Leathery</li>

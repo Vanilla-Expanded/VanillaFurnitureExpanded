@@ -284,6 +284,7 @@
         <fertility>1.0</fertility>
         <designationHotKey>Misc9</designationHotKey>
         <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <uiOrder>2610</uiOrder>
         <building>
             <blueprintGraphicData>
                 <texPath>NewThings/Linked/LongPlantPot_Blueprint_Atlas</texPath>
@@ -445,6 +446,7 @@
         </statBases>
         <size>(1,1)</size>
         <pathCost>14</pathCost>
+        <uiOrder>2992</uiOrder>
         <comps>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>

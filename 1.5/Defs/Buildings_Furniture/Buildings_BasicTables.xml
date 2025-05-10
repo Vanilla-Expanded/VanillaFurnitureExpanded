@@ -20,6 +20,7 @@
       </shadowData>
     </graphicData>
     <uiIconScale>0.8</uiIconScale>
+    <uiOrder>2299</uiOrder>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
       <WorkToBuild>500</WorkToBuild>
@@ -61,6 +62,7 @@
         <texPath>NewThings/Linked/Counter_Blueprint_Atlas</texPath>
       </blueprintGraphicData>
     </building>
+    <uiOrder>2301</uiOrder>
     <statBases>
       <MaxHitPoints>65</MaxHitPoints>
       <WorkToBuild>750</WorkToBuild>

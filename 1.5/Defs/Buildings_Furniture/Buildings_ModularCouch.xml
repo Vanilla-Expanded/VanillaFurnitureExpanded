@@ -145,6 +145,7 @@
             </li>
         </comps>
         <socialPropernessMatters>true</socialPropernessMatters>
+        <uiOrder>2430</uiOrder>
         <stuffCategories>
             <li>Fabric</li>
             <li>Leathery</li>

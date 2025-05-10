@@ -24,6 +24,7 @@
         <staticSunShadowHeight>0.5</staticSunShadowHeight>
         <surfaceType>Item</surfaceType>
         <canOverlapZones>false</canOverlapZones>
+        <uiOrder>2075</uiOrder>
         <placeWorkers>
             <li>PlaceWorker_ShowFacilitiesConnections</li>
         </placeWorkers>
