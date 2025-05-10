@@ -47,7 +47,7 @@
       <li Class="CompProperties_Flickable" />
       <li Class="CompProperties_Glower">
         <glowRadius>6</glowRadius>
-        <glowColor>(217,217,208,0)</glowColor>
+        <glowColor>(214,148,94,0)</glowColor>
         <colorPickerEnabled>true</colorPickerEnabled>
         <darklightToggle>true</darklightToggle>
       </li>
