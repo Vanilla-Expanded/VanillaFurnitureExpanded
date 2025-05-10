@@ -162,8 +162,10 @@
     <baseChance>3.5</baseChance>
     <requireChair>true</requireChair>
     <thingDefs>
-      <li>Joy_InudstrialComputer</li>
+      <!-- The LearningDesireDef uses this list in the order that it's here. -->
+      <!-- If adding more computers, make sure they're generally in order from best to worst computers. -->
       <li>Joy_ModernComputer</li>
+      <li>Joy_InudstrialComputer</li>
     </thingDefs>
     <jobDef>VFE_Play_Computer</jobDef>
     <joyKind>VFE_ComputerUsage</joyKind>

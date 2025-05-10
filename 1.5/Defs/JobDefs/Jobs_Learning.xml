@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>VFE_ComputerLearning</defName>
+    <driverClass>VanillaFurnitureEC.JobDriver_ComputerLearning</driverClass>
+    <reportString>using computer.</reportString>
+  </JobDef>
+
+  <LearningDesireDef>
+    <defName>VFE_ComputerLearning</defName>
+    <label>computer using</label>
+    <description>Use educational application, play educational games, watch (or listen) to educational videos. Requires a powered computer with a chair.</description>
+    <iconPath>NewThings/UI/LearningIcons/ComputerUsing</iconPath>
+    <workerClass>VanillaFurnitureEC.LearningGiver_ComputerUsing</workerClass>
+    <jobDef>VFE_ComputerLearning</jobDef>
+  </LearningDesireDef>
+
+</Defs>
