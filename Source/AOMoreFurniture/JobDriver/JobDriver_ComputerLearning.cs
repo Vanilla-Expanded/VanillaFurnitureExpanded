@@ -25,8 +25,10 @@ public class JobDriver_ComputerLearning : JobDriver
         var computerUseToil = ToilMaker.MakeToil();
         computerUseToil.tickAction = () =>
         {
+            pawn.GainComfortFromCellIfPossible();
             pawn.rotationTracker.FaceTarget(TargetA);
             LearningUtility.LearningTickCheckEnd(pawn);
+            pawn.skills.Learn(SkillDefOf.Intellectual, VFE_DefOf.VFE_ComputerLearning.xpPerTick);
         };
         computerUseToil.handlingFacing = true;
         computerUseToil.defaultCompleteMode = ToilCompleteMode.Never;

@@ -20,6 +20,9 @@ namespace VanillaFurnitureEC
 
         // JoyGivers
         public static JoyGiverDef VFE_Play_Computer;
+        
+        // LearningDesire
+        public static LearningDesireDef VFE_ComputerLearning;
 
         static VFE_DefOf()
         {
