@@ -431,6 +431,7 @@
         </graphicData>
         <!-- Currently disabled until we've got a way to make it work without -->
 <!--        <uiIconPath>NewThings/Light/OutdoorLamp_MenuIcon</uiIconPath>-->
+        <uiIconOffset>(0,0.2)</uiIconOffset>
         <tickerType>Rare</tickerType>
         <costList>
             <Steel>25</Steel>
@@ -439,8 +440,8 @@
             <MaxHitPoints>100</MaxHitPoints>
             <Mass>4</Mass>
             <Flammability>1</Flammability>
-            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
             <WorkToBuild>350</WorkToBuild>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
         </statBases>
         <size>(1,1)</size>
         <pathCost>14</pathCost>
@@ -458,11 +459,11 @@
             </li>
             <li Class="CompProperties_Glower">
                 <glowRadius>20</glowRadius>
-                <glowColor>(252,187,113,0)</glowColor>
+                <glowColor>(214,148,94,0)</glowColor>
                 <colorPickerEnabled>true</colorPickerEnabled>
                 <darklightToggle>true</darklightToggle>
             </li>
-            <li Class="VanillaFurnitureEC.CompProperties_ScheduleActiveAtSunlightRange">
+            <li Class="VFECore.CompProperties_ScheduleActiveAtSunlightRange">
                 <minLight>0</minLight>
                 <maxLight>0.5</maxLight>
                 <offMessage>Off due to sufficient sunlight.</offMessage>
@@ -471,6 +472,9 @@
         <placeWorkers>
             <li>PlaceWorker_NotUnderRoof</li>
         </placeWorkers>
+        <researchPrerequisites>
+            <li>Electricity</li>
+        </researchPrerequisites>
         <designationCategory>Furniture</designationCategory>
     </ThingDef>
 
