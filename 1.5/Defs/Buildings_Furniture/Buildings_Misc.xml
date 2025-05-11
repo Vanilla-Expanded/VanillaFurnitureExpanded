@@ -428,6 +428,7 @@
         <fillPercent>0.20</fillPercent>
         <graphicData>
             <texPath>NewThings/Light/OutdoorLamp</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(2,3.5)</drawSize>
             <addTopAltitudeBias>true</addTopAltitudeBias>
             <shadowData>
@@ -435,12 +436,12 @@
                 <offset>(0, 0, -0)</offset>
             </shadowData>
         </graphicData>
-        <!-- Currently disabled until we've got a way to make it work without -->
-<!--        <uiIconPath>NewThings/Light/OutdoorLamp_MenuIcon</uiIconPath>-->
+        <!-- Currently disabled, as the image is affected by drawSize, making it stretched. -->
+        <!-- <uiIconPath>NewThings/Light/OutdoorLamp_MenuIcon</uiIconPath>-->
         <uiIconOffset>(0,0.2)</uiIconOffset>
         <tickerType>Rare</tickerType>
         <costList>
-            <Steel>25</Steel>
+            <Steel>40</Steel>
         </costList>
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
@@ -456,7 +457,7 @@
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
                 <shortCircuitInRain>false</shortCircuitInRain>
-                <basePowerConsumption>40</basePowerConsumption>
+                <basePowerConsumption>70</basePowerConsumption>
                 <powerUpgrades>
                     <li>
                         <researchProject>ColoredLights</researchProject>
@@ -481,6 +482,7 @@
         </placeWorkers>
         <researchPrerequisites>
             <li>Electricity</li>
+            <li>ColoredLights</li>
         </researchPrerequisites>
         <designationCategory>Furniture</designationCategory>
     </ThingDef>
