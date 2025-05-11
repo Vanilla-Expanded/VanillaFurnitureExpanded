@@ -52,12 +52,19 @@ public class LearningGiver_ComputerUsing : LearningGiver
 
     public static bool CanUseComputerNow(Thing thing, Pawn pawn)
     {
+        // Only spawned things allowed
         if (!thing.Spawned)
             return false;
 
+        // Only allow if the computer is not forbidden
+        if (thing.IsForbidden(pawn))
+            return false;
+
+        // Make sure it's not reserved right now, etc.
         if (!pawn.CanReserve(thing))
             return false;
 
+        // If comp has power trader, ensure it's on and electricity isn't off
         var comp = thing.TryGetComp<CompPowerTrader>();
         if (comp != null)
         {
@@ -67,11 +74,17 @@ public class LearningGiver_ComputerUsing : LearningGiver
                 return false;
         }
 
-        if (VFE_DefOf.VFE_Play_Computer.requireChair && thing.InteractionCell.GetEdifice(thing.Map)?.def.building.isSittable != true)
-            return false;
-
-        if (thing.IsForbidden(pawn))
-            return false;
+        // Only check if the computer usage joy type requires chair,
+        // just in case some mod removes the requirement from the joy type.
+        if (VFE_DefOf.VFE_Play_Computer.requireChair)
+        {
+            // Make sure there's a sittable edifice
+            if (thing.InteractionCell.GetEdifice(thing.Map)?.def.building.isSittable != true)
+                return false;
+            // Also make sure that we can reserve it
+            if (!pawn.CanReserveSittableOrSpot(thing.InteractionCell))
+                return false;
+        }
 
         return true;
     }

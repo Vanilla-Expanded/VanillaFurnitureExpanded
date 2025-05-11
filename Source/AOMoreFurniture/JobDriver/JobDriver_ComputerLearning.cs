@@ -9,7 +9,7 @@ public class JobDriver_ComputerLearning : JobDriver
 {
     public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
-        return pawn.Reserve(TargetA, job, errorOnFailed: errorOnFailed);
+        return pawn.Reserve(TargetA, job, errorOnFailed: errorOnFailed) && pawn.ReserveSittableOrSpot(TargetThingA.InteractionCell, job, errorOnFailed: errorOnFailed);
     }
 
     protected override IEnumerable<Toil> MakeNewToils()

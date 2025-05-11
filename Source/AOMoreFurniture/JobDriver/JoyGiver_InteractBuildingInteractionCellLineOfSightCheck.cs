@@ -3,7 +3,7 @@ using Verse;
 
 namespace VanillaFurnitureEC;
 
-public class JoyGiver_InteractBuildingInteractionCell_LineOfSightCheck : JoyGiver_InteractBuildingInteractionCell
+public class JoyGiver_InteractBuildingInteractionCellLineOfSightCheck : JoyGiver_InteractBuildingInteractionCell
 {
     protected override bool CanInteractWith(Pawn pawn, Thing t, bool inBed)
     {

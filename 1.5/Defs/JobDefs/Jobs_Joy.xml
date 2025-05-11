@@ -100,7 +100,7 @@
 
   <JoyGiverDef>
     <defName>Play_DartsBoard</defName>
-    <giverClass>VanillaFurnitureEC.JoyGiver_InteractBuildingInteractionCell_LineOfSightCheck</giverClass>
+    <giverClass>VanillaFurnitureEC.JoyGiver_InteractBuildingInteractionCellLineOfSightCheck</giverClass>
     <baseChance>3</baseChance>
     <thingDefs>
       <li>Joy_DartsBoard</li>
