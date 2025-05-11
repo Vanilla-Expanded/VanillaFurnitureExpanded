@@ -85,8 +85,10 @@
     <Compile Include="JobDriver\JobDriver_ExtendedSitFacingBuilding.cs" />
     <Compile Include="JobDriver\JobDriver_UseLounger.cs" />
     <Compile Include="JobDriver\JoyGiver_InteractBuildingInteractionCellSit.cs" />
+    <Compile Include="JobDriver\JoyGiver_InteractBuildingInteractionCell_LineOfSightCheck.cs" />
     <Compile Include="JobDriver\JoyGiver_UseLounger.cs" />
     <Compile Include="JobDriver\LearningGiver_ComputerUsing.cs" />
+    <Compile Include="NonPublicMethods.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_LinkToFirepits.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_NotOnWall.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_SameRoomRadius.cs" />
