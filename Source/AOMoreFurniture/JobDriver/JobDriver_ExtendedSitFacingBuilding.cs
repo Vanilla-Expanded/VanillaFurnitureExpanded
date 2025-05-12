@@ -28,7 +28,7 @@ public class JobDriver_ExtendedSitFacingBuilding : JobDriver_SitFacingBuilding
         // We could always replace it, but I feel that doing it this
         // way is more compatible in case the vanilla JobDriver is
         // updated, and we forget to update this method.
-        if (!joyData.allowComfortFromCell)
+        if (joyData is { allowComfortFromCell: false })
         {
             toil.tickAction = () =>
             {
@@ -59,7 +59,7 @@ public class JobDriver_ExtendedSitFacingBuilding : JobDriver_SitFacingBuilding
         // Add research points when finished the job.
         toil.AddFinishAction(() =>
         {
-            if (joyData == null && joyData.researchOnFinished > 0)
+            if (joyData == null || joyData.researchOnFinished <= 0)
                 return;
 
             var project = Find.ResearchManager?.GetProject();
@@ -88,14 +88,15 @@ public class JobDriver_ExtendedSitFacingBuilding : JobDriver_SitFacingBuilding
 
     public override void ExposeData()
     {
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        {
+            joyData = TargetA.Thing.def.GetModExtension<ExtendedSitFacingJoyDataExtension>();
+            powerTrader = TargetA.Thing.TryGetComp<CompPowerTrader>();
+        }
+
+        // Call to base needs to be done after we've done our PostLoadInit
         base.ExposeData();
 
         Scribe_Values.Look(ref nextSoundTick, nameof(nextSoundTick));
-
-        if (Scribe.mode != LoadSaveMode.PostLoadInit)
-            return;
-
-        joyData = TargetA.Thing.def.GetModExtension<ExtendedSitFacingJoyDataExtension>();
-        powerTrader = TargetA.Thing.TryGetComp<CompPowerTrader>();
     }
 }
