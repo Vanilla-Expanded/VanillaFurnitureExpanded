@@ -211,6 +211,15 @@
             <WorkToBuild>12000</WorkToBuild>
             <Beauty>80</Beauty>
         </statBases>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <Comfort>0.05</Comfort>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+                <maxDistance>6</maxDistance>
+            </li>
+        </comps>
         <researchPrerequisites>
             <li>MF_RoyalFurniture</li>
         </researchPrerequisites>

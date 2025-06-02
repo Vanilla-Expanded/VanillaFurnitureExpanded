@@ -28,15 +28,6 @@
         <placeWorkers>
             <li>PlaceWorker_ShowFacilitiesConnections</li>
         </placeWorkers>
-        <comps>
-            <li Class="CompProperties_Facility">
-                <statOffsets>
-                    <Comfort>0.05</Comfort>
-                </statOffsets>
-                <maxSimultaneous>1</maxSimultaneous>
-                <maxDistance>6</maxDistance>
-            </li>
-        </comps>
         <researchPrerequisites>
             <li>ComplexFurniture</li>
         </researchPrerequisites>
