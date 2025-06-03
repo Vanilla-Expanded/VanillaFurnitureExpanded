@@ -91,7 +91,7 @@
                 <rectW>(0.275, 0, 0.45, 1)</rectW>
             </damageData>
             <shadowData>
-                <volume>(0.5, 0.3, 0.3)</volume>
+                <volume>(0.3, 0.6, 0.3)</volume>
             </shadowData>
         </graphicData>
         <statBases>
@@ -129,7 +129,7 @@
         <designationCategory>Furniture</designationCategory>
     </ThingDef>
 
-    <ThingDef ParentName="TableBase">
+    <ThingDef ParentName="ArtableFurnitureBase">
         <defName>Table_RoyalDresser</defName>
         <label>royal dresser</label>
         <description>A luxurious dresser, adorned with solid gold and elegant in design, making nearby beds more comfortable.Placing more than one end table near the same bed has no effect.</description>
@@ -146,7 +146,7 @@
                 <rectW>(0.1, 0, 0.8, 2)</rectW>
             </damageData>
             <shadowData>
-                <volume>(1.7, 0.3, 0.8)</volume>
+                <volume>(1.7, 0.5, 0.8)</volume>
             </shadowData>
         </graphicData>
         <statBases>
@@ -156,8 +156,14 @@
             <Flammability>1.0</Flammability>
             <Beauty>50</Beauty>
         </statBases>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
         <size>(2,1)</size>
         <pathCost>42</pathCost>
+        <fillPercent>0.4</fillPercent>
         <defaultPlacingRot>South</defaultPlacingRot>
         <costStuffCount>75</costStuffCount>
         <uiOrder>2070</uiOrder>
@@ -179,6 +185,9 @@
                 <maxDistance>6</maxDistance>
             </li>
         </comps>
+        <building>
+            <paintable>true</paintable>
+        </building>
         <staticSunShadowHeight>0</staticSunShadowHeight>
         <castEdgeShadows>false</castEdgeShadows>
         <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
