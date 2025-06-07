@@ -38,7 +38,7 @@
         </comps>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
         <fillPercent>0.4</fillPercent>
-        <pathCost>60</pathCost>
+        <pathCost>42</pathCost>
         <staticSunShadowHeight>0.17</staticSunShadowHeight>
         <castEdgeShadows>True</castEdgeShadows>
         <techLevel>Industrial</techLevel>
