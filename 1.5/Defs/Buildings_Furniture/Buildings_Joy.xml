@@ -22,7 +22,7 @@
     <designationCategory>Joy</designationCategory>
     <placeWorkers>
       <!-- Uses CompProperties_CauseJoyHediff_Aoe, draws radius only if in the same room (full radius if placed in a wall). -->
-      <li>VanillaFurnitureEC.PlaceWorker_SameRoomRadius</li>
+      <li>VFECore.PlaceWorker_CompCustomCauseHediff_AoE</li>
     </placeWorkers>
     <comps>
       <li Class="CompProperties_Breakdownable" />
@@ -70,10 +70,16 @@
       <li Class="VFECore.CompProperties_AmbientSound">
         <ambientSound>VFE_IndustrialRadio_Ambience</ambientSound>
       </li>
-      <li Class="VanillaFurnitureEC.CompProperties_CauseJoyHediff_Aoe">
+      <li Class="VFECore.CompProperties_CustomCauseHediff_AoE">
+        <compClass>VanillaFurnitureEC.CompCauseJoyHediff_Aoe</compClass>
         <hediff>VFE_ListeningToMusic</hediff>
         <range>6</range>
         <checkInterval>300</checkInterval>
+        <hediffDuration>305</hediffDuration>
+        <mustBeAwake>true</mustBeAwake>
+        <requiredCapacities>
+          <li>Hearing</li>
+        </requiredCapacities>
       </li>
     </comps>
     <statBases>
@@ -119,10 +125,16 @@
       <li Class="VFECore.CompProperties_AmbientSound">
         <ambientSound>VFE_SpacerRadio_Ambience</ambientSound>
       </li>
-      <li Class="VanillaFurnitureEC.CompProperties_CauseJoyHediff_Aoe">
+      <li Class="VFECore.CompProperties_CustomCauseHediff_AoE">
+        <compClass>VanillaFurnitureEC.CompCauseJoyHediff_Aoe</compClass>
         <hediff>VFE_ListeningToMusic</hediff>
         <range>12</range>
         <checkInterval>300</checkInterval>
+        <hediffDuration>305</hediffDuration>
+        <mustBeAwake>true</mustBeAwake>
+        <requiredCapacities>
+          <li>Hearing</li>
+        </requiredCapacities>
       </li>
     </comps>
     <statBases>

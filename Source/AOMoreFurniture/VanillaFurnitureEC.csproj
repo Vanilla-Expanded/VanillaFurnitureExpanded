@@ -62,6 +62,10 @@
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="VFECore">
+      <HintPath>..\..\..\VanillaExpandedFramework\1.5\Assemblies\VFECore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <AppDesigner Include="Properties\" />
@@ -74,7 +78,6 @@
     <Compile Include="Comps\CompInspectStringLounger.cs" />
     <Compile Include="Comps\CompProperties_BinClean.cs" />
     <Compile Include="Comps\CompCauseJoyHediff_Aoe.cs" />
-    <Compile Include="Comps\CompProperties_CauseJoyHediff_Aoe.cs" />
     <Compile Include="Comps\HediffCompProperties_CauseJoy.cs" />
     <Compile Include="Comps\HediffComp_CauseJoy.cs" />
     <Compile Include="DefModExtensions\ExtendedSitFacingJoyDataExtension.cs" />
@@ -91,7 +94,6 @@
     <Compile Include="NonPublicMethods.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_LinkToFirepits.cs" />
     <Compile Include="PlaceWorkers\PlaceWorker_NotOnWall.cs" />
-    <Compile Include="PlaceWorkers\PlaceWorker_SameRoomRadius.cs" />
     <Compile Include="StaticCollections.cs" />
     <Compile Include="VFECore.cs" />
     <Compile Include="WorkGiver_CleanBin.cs" />
