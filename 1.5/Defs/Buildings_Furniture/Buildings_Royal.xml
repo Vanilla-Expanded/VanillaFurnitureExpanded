@@ -122,7 +122,15 @@
                 <maxSimultaneous>1</maxSimultaneous>
                 <mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
             </li>
+            <li Class="CompProperties_Art">
+                <nameMaker>NamerArtFurniture</nameMaker>
+                <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+                <minQualityForArtistic>Awful</minQualityForArtistic>
+            </li>
         </comps>
+        <inspectorTabs>
+            <li>ITab_Art</li>
+        </inspectorTabs>
         <staticSunShadowHeight>0</staticSunShadowHeight>
         <castEdgeShadows>false</castEdgeShadows>
         <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
