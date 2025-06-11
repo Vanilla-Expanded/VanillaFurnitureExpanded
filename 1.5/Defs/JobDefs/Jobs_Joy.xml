@@ -194,4 +194,28 @@
     <jobDef>VFE_Play_Sunbathing</jobDef>
     <joyKind>Meditative</joyKind>
   </JoyGiverDef>
+
+  <JobDef>
+    <defName>VFE_ListenToMusic</defName>
+    <driverClass>VanillaFurnitureEC.JobDriver_ExtendedSitFacingBuilding</driverClass>
+    <reportString>listening to music.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>99</joyMaxParticipants>
+    <joyKind>HighCulture</joyKind>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JoyGiverDef>
+    <defName>VFE_ListenToMusic</defName>
+    <!-- Basically - if possible, sit in range of radio. If not, stand next to it. -->
+    <giverClass>VanillaFurnitureEC.JoyGiver_ListenToMusic</giverClass>
+    <!-- Very low chance to happen -->
+    <baseChance>0.5</baseChance>
+    <thingDefs>
+      <li>Radio_Industrial</li>
+      <li>Radio_Spacer</li>
+    </thingDefs>
+    <jobDef>VFE_ListenToMusic</jobDef>
+    <joyKind>HighCulture</joyKind>
+  </JoyGiverDef>
 </Defs>

@@ -6,6 +6,8 @@ namespace VanillaFurnitureEC;
 
 public class CompCauseJoyHediff_Aoe : CompCustomCauseHediff_AoE
 {
+    public new CompProperties_CustomCauseHediff_AoE Props => base.Props;
+
     protected override Hediff GiveOrUpdateHediff(Pawn target)
     {
         var hediff = base.GiveOrUpdateHediff(target);
@@ -32,4 +34,8 @@ public class CompCauseJoyHediff_Aoe : CompCustomCauseHediff_AoE
     }
 
     public override bool IsPawnAffected(Pawn target) => target.needs.joy != null && base.IsPawnAffected(target);
+
+    internal void CacheCurrentRoom() => tempWorkingRoom = parent.GetRoom();
+
+    internal void ClearCurrentRoom() => tempWorkingRoom = null;
 }

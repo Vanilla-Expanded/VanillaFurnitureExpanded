@@ -26,7 +26,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -89,6 +89,7 @@
     <Compile Include="JobDriver\JobDriver_UseLounger.cs" />
     <Compile Include="JobDriver\JoyGiver_InteractBuildingInteractionCellSit.cs" />
     <Compile Include="JobDriver\JoyGiver_InteractBuildingInteractionCellLineOfSightCheck.cs" />
+    <Compile Include="JobDriver\JoyGiver_ListenToMusic.cs" />
     <Compile Include="JobDriver\JoyGiver_UseLounger.cs" />
     <Compile Include="JobDriver\LearningGiver_ComputerUsing.cs" />
     <Compile Include="NonPublicMethods.cs" />

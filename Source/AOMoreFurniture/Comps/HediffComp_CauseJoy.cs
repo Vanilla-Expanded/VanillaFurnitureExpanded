@@ -15,10 +15,15 @@ public class HediffComp_CauseJoy : HediffComp
         if (joy == null)
             return;
 
+        // If actively listening to the radio, the JobDriver will handle the recreation gain.
+        if (Pawn.CurJobDef == VFE_DefOf.VFE_ListenToMusic)
+            return;
+
         var amount = joyGainRate * JoyTunings.BaseJoyGainPerHour / GenDate.TicksPerHour;
         if (amount <= 0f)
             return;
 
+        // If not actively listening to radio allow for passive joy loss.
         if (joyKind != null)
             amount *= joy.tolerances.JoyFactorFromTolerance(joyKind);
         amount = Mathf.Min(amount, 1f - joy.CurLevel);
