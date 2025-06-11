@@ -134,7 +134,7 @@
           <Comfort>0.05</Comfort>
         </statOffsets>
         <maxSimultaneous>1</maxSimultaneous>
-        <maxDistance>1.9</maxDistance>
+        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
       </li>
     </comps>
     <placeWorkers>
