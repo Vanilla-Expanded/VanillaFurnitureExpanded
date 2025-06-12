@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- Ergonomic beds -->
+
+    <ThingDef Name="VFE_ErgonomicBedBase" ParentName="ArtableBedBase" Abstract="True">
+        <statBases>
+            <Flammability>1.0</Flammability>
+            <Beauty>2</Beauty>
+            <BedRestEffectiveness>1.1</BedRestEffectiveness>
+            <Comfort>0.85</Comfort>
+            <ImmunityGainSpeedFactor>1.12</ImmunityGainSpeedFactor>
+            <SurgerySuccessChanceFactor>1.05</SurgerySuccessChanceFactor>
+            <BirthRitualQualityOffset MayRequire="Ludeon.RimWorld.Biotech">2</BirthRitualQualityOffset>
+        </statBases>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+        </stuffCategories>
+        <building>
+            <bed_showSleeperBody>False</bed_showSleeperBody>
+            <bed_healPerDay>5</bed_healPerDay>
+            <paintable>true</paintable>
+        </building>
+        <comps>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>EndTable</li>
+                    <li>Dresser</li>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator</li>
+                  
+                    <li>Table_RoyalDresser</li>
+                    <li>Table_RoyalEndTable</li>
+                    <li>Table_Wardrobe</li>
+                    <li>VFE_RoyalWardrobe</li>
+                </linkableFacilities>
+            </li>
+        </comps>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <fillPercent>0.4</fillPercent>
+        <pathCost>42</pathCost>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
+        <techLevel>Industrial</techLevel>
+        <researchPrerequisites>
+            <li>MF_ModernFurniture</li>
+        </researchPrerequisites>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+    <ThingDef ParentName="VFE_ErgonomicBedBase">
+        <defName>Bed_Ergonomic</defName>
+        <label>ergonomic bed</label>
+        <description>A modern, adjustable bed designed for maximum comfort and proper spinal support.</description>
+        <graphicData>
+            <texPath>NewThings/Beds/ErgonomicBed/SpacerBed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <rect>(0,0.1,1,1.9)</rect>
+            </damageData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>160</MaxHitPoints>
+            <WorkToBuild>3000</WorkToBuild>
+            <Mass>40</Mass>
+            <Beauty>2</Beauty>
+        </statBases>
+        <size>(1,2)</size>
+        <costStuffCount>50</costStuffCount>
+        <costList>
+            <Steel>20</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <uiIconScale>0.90</uiIconScale>
+    </ThingDef>
+
+    <ThingDef ParentName="VFE_ErgonomicBedBase">
+        <defName>Bed_DoubleErgonomic</defName>
+        <label>ergonomic double bed</label>
+        <description>A modern, adjustable bed designed for maximum comfort and proper spinal support. Fits two people.</description>
+        <graphicData>
+            <texPath>NewThings/Beds/ErgonomicBedDouble/SpacerBedDouble</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2.1,2.1)</drawSize>
+            <damageData>
+                <rect>(0,0.2,2,1.8)</rect>
+            </damageData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>300</MaxHitPoints>
+            <WorkToBuild>5500</WorkToBuild>
+            <Mass>75</Mass>
+            <Beauty>4</Beauty>
+        </statBases>
+        <size>(2,2)</size>
+        <costStuffCount>100</costStuffCount>
+        <costList>
+            <Steel>40</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <uiIconScale>0.90</uiIconScale>
+    </ThingDef>
+
+    <!-- Wardrobe -->
+
+    <ThingDef ParentName="VFE_WardrobeBase">
+        <defName>Table_Wardrobe</defName>
+        <label>wardrobe</label>
+        <description>A tall wardrobe for storing clothing and other items. Gives a small comfort bonus to all nearby beds. Placing more than one wardrobe near the same bed has no effect.</description>
+        <graphicData>
+            <texPath>NewThings/Furniture/Wardrobe/Wardrobe</texPath>
+            <damageData>
+                <rectN>(0,0,2,1.5)</rectN>
+                <rectS>(0,0,2,1.5)</rectS>
+                <rectE>(0,0,1,2.245)</rectE>
+                <rectW>(0,0,1,2.245)</rectW>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <costStuffCount>60</costStuffCount>
+        <statBases>
+            <MaxHitPoints>140</MaxHitPoints>
+            <Mass>20</Mass>
+            <WorkToBuild>2500</WorkToBuild>
+            <Beauty>8</Beauty>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <Comfort>0.05</Comfort>
+                </statOffsets>
+                <maxSimultaneous>1</maxSimultaneous>
+                <maxDistance>6</maxDistance>
+            </li>
+            <li Class="CompProperties_Styleable"/>
+        </comps>
+        <building>
+            <paintable>true</paintable>
+        </building>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    </ThingDef>
+
+    <!-- Ergonomic chair -->
+
+    <ThingDef ParentName="FurnitureWithQualityBase">
+        <defName>Seat_ModernChair</defName>
+        <label>ergonomic chair</label>
+        <description>A modern, well-designed chair with excellent back support and padding, providing high comfort.</description>
+        <graphicData>
+            <texPath>NewThings/Furniture/ErgonomicChair/ErgonomicChair</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(1,1)</drawSize>
+            <damageData>
+                <rectN>(0.2,0,0.6,0.85)</rectN>
+                <rectS>(0.2,0,0.6,1)</rectS>
+                <rectE>(0.2,0,0.6,0.625)</rectE>
+                <rectW>(0.2,0,0.6,0.625)</rectW>
+            </damageData>
+            <shadowData>
+                <volume>(0.225, 0.33, 0.225)</volume>
+            </shadowData>
+        </graphicData>
+        <uiIconScale>1</uiIconScale>
+        <altitudeLayer>Building</altitudeLayer>
+        <statBases>
+            <MaxHitPoints>130</MaxHitPoints>
+            <WorkToBuild>16000</WorkToBuild>
+            <Mass>20</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>6</Beauty>
+            <Comfort>0.85</Comfort>
+        </statBases>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <uiOrder>2440</uiOrder>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>80</costStuffCount>
+        <costList>
+            <Steel>20</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <pathCost>30</pathCost>
+        <fillPercent>0.40</fillPercent>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <building>
+            <isSittable>true</isSittable>
+            <paintable>true</paintable>
+        </building>
+        <researchPrerequisites>
+            <li>MF_ModernFurniture</li>
+        </researchPrerequisites>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+</Defs>

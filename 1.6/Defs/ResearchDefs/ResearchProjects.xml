@@ -1,0 +1,103 @@
+﻿<?Yml version="1.0" encoding="utf8"?>
+<Defs>
+
+    <ResearchProjectDef>
+        <defName>MF_BasicFurniture</defName>
+        <label>basic furniture</label>
+        <tab>VanillaExpanded</tab>
+        <description>Build simple furniture like simple beds, basic tables, stools, benches and more.</description>
+        <baseCost>300</baseCost>
+        <techLevel>Neolithic</techLevel>
+        <tags>
+            <li>ClassicStart</li>
+        </tags>
+        <researchViewX>0.00</researchViewX>
+        <researchViewY>1.40</researchViewY>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->foundations of comfort</li>
+                <li>subject_story->rediscovered ancient techniques for crafting durable, essential furniture</li>
+                <li>subject_story->pioneered the use of local materials to create comfortable living spaces</li>
+                <li>subject_story->taught the community the value of crafting with nature, not against it</li>
+                <li>subject_story->initiated the tradition of communal gatherings around the hearth and table</li>
+                <li>subject_gerund->establishing the basics of homely comfort and utility</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>MF_RoyalFurniture</defName>
+        <label>artisan furniture</label>
+        <tab>VanillaExpanded</tab>
+        <description>Build luxury furniture focused strongly on aesthetics and beauty over practicality, usually only seen in the houses of the wealthy elite. Including poster beds, royal chairs, tables and armchairs.</description>
+        <baseCost>800</baseCost>
+        <techLevel>Medieval</techLevel>
+        <researchViewX>1.00</researchViewX>
+        <researchViewY>2.35</researchViewY>
+        <prerequisites>
+            <li>ComplexFurniture</li>
+        </prerequisites>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->the art of luxury</li>
+                <li>subject_story->reclaimed forgotten methods of inlay and marquetry for exquisite pieces</li>
+                <li>subject_story->fostered a new age of craftsmanship, blending beauty with utility</li>
+                <li>subject_story->commissioned pieces that would become the envy of visiting dignitaries</li>
+                <li>subject_story->inspired artisans to push the boundaries of design and materials</li>
+                <li>subject_story->created spaces of unparalleled elegance, reflecting the pinnacle of culture</li>
+                <li>subject_gerund->crafting symbols of status and artistry</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>MF_ModernFurniture</defName>
+        <label>modern furniture</label>
+        <tab>VanillaExpanded</tab>
+        <description>Learn to build furniture of the modern day that is focused on practicality over beauty, such as roulette tables, wardrobes, dart boards, punching bags and ergonomic beds.</description>
+        <baseCost>800</baseCost>
+        <techLevel>Industrial</techLevel>
+        <researchViewX>2.00</researchViewX>
+        <researchViewY>1.80</researchViewY>
+        <prerequisites>
+            <li>ComplexFurniture</li>
+        </prerequisites>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->practical elegance</li>
+                <li>subject_story->embraced the fusion of form and function to suit modern lifestyles</li>
+                <li>subject_story->innovated with new materials for durability and comfort</li>
+                <li>subject_story->prioritized ergonomic designs to enhance daily living</li>
+                <li>subject_story->introduced concepts of modular and space-saving furniture</li>
+                <li>subject_story->championed the minimalist aesthetic, focusing on simplicity and practicality</li>
+                <li>subject_gerund->redefining living spaces for the contemporary era</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>MF_WasteDisposal</defName>
+        <label>waste disposal</label>
+        <tab>VanillaExpanded</tab>
+        <description>Learn to build small and large bins, objects that slowly clean the environment they are in.</description>
+        <baseCost>1200</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>MF_ModernFurniture</li>
+        </prerequisites>
+        <researchViewX>2.00</researchViewX>
+        <researchViewY>1.25</researchViewY>
+        <generalRules>
+            <rulesStrings>
+                <li>subject->the cleanliness revolution</li>
+                <li>subject_story->developed efficient waste management solutions to promote hygiene</li>
+                <li>subject_story->introduced the concept of recycling, transforming waste into resources</li>
+                <li>subject_story->engineered bins that integrate seamlessly into both public and private spaces</li>
+                <li>subject_story->pioneered waste processing techniques that minimize environmental impact</li>
+                <li>subject_story->catalyzed a cultural shift towards sustainability and cleanliness</li>
+                <li>subject_gerund->enhancing communities with smart waste solutions</li>
+            </rulesStrings>
+        </generalRules>
+    </ResearchProjectDef>
+
+</Defs>

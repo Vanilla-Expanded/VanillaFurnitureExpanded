@@ -35,7 +35,7 @@ public class CompInspectStringLounger : CompInspectString
         {
             foreach (var pawn in assignable.AssignedPawnsForReading)
             {
-                if (!pawn.needs.EnjoysOutdoors())
+                if (!pawn.needs.PrefersOutdoors)
                     AppendFailReason("VFE.SunbathingNotPossible.PawnOutdoors".Translate(pawn.Named("PAWN")));
                 if (!pawn.ComfortableTemperatureRange().Includes(parent.Map.mapTemperature.OutdoorTemp))
                     AppendFailReason("VFE.SunbathingNotPossible.PawnComfortableTemperature".Translate(pawn.Named("PAWN")));

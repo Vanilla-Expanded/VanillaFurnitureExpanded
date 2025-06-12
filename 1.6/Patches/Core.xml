@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Core</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/StatDef[defName="Beauty"]/parts</xpath>
+                    <value>
+                        <li Class="VanillaFurnitureEC.StatPart_Bin"/>
+                    </value>
+                </li>
+
+                <!-- Armchair and couch linking to coffee table, in a safe way that won't conflict with other mods -->
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="Armchair" or defName="Couch"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]</xpath>
+                    <nomatch Class="PatchOperationConditional">
+                        <success>Always</success>
+                        <xpath>Defs/ThingDef[defName="Armchair" or defName="Couch"]/comps</xpath>
+                        <!-- Add <comps> node together with the comp -->
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>Defs/ThingDef[defName="Armchair" or defName="Couch"]</xpath>
+                            <value>
+                                <comps>
+                                    <li Class="CompProperties_AffectedByFacilities">
+                                        <linkableFacilities>
+                                            <li>VFE_CoffeeTable</li>
+                                        </linkableFacilities>
+                                    </li>
+                                </comps>
+                            </value>
+                        </nomatch>
+                        <!-- If <comps> node exists, just add the comp itself -->
+                        <match Class="PatchOperationAdd">
+                            <xpath>Defs/ThingDef[defName="Armchair" or defName="Couch"]/comps</xpath>
+                            <value>
+                                <li Class="CompProperties_AffectedByFacilities">
+                                    <linkableFacilities>
+                                        <li>VFE_CoffeeTable</li>
+                                    </linkableFacilities>
+                                </li>
+                            </value>
+                        </match>
+                    </nomatch>
+                    <!-- If both <comps> node exists and the affected by facilities comp, only insert our facilities -->
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Armchair" or defName="Couch"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                        <value>
+                            <li>
+                                <li>VFE_CoffeeTable</li>
+                            </li>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

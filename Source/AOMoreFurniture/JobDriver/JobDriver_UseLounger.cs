@@ -70,8 +70,8 @@ public class JobDriver_UseLounger : JobDriver_LayDown
 
             // Our slightly modified ApplyBedRelatedEffects. No bed related thoughts.
             var bed = Bed;
-            JoyUtility.JoyTickCheckEnd(pawn, joySource: bed);
-            pawn.GainComfortFromCellIfPossible();
+            JoyUtility.JoyTickCheckEnd(pawn,1, joySource: bed);
+            pawn.GainComfortFromCellIfPossible(1);
             if (asleep && CanRest && pawn.needs.rest != null)
                 pawn.needs.rest.TickResting(bed.GetStatValue(StatDefOf.BedRestEffectiveness));
 

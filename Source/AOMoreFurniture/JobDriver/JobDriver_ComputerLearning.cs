@@ -39,9 +39,9 @@ public class JobDriver_ComputerLearning : JobDriver
         var computerUseToil = ToilMaker.MakeToil();
         computerUseToil.tickAction = () =>
         {
-            pawn.GainComfortFromCellIfPossible();
+            pawn.GainComfortFromCellIfPossible(1);
             pawn.rotationTracker.FaceTarget(TargetA);
-            LearningUtility.LearningTickCheckEnd(pawn);
+            LearningUtility.LearningTickCheckEnd(pawn,1);
             pawn.skills.Learn(SkillDefOf.Intellectual, VFE_DefOf.VFE_ComputerLearning.xpPerTick);
 
             if (joyData is { sound: not null } && Find.TickManager.TicksGame >= nextSoundTick)

@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef ParentName="FurnitureWithQualityBase">
+        <defName>Misc_FileCabinet</defName>
+        <label>filing cabinet</label>
+        <description>Increases research speed when placed near a research bench. One research bench can use up to two filing cabinets.</description>
+        <graphicData>
+            <texPath>NewThings/Misc/FilingCabinet/FilingCabinet</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(2,2)</drawSize>
+            <damageData>
+                <rectN>(0.03,0,0.94,1.3)</rectN>
+                <rectS>(0.03,0,0.94,1.3)</rectS>
+                <rectE>(0.03,0,0.65,1.3)</rectE>
+                <rectW>(0.32,0,0.65,1.3)</rectW>
+            </damageData>
+        </graphicData>
+        <size>(1,1)</size>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.4</fillPercent>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <statBases>
+            <MaxHitPoints>80</MaxHitPoints>
+            <WorkToBuild>1200</WorkToBuild>
+            <Flammability>1.0</Flammability>
+            <Mass>12</Mass>
+        </statBases>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>100</costStuffCount>
+        <comps>
+            <li Class="CompProperties_Facility">
+                <statOffsets>
+                    <ResearchSpeedFactor>0.03</ResearchSpeedFactor>
+                </statOffsets>
+                <maxSimultaneous>2</maxSimultaneous>
+                <maxDistance>6</maxDistance>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+        <building>
+            <paintable>true</paintable>
+        </building>
+        <researchPrerequisites>
+            <li>MF_ModernFurniture</li>
+        </researchPrerequisites>
+        <designationCategory>Misc</designationCategory>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <uiIconScale>0.6</uiIconScale>
+        <pathCost>42</pathCost>
+        <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    </ThingDef>
+
+    <ThingDef ParentName="StorageShelfBase">
+        <defName>Shelf_WeaponRack</defName>
+        <label>weapon rack</label>
+        <description>A shelf for storing weapons. Items stored in this will not affect room beauty and they won't deteriorate, even if outside.</description>
+        <graphicData>
+            <texPath>NewThings/Furniture/WeaponRack/WeaponShelf</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,2)</drawSize>
+        </graphicData>
+        <stuffCategories Inherit="False">
+            <li>Metallic</li>
+        </stuffCategories>
+        <fillPercent>0.4</fillPercent>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <costStuffCount>25</costStuffCount>
+        <passability>PassThroughOnly</passability>
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <Mass>10</Mass>
+            <WorkToBuild>600</WorkToBuild>
+            <Flammability>1.0</Flammability>
+            <Beauty>0.5</Beauty>
+        </statBases>
+        <size>(2,1)</size>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <building Inherit="False">
+            <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+            <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+            <maxItemsInCell>6</maxItemsInCell>
+            <storageGroupTag>Shelf</storageGroupTag>
+            <blueprintClass>Blueprint_Storage</blueprintClass>
+            <fixedStorageSettings>
+                <filter>
+                    <disallowNotEverStorable>true</disallowNotEverStorable>
+                    <categories>
+                        <li>Weapons</li>
+                    </categories>
+                </filter>
+            </fixedStorageSettings>
+            <defaultStorageSettings>
+                <priority>Important</priority>
+                <filter>
+                    <categories>
+                        <li>Weapons</li>
+                    </categories>
+                </filter>
+            </defaultStorageSettings>
+            <paintable>true</paintable>
+        </building>
+        <designationHotKey>Misc12</designationHotKey>
+        <researchPrerequisites>
+            <li>ComplexFurniture</li>
+        </researchPrerequisites>
+        <designationCategory>Furniture</designationCategory>
+        <pathCost>50</pathCost>
+    </ThingDef>
+
+    <!-- Bins -->
+
+    <ThingDef ParentName="FurnitureBase">
+        <defName>Bin_Small</defName>
+        <label>small bin</label>
+        <description>A small bin to help keep the surrounding area somewhat clean. Slowly removes trash and filth in a 10-cell radius.</description>
+        <graphicData>
+            <texPath>NewThings/Misc/BinSmall/SmallBin</texPath>
+            <drawSize>(1,1)</drawSize>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shadowData>
+                <volume>(0.3, 0.6, 0.3)</volume>
+                <offset>(0, 0, -0.2)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.2,0.15,0.6,0.7)</rect>
+            </damageData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <tickerType>Normal</tickerType>
+        <fillPercent>0.20</fillPercent>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <WorkToBuild>495</WorkToBuild>
+            <Mass>2</Mass>
+            <Flammability>1.0</Flammability>
+            <Cleanliness>2</Cleanliness>
+        </statBases>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>40</costStuffCount>
+        <size>(1,1)</size>
+        <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+        <rotatable>false</rotatable>
+        <researchPrerequisites>
+            <li>MF_WasteDisposal</li>
+        </researchPrerequisites>
+        <designationCategory>Misc</designationCategory>
+        <specialDisplayRadius>10</specialDisplayRadius>
+        <comps>
+            <li Class="VanillaFurnitureEC.CompProperties_BinClean">
+                <timerInTicks>2000</timerInTicks>
+                <radius>10</radius>
+                <capacity>100</capacity>
+                <beautyPerFilthStored>
+                    <points>
+                        <li>0, 0</li>
+                        <li>1, -15</li>
+                    </points>
+                </beautyPerFilthStored>
+            </li>
+        </comps>
+        <building>
+            <paintable>true</paintable>
+        </building>
+        <pathCost>42</pathCost>
+        <blockWind>true</blockWind>
+    </ThingDef>
+
+    <ThingDef ParentName="FurnitureBase">
+        <defName>Bin_Large</defName>
+        <label>large bin</label>
+        <description>A spacious waste disposal unit that efficiently keeps the surrounding area clean. Slowly removes trash and filth in a 15-cell radius.</description>
+        <graphicData>
+            <texPath>NewThings/Misc/BinLarge/BinLarge</texPath>
+            <drawSize>(2.65,2.65)</drawSize>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <shadowData>
+                <volume>(1.7, 0.6, 0.6)</volume>
+            </shadowData>
+            <damageData>
+                <rectN>(0.2,0.1,1.6,1.1)</rectN>
+                <rectS>(0.2,0.1,1.6,1.1)</rectS>
+                <rectE>(0.1,0.2,0.8,1.7)</rectE>
+                <rectW>(0.1,0.2,0.8,1.7)</rectW>
+            </damageData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <tickerType>Normal</tickerType>
+        <fillPercent>0.60</fillPercent>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>750</WorkToBuild>
+            <Mass>5</Mass>
+            <Flammability>1.0</Flammability>
+            <Cleanliness>3</Cleanliness>
+        </statBases>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>60</costStuffCount>
+        <size>(2,1)</size>
+        <defaultPlacingRot>South</defaultPlacingRot>
+        <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+        <rotatable>true</rotatable>
+        <researchPrerequisites>
+            <li>MF_WasteDisposal</li>
+        </researchPrerequisites>
+        <designationCategory>Misc</designationCategory>
+        <specialDisplayRadius>15</specialDisplayRadius>
+        <comps>
+            <li Class="VanillaFurnitureEC.CompProperties_BinClean">
+                <timerInTicks>1500</timerInTicks>
+                <radius>15</radius>
+                <capacity>200</capacity>
+                <beautyPerFilthStored>
+                    <points>
+                        <li>0, 0</li>
+                        <li>1, -20</li>
+                    </points>
+                </beautyPerFilthStored>
+            </li>
+        </comps>
+        <building>
+            <paintable>true</paintable>
+        </building>
+        <pathCost>42</pathCost>
+        <blockWind>true</blockWind>
+    </ThingDef>
+
+    <ThingDef ParentName="FurnitureWithQualityBase">
+        <defName>VFE_LongPlantPot</defName>
+        <label>long plant pot</label>
+        <description>Plant decorative flowers here to improve the mood of people nearby. Designed to be combined with other plant pots to form various shapes.</description>
+        <thingClass>Building_PlantGrower</thingClass>
+        <graphicData>
+            <texPath>NewThings/Linked/LongPlantPot_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+<!--            <shaderType>CutoutComplex</shaderType>-->
+            <linkType>CornerFiller</linkType>
+            <linkFlags>
+                <li>Custom8</li>
+            </linkFlags>
+            <shadowData>
+                <volume>(0.55, 0.35, 0.3)</volume>
+                <offset>(0, 0, -0.28)</offset>
+            </shadowData>
+            <damageData>
+                <rect>(0.2,0.2,0.6,0.6)</rect>
+            </damageData>
+        </graphicData>
+        <uiIconPath>NewThings/Linked/LongPlantPot_MenuIcon</uiIconPath>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <fillPercent>0.20</fillPercent>
+        <statBases>
+            <MaxHitPoints>75</MaxHitPoints>
+            <WorkToBuild>250</WorkToBuild>
+            <Mass>2</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <drawStyleCategory>Walls</drawStyleCategory>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>20</costStuffCount>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+        </comps>
+        <fertility>1.0</fertility>
+        <designationHotKey>Misc9</designationHotKey>
+        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <uiOrder>2610</uiOrder>
+        <building>
+            <blueprintGraphicData>
+                <texPath>NewThings/Linked/LongPlantPot_Blueprint_Atlas</texPath>
+            </blueprintGraphicData>
+            <defaultPlantToGrow>Plant_Daylily</defaultPlantToGrow>
+            <sowTag>Decorative</sowTag>
+            <paintable>true</paintable>
+        </building>
+        <rotatable>false</rotatable>
+<!--        <uiIconOffset>(0, -0.05)</uiIconOffset>-->
+        <researchPrerequisites>
+            <li>MF_ModernFurniture</li>
+        </researchPrerequisites>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+    <ThingDef ParentName="LampBase">
+        <defName>VFE_DeskLamp</defName>
+        <label>desk lamp</label>
+        <description>An electrical desk lamp that lights a small area. People need light to move and work at full speed.</description>
+        <designationHotKey>Misc11</designationHotKey>
+        <graphicData>
+            <texPath>NewThings/Light/DeskLamp</texPath>
+            <shadowData>
+                <volume>(0.1, 0.3, 0.1)</volume>
+                <offset>(0,0,0.2)</offset>
+            </shadowData>
+            <damageData>
+                <rect>0.4,0.7,0.2,0.2</rect>
+            </damageData>
+            <drawSize>1.5,1.5</drawSize>
+        </graphicData>
+        <altitudeLayer>BuildingOnTop</altitudeLayer>
+        <building>
+            <isEdifice>false</isEdifice>
+        </building>
+        <clearBuildingArea>false</clearBuildingArea>
+        <costList>
+            <Steel>15</Steel>
+        </costList>
+        <statBases>
+            <Mass>2</Mass>
+            <WorkToBuild>250</WorkToBuild>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+        </statBases>
+        <uiOrder>2990</uiOrder>
+        <placeWorkers>
+            <li>VanillaFurnitureEC.PlaceWorker_NotOnWall</li>
+        </placeWorkers>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>20</basePowerConsumption>
+                <shortCircuitInRain>true</shortCircuitInRain>
+                <powerUpgrades>
+                    <li>
+                        <researchProject>ColoredLights</researchProject>
+                        <factor>0.5</factor>
+                    </li>
+                </powerUpgrades>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>9.55</glowRadius>
+                <glowColor>(214,148,94,0)</glowColor>
+                <colorPickerEnabled>true</colorPickerEnabled>
+                <darklightToggle>true</darklightToggle>
+            </li>
+        </comps>
+        <uiIconScale>1.25</uiIconScale>
+        <uiIconOffset>(0, 0.5)</uiIconOffset>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+    <ThingDef ParentName="LampBase">
+        <defName>VFE_FloorLamp</defName>
+        <label>floor lamp</label>
+        <description>A low-profile light source embedded into the floor. While not as bright as a standing lamp, it provides subtle, even lighting without obstructing movement. Does not short circuit in rain.</description>
+        <designationHotKey>Misc11</designationHotKey>
+        <graphicData>
+            <texPath>NewThings/Light/FloorLamp</texPath>
+            <damageData>
+                <rect>(0,0,1,1)</rect>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <!-- Conduits layer is under ideology slabs, but over floor layer. -->
+        <!-- It allows for spots to be visible over the lamp. -->
+        <altitudeLayer>Conduits</altitudeLayer>
+        <passability>Standable</passability>
+        <building>
+            <isEdifice>false</isEdifice>
+        </building>
+        <clearBuildingArea>false</clearBuildingArea>
+        <costList>
+            <Steel>20</Steel>
+        </costList>
+        <statBases>
+            <MaxHitPoints>40</MaxHitPoints>
+            <Mass>3</Mass>
+            <WorkToBuild>400</WorkToBuild>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+        </statBases>
+        <uiOrder>2990</uiOrder>
+        <placeWorkers>
+            <li>VanillaFurnitureEC.PlaceWorker_NotOnWall</li>
+        </placeWorkers>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>20</basePowerConsumption>
+                <powerUpgrades>
+                    <li>
+                        <researchProject>ColoredLights</researchProject>
+                        <factor>0.5</factor>
+                    </li>
+                </powerUpgrades>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>8.9</glowRadius>
+                <glowColor>(214,148,94,0)</glowColor>
+                <colorPickerEnabled>true</colorPickerEnabled>
+                <darklightToggle>true</darklightToggle>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>FlatscreenTelevision</li>
+        </researchPrerequisites>
+        <uiIconScale>0.8</uiIconScale>
+        <pathCost>0</pathCost>
+        <fillPercent>0</fillPercent>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+    <ThingDef ParentName="LampBase">
+        <defName>Light_Streetlamp</defName>
+        <label>outdoor lamp</label>
+        <description>An electrical standing lamp that lights an area, good for large outdoor spaces. Will automatically turn off during the day to prevent power consumption.</description>
+        <fillPercent>0.20</fillPercent>
+        <graphicData>
+            <texPath>NewThings/Light/OutdoorLamp</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,3.5)</drawSize>
+            <addTopAltitudeBias>true</addTopAltitudeBias>
+            <shadowData>
+                <volume>(0.2, 0.7, 0.2)</volume>
+                <offset>(0, 0, -0)</offset>
+            </shadowData>
+        </graphicData>
+        <!-- Currently disabled, as the image is affected by drawSize, making it stretched. -->
+        <!-- <uiIconPath>NewThings/Light/OutdoorLamp_MenuIcon</uiIconPath>-->
+        <uiIconOffset>(0,0.2)</uiIconOffset>
+        <tickerType>Rare</tickerType>
+        <costList>
+            <Steel>40</Steel>
+        </costList>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Mass>4</Mass>
+            <Flammability>1</Flammability>
+            <WorkToBuild>350</WorkToBuild>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+        </statBases>
+        <size>(1,1)</size>
+        <pathCost>14</pathCost>
+        <uiOrder>2992</uiOrder>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <shortCircuitInRain>false</shortCircuitInRain>
+                <basePowerConsumption>70</basePowerConsumption>
+                <powerUpgrades>
+                    <li>
+                        <researchProject>ColoredLights</researchProject>
+                        <factor>0.5</factor>
+                    </li>
+                </powerUpgrades>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>19</glowRadius>
+                <glowColor>(214,148,94,0)</glowColor>
+                <colorPickerEnabled>true</colorPickerEnabled>
+                <darklightToggle>true</darklightToggle>
+            </li>
+            <li Class="VEF.Buildings.CompProperties_ScheduleExtended">
+                <minLight>0</minLight>
+                <maxLight>0.5</maxLight>
+                <offMessage>Off due to sufficient sunlight.</offMessage>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_NotUnderRoof</li>
+        </placeWorkers>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>ColoredLights</li>
+        </researchPrerequisites>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+</Defs>

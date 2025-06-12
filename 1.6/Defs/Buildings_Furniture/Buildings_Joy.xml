@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase" Name="VFE_RadioBase" Abstract="True">
+    <building>
+      <joyKind>HighCulture</joyKind>
+    </building>
+    <thingCategories>
+      <li>BuildingsJoy</li>
+    </thingCategories>
+    <passability>PassThroughOnly</passability>
+    <altitudeLayer>Building</altitudeLayer>
+    <!-- Use place workers to draw radius -->
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <drawPlaceWorkersWhileInstallBlueprintSelected>true</drawPlaceWorkersWhileInstallBlueprintSelected>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <tradeTags>
+      <li>Television</li>
+      <li>MusicalInstrument</li>
+    </tradeTags>
+    <constructEffect>ConstructMetal</constructEffect>
+    <designationCategory>Joy</designationCategory>
+    <placeWorkers>
+      <!-- Uses CompProperties_CauseJoyHediff_Aoe, draws radius only if in the same room (full radius if placed in a wall). -->
+      <li>VEF.Buildings.PlaceWorker_CompCustomCauseHediff_AoE</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Flickable" />
+      <li>
+        <compClass>CompGatherSpot</compClass>
+      </li>
+    </comps>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <canOverlapZones>false</canOverlapZones>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+
+  <ThingDef ParentName="VFE_RadioBase">
+    <defName>Radio_Industrial</defName>
+    <label>industrial radio</label>
+    <description>An industrial-era radio for playing music and spoken broadcasts. Even on the rimworlds, there is often an old transmitter running something at least marginally interesting. Provides passive music recreation to those that can hear it.</description>
+    <graphicData>
+      <texPath>NewThings/Joy/IndustrialRadio/IndustrialRadio</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.5)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.05,0.2,0.9,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="VEF.Sounds.CompProperties_AmbientSound">
+        <ambientSound>VFE_IndustrialRadio_Ambience</ambientSound>
+      </li>
+      <li Class="VEF.Buildings.CompProperties_CustomCauseHediff_AoE">
+        <compClass>VanillaFurnitureEC.CompCauseJoyHediff_Aoe</compClass>
+        <hediff>VFE_ListeningToMusic</hediff>
+        <range>6</range>
+        <checkInterval>300</checkInterval>
+        <hediffDuration>305</hediffDuration>
+        <mustBeAwake>true</mustBeAwake>
+        <requiredCapacities>
+          <li>Hearing</li>
+        </requiredCapacities>
+      </li>
+    </comps>
+    <statBases>
+      <WorkToBuild>8000</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>10</Mass>
+      <JoyGainFactor>0.3</JoyGainFactor>
+    </statBases>
+    <researchPrerequisites>
+      <li>TubeTelevision</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <uiIconScale>0.9</uiIconScale>
+  </ThingDef>
+
+  <ThingDef ParentName="VFE_RadioBase">
+    <defName>Radio_Spacer</defName>
+    <label>longwave radio</label>
+    <description>A state-of-the-art, high-fidelity radio that uses advanced longwave transmission to deliver crystal-clear music, broadcasts, and interstellar transmissions. Even on the rimworlds, someone out there is always transmitting something - whether it’s news, music, or distant voices from the void..</description>
+    <graphicData>
+      <texPath>NewThings/Joy/LongwaveRadio/LongwaveRadio</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.5)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.05,0.2,0.9,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Steel>80</Steel>
+      <Plasteel>20</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li Class="VEF.Sounds.CompProperties_AmbientSound">
+        <ambientSound>VFE_SpacerRadio_Ambience</ambientSound>
+      </li>
+      <li Class="VEF.Buildings.CompProperties_CustomCauseHediff_AoE">
+        <compClass>VanillaFurnitureEC.CompCauseJoyHediff_Aoe</compClass>
+        <hediff>VFE_ListeningToMusic</hediff>
+        <range>12</range>
+        <checkInterval>300</checkInterval>
+        <hediffDuration>305</hediffDuration>
+        <mustBeAwake>true</mustBeAwake>
+        <requiredCapacities>
+          <li>Hearing</li>
+        </requiredCapacities>
+      </li>
+    </comps>
+    <statBases>
+      <WorkToBuild>12000</WorkToBuild>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Mass>12</Mass>
+      <JoyGainFactor>0.6</JoyGainFactor>
+      <Beauty>1</Beauty>
+    </statBases>
+    <researchPrerequisites>
+      <li>FlatscreenTelevision</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <uiIconScale>0.9</uiIconScale>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Joy_Arcade</defName>
+    <label>arcade machine</label>
+    <description>A bulky, coin-operated arcade cabinet with an aging CRT screen and colorful buttons. Though outdated, it still provides hours of digital entertainment. Classic games never truly die.</description>
+    <graphicData>
+      <texPath>NewThings/Joy/Arcade/Arcade</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <shadowData>
+        <volume>(0.7, 0.4, 0.7)</volume>
+      </shadowData>
+      <damageData>
+        <!-- Use separate rect for each, as just using a single rect will cause it to be rotated. -->
+        <rectN>(0.05,-0.05,0.9,1.45)</rectN>
+        <rectS>(0.05,-0.05,0.9,1.45)</rectS>
+        <rectE>(0.05,-0.05,0.9,1.45)</rectE>
+        <rectW>(0.05,-0.05,0.9,1.45)</rectW>
+      </damageData>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <uiIconScale>0.5</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <drawPlaceWorkersWhileInstallBlueprintSelected>true</drawPlaceWorkersWhileInstallBlueprintSelected>
+    <rotatable>true</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>BuildingsJoy</li>
+    </thingCategories>
+    <passability>PassThroughOnly</passability>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <WorkToBuild>14000</WorkToBuild>
+      <Mass>22</Mass>
+      <Flammability>1.0</Flammability>
+      <JoyGainFactor>1.25</JoyGainFactor>
+    </statBases>
+    <fillPercent>0.5</fillPercent>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <researchPrerequisites>
+      <li>TubeTelevision</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <building>
+      <joyKind>Gaming_Cerebral</joyKind>
+      <watchBuildingStandDistanceRange>
+        <min>1</min>
+        <max>1</max>
+      </watchBuildingStandDistanceRange>
+      <paintable>true</paintable>
+    </building>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <Steel>20</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <pathCost>48</pathCost>
+    <designationCategory>Joy</designationCategory>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <tradeTags>
+      <li>Television</li>
+    </tradeTags>
+    <modExtensions>
+      <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
+      <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+        <sound>VFE_Arcade_SFX</sound>
+        <soundRefireDelay>400~500</soundRefireDelay>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase" Name="VFE_ComputerBase" Abstract="True">
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <drawPlaceWorkersWhileInstallBlueprintSelected>true</drawPlaceWorkersWhileInstallBlueprintSelected>
+    <rotatable>true</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>BuildingsJoy</li>
+    </thingCategories>
+    <passability>PassThroughOnly</passability>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <building>
+      <joyKind>VFE_ComputerUsage</joyKind>
+      <paintable>true</paintable>
+    </building>
+    <pathCost>42</pathCost>
+    <designationCategory>Joy</designationCategory>
+    <tradeTags>
+      <li>Television</li>
+    </tradeTags>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,1)</interactionCellOffset>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <interactionCellIcon>DiningChair</interactionCellIcon>
+    <interactionCellIconReverse>true</interactionCellIconReverse>
+  </ThingDef>
+
+  <ThingDef ParentName="VFE_ComputerBase">
+    <defName>Joy_InudstrialComputer</defName>
+    <label>old computer</label>
+    <description>A bulky, outdated computer standing on a small desk. The screen flickers, the keys stick, and it hums with age, but it still runs simple programs. There's always some archaic software waiting to be used.</description>
+    <graphicData>
+      <texPath>NewThings/Joy/IndustrialComputer/IndustrialComputer</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <shadowData>
+        <volume>(0.7, 0.3, 0.7)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.1,0.1,0.8,0.8)</rect>
+      </damageData>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Mass>18</Mass>
+      <JoyGainFactor>1.0</JoyGainFactor>
+    </statBases>
+    <fillPercent>0.40</fillPercent>
+    <researchPrerequisites>
+      <li>TubeTelevision</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <costStuffCount>30</costStuffCount>
+    <costList>
+      <Steel>75</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>180</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <uiIconOffset>(0, 0.1)</uiIconOffset>
+    <uiIconScale>0.7</uiIconScale>
+    <modExtensions>
+      <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
+      <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+        <sound>VFE_Computer_SFX</sound>
+        <soundRefireDelay>400~500</soundRefireDelay>
+        <extraJoySkill>Intellectual</extraJoySkill>
+        <extraJoyXpPerTick>0.002</extraJoyXpPerTick>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="VFE_ComputerBase">
+    <defName>Joy_ModernComputer</defName>
+    <label>modern computer</label>
+    <description>A sleek, high-performance computing station housed on a sturdy desk. Equipped with a fast processor, an ergonomic keyboard, and a crisp, flat-panel display, it offers a vast range of software: whether for research, entertainment, or light interstellar networking.</description>
+    <graphicData>
+      <texPath>NewThings/Joy/ModernComputer/ModernComputer</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <shadowData>
+        <volume>(1.65, 0.3, 0.7)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.1,0.1,1.8,0.75)</rect>
+      </damageData>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToBuild>18000</WorkToBuild>
+      <Mass>30</Mass>
+      <JoyGainFactor>1.4</JoyGainFactor>
+    </statBases>
+    <fillPercent>0.50</fillPercent>
+    <size>(2,1)</size>
+    <researchPrerequisites>
+      <li>FlatscreenTelevision</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <costStuffCount>60</costStuffCount>
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>250</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+    </comps>
+    <uiIconScale>1</uiIconScale>
+    <modExtensions>
+      <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
+      <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+        <sound>VFE_Computer_SFX</sound>
+        <soundRefireDelay>400~500</soundRefireDelay>
+        <researchOnFinished>10</researchOnFinished>
+        <extraJoySkill>Intellectual</extraJoySkill>
+        <extraJoyXpPerTick>0.004</extraJoyXpPerTick>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="ArtableFurnitureBase">
+    <defName>Joy_Piano</defName>
+    <label>upright piano</label>
+    <description>A compact upright piano designed for musical recreation. A great way to develop artistic skills and entertain others.</description>
+    <graphicData>
+      <texPath>NewThings/Joy/UprightPiano/Piano</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3.03,3.03)</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <castEdgeShadows>True</castEdgeShadows>
+    <altitudeLayer>Building</altitudeLayer>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <fillPercent>0.40</fillPercent>
+    <building>
+      <joyKind>HighCulture</joyKind>
+      <watchBuildingStandDistanceRange>
+        <min>1</min>
+        <max>1</max>
+      </watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>1</watchBuildingStandRectWidth>
+      <paintable>true</paintable>
+    </building>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>12000</WorkToBuild>
+      <Mass>50</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>6</Beauty>
+      <JoyGainFactor>1.2</JoyGainFactor>
+    </statBases>
+    <size>(2,1)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <costStuffCount>140</costStuffCount>
+    <costList>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <pathCost>30</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Joy</designationCategory>
+    <canOverlapZones>false</canOverlapZones>
+    <researchPrerequisites>
+      <li>MF_ModernFurniture</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <modExtensions>
+      <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
+      <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+        <effecter>Joy_PlayPiano</effecter>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="ArtableFurnitureBase">
+    <defName>Joy_RouletteTable</defName>
+    <label>roulette table</label>
+    <description>A sophisticated gambling table designed for playing roulette. A thrilling mix of chance and strategy, making it a centerpiece of any high-end casino or social space.</description>
+    <graphicData>
+      <texPath>NewThings/Joy/RouletteTable/RouletteTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <castEdgeShadows>True</castEdgeShadows>
+    <altitudeLayer>Building</altitudeLayer>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <fillPercent>0.40</fillPercent>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <building>
+      <joyKind>Gaming_Cerebral</joyKind>
+      <buildingSizeCategory>Medium</buildingSizeCategory>
+      <paintable>true</paintable>
+    </building>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToBuild>16000</WorkToBuild>
+      <Mass>75</Mass>
+      <Flammability>1.0</Flammability>
+      <JoyGainFactor>1.4</JoyGainFactor>
+    </statBases>
+    <size>(2,4)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>120</costStuffCount>
+    <costList>
+      <Cloth>100</Cloth>
+      <WoodLog>40</WoodLog>
+    </costList>
+    <pathCost>42</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Joy</designationCategory>
+    <canOverlapZones>false</canOverlapZones>
+    <placeWorkers>
+      <li>PlaceWorker_NeverAdjacentUnstandable</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>MF_ModernFurniture</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+    <modExtensions>
+      <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
+      <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+<!--        <sound></sound>-->
+        <effecter>VFE_Joy_HoldChips</effecter>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Joy_DartsBoard</defName>
+    <label>darts board</label>
+    <description>A simple dartboard mounted on a stand. A fun way to practice accuracy and hand-eye coordination. It trains shooting ability.</description>
+    <graphicData>
+      <texPath>NewThings/Joy/Dartboard/Dartboard</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.8, 0.3)</volume>
+      </shadowData>
+      <damageData>
+        <!-- Use separate rect for each, as just using a single rect will cause it to be rotated. -->
+        <rectN>(0.25,0,0.5,1.32)</rectN>
+        <rectS>(0.25,0,0.5,1.32)</rectS>
+        <rectE>(0.25,0,0.5,1.32)</rectE>
+        <rectW>(0.25,0,0.5,1.32)</rectW>
+      </damageData>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>true</rotatable>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>BuildingsJoy</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>15</Mass>
+      <Flammability>1.0</Flammability>
+      <JoyGainFactor>1.1</JoyGainFactor>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <building>
+      <joyKind>Gaming_Dexterity</joyKind>
+      <paintable>true</paintable>
+    </building>
+    <costStuffCount>60</costStuffCount>
+    <pathCost>42</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <drawPlaceWorkersWhileInstallBlueprintSelected>true</drawPlaceWorkersWhileInstallBlueprintSelected>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <designationCategory>Joy</designationCategory>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <uiIconScale>0.65</uiIconScale>
+    <uiIconOffset>(0, 0.05)</uiIconOffset>
+    <passability>PassThroughOnly</passability>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,5)</interactionCellOffset>
+    <canOverlapZones>false</canOverlapZones>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
+    <modExtensions>
+      <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+        <allowComfortFromCell>false</allowComfortFromCell>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Joy_PunchingBag</defName>
+    <label>punching bag</label>
+    <description>A sturdy, stand-mounted punching bag for combat training and stress relief. It trains melee combat ability.</description>
+    <graphicData>
+      <texPath>NewThings/Joy/PunchingBag/PunchingBag</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.8, 0.3)</volume>
+      </shadowData>
+      <damageData>
+        <!-- Use separate rect for each, as just using a single rect will cause it to be rotated. -->
+        <rectN>(0.25,0,0.5,1.4)</rectN>
+        <rectS>(0.25,0,0.5,1.4)</rectS>
+        <rectE>(0.25,0,0.5,1.4)</rectE>
+        <rectW>(0.25,0,0.5,1.4)</rectW>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <fillPercent>0.40</fillPercent>
+    <building>
+      <joyKind>VFE_StrengthPlay</joyKind>
+      <paintable>true</paintable>
+    </building>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToBuild>9000</WorkToBuild>
+      <Mass>18</Mass>
+      <Flammability>1.0</Flammability>
+      <JoyGainFactor>1.2</JoyGainFactor>
+    </statBases>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costStuffCount>60</costStuffCount>
+    <costList>
+      <Steel>20</Steel>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <pathCost>42</pathCost>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Joy</designationCategory>
+    <uiIconOffset>(0,0.05)</uiIconOffset>
+    <uiIconScale>0.55</uiIconScale>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <modExtensions>
+      <!-- Extra data for JobDriver_ExtendedSitFacingBuilding -->
+      <li Class="VanillaFurnitureEC.ExtendedSitFacingJoyDataExtension">
+        <allowComfortFromCell>false</allowComfortFromCell>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BedBase">
+    <defName>VFE_Lounger</defName>
+    <label>lounger</label>
+    <description>A reclining cushioned lounger designed for relaxation. Offers superior comfort but is not ideal for deep, restful sleep. Allows for sunbathing recreation.</description>
+    <thingClass>Building_Bed</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <canOverlapZones>false</canOverlapZones>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <graphicData>
+      <texPath>NewThings/Joy/Lounger/Lounger</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <rect>(0,0.05,1,1.95)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>NewThings/Joy/Lounger/Lounger_east</uiIconPath>
+    <comps Inherit="False">
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_InspectString">
+        <compClass>VanillaFurnitureEC.CompInspectStringLounger</compClass>
+      </li>
+    </comps>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Mass>35</Mass>
+      <WorkToBuild>1200</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>2</Beauty>
+      <BedRestEffectiveness>0.6</BedRestEffectiveness>
+      <Comfort>0.9</Comfort>
+      <ImmunityGainSpeedFactor>0.8</ImmunityGainSpeedFactor>
+      <SurgerySuccessChanceFactor>0.5</SurgerySuccessChanceFactor>
+      <JoyGainFactor>1.05</JoyGainFactor>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <placeWorkers Inherit="False" />
+    <costStuffCount>50</costStuffCount>
+    <building>
+      <joyKind>Meditative</joyKind>
+      <bed_showSleeperBody>True</bed_showSleeperBody>
+      <paintable>true</paintable>
+      <buildingTags>
+        <li>Bed</li>
+      </buildingTags>
+    </building>
+    <fillPercent>0.4</fillPercent>
+    <pathCost>42</pathCost>
+    <staticSunShadowHeight>0.17</staticSunShadowHeight>
+    <castEdgeShadows>True</castEdgeShadows>
+    <techLevel>Industrial</techLevel>
+    <passability>PassThroughOnly</passability>
+    <designationCategory>Joy</designationCategory>
+    <researchPrerequisites>
+      <li>MF_ModernFurniture</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <!-- Use the default uiOrder value to not force the lounger to have a different order. -->
+    <!-- It feels weird if it's forced before all vanilla buildings. -->
+    <uiOrder>2999</uiOrder>
+    <size>(1,2)</size>
+    <modExtensions>
+      <li Class="VanillaFurnitureEC.NoUnownedBedOverlayExtension"/>
+    </modExtensions>
+  </ThingDef>
+</Defs>

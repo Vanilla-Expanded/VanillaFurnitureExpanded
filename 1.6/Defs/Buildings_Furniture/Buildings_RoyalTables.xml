@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef Name="RoyalTableDesc" ParentName="TableGatherSpotBase" Abstract="True">
+        <description>A finely crafted, gold-trimmed table adorned with intricate carvings and polished surfaces. People eat off tables when chairs are placed facing them.</description>
+        <graphicData>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <statBases>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <researchPrerequisites>
+            <li>MF_RoyalFurniture</li>
+        </researchPrerequisites>
+        <!-- Need to remove edge shadows/static sun shadow heights to make the game use shadowData -->
+        <castEdgeShadows>false</castEdgeShadows>
+        <staticSunShadowHeight>0</staticSunShadowHeight>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+    <ThingDef ParentName="RoyalTableDesc">
+        <defName>Table_Royal1x1c</defName>
+        <label>royal table (1x1)</label>
+        <graphicData>
+            <texPath>NewThings/Furniture/RoyalTables/RoyalTable1x1</texPath>
+            <drawSize>(1,1)</drawSize>
+            <damageData>
+                <rect>(0.20,0.35,0.6,0.6)</rect>
+            </damageData>
+            <shadowData>
+                <volume>(0.45, 0.25, 0.45)</volume>
+            </shadowData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>70</MaxHitPoints>
+            <WorkToBuild>750</WorkToBuild>
+            <Mass>5</Mass>
+            <Beauty>10</Beauty>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">5</StyleDominance>
+        </statBases>
+        <size>(1,1)</size>
+        <costStuffCount>20</costStuffCount>
+        <costList>
+            <Gold>10</Gold>
+        </costList>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <rotatable>false</rotatable>
+    </ThingDef>
+
+    <ThingDef ParentName="RoyalTableDesc">
+        <defName>Table_Royal1x2c</defName>
+        <label>royal table (1x2)</label>
+        <graphicData>
+            <texPath>NewThings/Furniture/RoyalTables/RoyalTable1x2</texPath>
+            <drawSize>(3,4)</drawSize>
+            <damageData>
+                <rect>(0.09,0.15,0.82,1.7)</rect>
+            </damageData>
+            <shadowData>
+                <volume>(0.85, 0.25, 1.65)</volume>
+            </shadowData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>90</MaxHitPoints>
+            <WorkToBuild>1000</WorkToBuild>
+            <Mass>7</Mass>
+            <Beauty>20</Beauty>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">10</StyleDominance>
+        </statBases>
+        <size>(1,2)</size>
+        <costStuffCount>35</costStuffCount>
+        <costList>
+            <Gold>20</Gold>
+        </costList>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    </ThingDef>
+
+    <ThingDef ParentName="RoyalTableDesc">
+        <defName>Table_Royal2x2c</defName>
+        <label>royal table (2x2)</label>
+        <graphicData>
+            <texPath>NewThings/Furniture/RoyalTables/RoyalTable2x2</texPath>
+            <drawSize>(4,4)</drawSize>
+            <damageData>
+                <rect>(0.15,0.15,1.7,1.7)</rect>
+            </damageData>
+            <shadowData>
+                <volume>(1.55, 0.25, 1.55)</volume>
+            </shadowData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <WorkToBuild>2000</WorkToBuild>
+            <Mass>13</Mass>
+            <Beauty>40</Beauty>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">20</StyleDominance>
+        </statBases>
+        <size>(2,2)</size>
+        <costStuffCount>65</costStuffCount>
+        <costList>
+            <Gold>40</Gold>
+        </costList>
+        <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
+        <rotatable>false</rotatable>
+    </ThingDef>
+
+    <ThingDef ParentName="RoyalTableDesc">
+        <defName>Table_Royal2x4c</defName>
+        <label>royal table (2x4)</label>
+        <graphicData>
+            <texPath>NewThings/Furniture/RoyalTables/RoyalTable2x4</texPath>
+            <drawSize>(4,6)</drawSize>
+            <damageData>
+                <rect>(0.1,0.2,1.8,3.6)</rect>
+            </damageData>
+            <shadowData>
+                <volume>(1.65, 0.25, 3.3)</volume>
+            </shadowData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>175</MaxHitPoints>
+            <WorkToBuild>3750</WorkToBuild>
+            <Mass>26</Mass>
+            <Beauty>80</Beauty>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">40</StyleDominance>
+        </statBases>
+        <size>(2,4)</size>
+        <costStuffCount>120</costStuffCount>
+        <costList>
+            <Gold>60</Gold>
+        </costList>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <building>
+            <!-- Match vanilla table. Seems to only affect destruction sounds. -->
+            <buildingSizeCategory>Medium</buildingSizeCategory>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="RoyalTableDesc">
+        <defName>Table_Royal3x3c</defName>
+        <label>royal table (3x3)</label>
+        <graphicData>
+            <texPath>NewThings/Furniture/RoyalTables/RoyalTable3x3</texPath>
+            <drawSize>(5,5)</drawSize>
+            <damageData>
+                <rect>(0.15,0.15,2.7,2.7)</rect>
+            </damageData>
+            <shadowData>
+                <volume>(2.5, 0.25, 2.5)</volume>
+            </shadowData>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>200</MaxHitPoints>
+            <WorkToBuild>4200</WorkToBuild>
+            <Mass>30</Mass>
+            <Beauty>90</Beauty>
+            <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">40</StyleDominance>
+        </statBases>
+        <size>(3,3)</size>
+        <costStuffCount>125</costStuffCount>
+        <costList>
+            <Gold>90</Gold>
+        </costList>
+        <constructionSkillPrerequisite>9</constructionSkillPrerequisite>
+        <rotatable>false</rotatable>
+        <building>
+            <!-- Match vanilla table. Seems to only affect destruction sounds. -->
+            <buildingSizeCategory>Medium</buildingSizeCategory>
+        </building>
+    </ThingDef>
+
+</Defs>

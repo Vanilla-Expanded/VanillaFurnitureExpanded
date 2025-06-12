@@ -1,6 +1,6 @@
 ﻿using RimWorld;
 using Verse;
-using VFECore;
+using VEF.Buildings;
 
 namespace VanillaFurnitureEC;
 

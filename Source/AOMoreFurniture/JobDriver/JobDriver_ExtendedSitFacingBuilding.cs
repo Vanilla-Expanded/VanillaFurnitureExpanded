@@ -36,7 +36,7 @@ public class JobDriver_ExtendedSitFacingBuilding : JobDriver_SitFacingBuilding
                 // Perhaps a reverse harmony patch would be better to copy the original method?
                 // Honestly, feels like too much work for such a simple thing.
                 pawn.rotationTracker.FaceTarget(TargetA);
-                JoyUtility.JoyTickCheckEnd(pawn, job.doUntilGatheringEnded ? JoyTickFullJoyAction.None : JoyTickFullJoyAction.EndJob, 1f, (Building)TargetThingA);
+                JoyUtility.JoyTickCheckEnd(pawn, 1,job.doUntilGatheringEnded ? JoyTickFullJoyAction.None : JoyTickFullJoyAction.EndJob, 1f, (Building)TargetThingA);
             };
         }
 
