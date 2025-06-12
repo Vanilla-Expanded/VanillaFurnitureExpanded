@@ -41,6 +41,9 @@
                 <maxDistance>6</maxDistance>
             </li>
         </comps>
+<!--        <thingCategories Inherit="False">-->
+<!--            <li>BuildingsMisc</li>-->
+<!--        </thingCategories>-->
         <placeWorkers>
             <li>PlaceWorker_ShowFacilitiesConnections</li>
         </placeWorkers>
@@ -169,6 +172,9 @@
                 </beautyPerFilthStored>
             </li>
         </comps>
+<!--        <thingCategories Inherit="False">-->
+<!--            <li>BuildingsMisc</li>-->
+<!--        </thingCategories>-->
         <building>
             <paintable>true</paintable>
         </building>
@@ -233,6 +239,9 @@
                 </beautyPerFilthStored>
             </li>
         </comps>
+<!--        <thingCategories Inherit="False">-->
+<!--            <li>BuildingsMisc</li>-->
+<!--        </thingCategories>-->
         <building>
             <paintable>true</paintable>
         </building>

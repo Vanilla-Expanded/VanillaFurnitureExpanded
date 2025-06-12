@@ -112,15 +112,6 @@ namespace VanillaFurnitureEC
             Scribe_Deep.Look(ref innerContainer, "container", this);
             innerContainer ??= new ThingOwner<Filth>(this);
             Scribe_Values.Look(ref cleanupTarget, "cleanupTarget", 0.9f);
-
-            // Backwards compatibility to support change from ThingOwner<Thing> to ThingOwner<Filth>, remove in 1.6.
-            if (Scribe.mode == LoadSaveMode.LoadingVars)
-            {
-                ThingOwner container = null;
-                Scribe_Deep.Look(ref container, "innerContainer", this);
-                if (container is { Any: true })
-                    container.TryTransferAllToContainer(innerContainer);
-            }
         }
     }
 }
