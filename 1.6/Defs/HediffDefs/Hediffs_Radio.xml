@@ -16,7 +16,12 @@
         <showRemainingTime>false</showRemainingTime>
       </li>
       <li Class="HediffCompProperties_DisappearsOnDeath"/>
-      <li Class="VanillaFurnitureEC.HediffCompProperties_CauseJoy"/>
+      <li Class="VanillaFurnitureEC.HediffCompProperties_CauseJoy">
+        <jobDefsDisablingRecreation>
+          <!-- The job will handle adding recreation (while disabling passive loss), so disable recreation gain preventing double gain. -->
+          <li>VFE_ListenToMusic</li>
+        </jobDefsDisablingRecreation>
+      </li>
     </comps>
     <stages>
       <li>

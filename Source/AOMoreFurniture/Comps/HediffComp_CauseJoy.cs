@@ -9,17 +9,20 @@ public class HediffComp_CauseJoy : HediffComp
     public float joyGainRate;
     public JoyKindDef joyKind;
 
-    public override void CompPostTick(ref float severityAdjustment)
+    protected HediffCompProperties_CauseJoy Props => (HediffCompProperties_CauseJoy)props;
+
+    public override void CompPostTickInterval(ref float severityAdjustment, int delta)
     {
         var joy = Pawn.needs.joy;
         if (joy == null)
             return;
 
         // If actively listening to the radio, the JobDriver will handle the recreation gain.
-        if (Pawn.CurJobDef == VFE_DefOf.VFE_ListenToMusic)
+        var job = Pawn.CurJobDef;
+        if (job != null && Props.jobDefsDisablingRecreation != null && Props.jobDefsDisablingRecreation.Contains(job))
             return;
 
-        var amount = joyGainRate * JoyTunings.BaseJoyGainPerHour / GenDate.TicksPerHour;
+        var amount = joyGainRate * delta * (JoyTunings.BaseJoyGainPerHour / GenDate.TicksPerHour);
         if (amount <= 0f)
             return;
 

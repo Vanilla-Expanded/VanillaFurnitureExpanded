@@ -30,18 +30,18 @@ public class JobDriver_ExtendedSitFacingBuilding : JobDriver_SitFacingBuilding
         // updated, and we forget to update this method.
         if (joyData is { allowComfortFromCell: false })
         {
-            toil.tickAction = () =>
+            toil.tickIntervalAction = delta =>
             {
                 // Same tickAction as original, but missing comfort gain.
                 // Perhaps a reverse harmony patch would be better to copy the original method?
                 // Honestly, feels like too much work for such a simple thing.
                 pawn.rotationTracker.FaceTarget(TargetA);
-                JoyUtility.JoyTickCheckEnd(pawn, 1,job.doUntilGatheringEnded ? JoyTickFullJoyAction.None : JoyTickFullJoyAction.EndJob, 1f, (Building)TargetThingA);
+                JoyUtility.JoyTickCheckEnd(pawn, delta, job.doUntilGatheringEnded ? JoyTickFullJoyAction.None : JoyTickFullJoyAction.EndJob, 1f, (Building)TargetThingA);
             };
         }
 
-        // Play a sound every couple of ticks, both sound and delay specified by the 
-        toil.tickAction += () =>
+        // Play a sound every couple of ticks, both sound and delay specified by the Props
+        toil.tickIntervalAction += delta =>
         {
             if (joyData == null)
                 return;
@@ -53,7 +53,7 @@ public class JobDriver_ExtendedSitFacingBuilding : JobDriver_SitFacingBuilding
             }
 
             if (joyData.extraJoySkill != null)
-                pawn.skills.GetSkill(joyData.extraJoySkill).Learn(joyData.extraJoyXpPerTick);
+                pawn.skills.GetSkill(joyData.extraJoySkill).Learn(joyData.extraJoyXpPerTick * delta);
         };
 
         // Add research points when finished the job.

@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace VanillaFurnitureEC
@@ -11,6 +12,8 @@ namespace VanillaFurnitureEC
         public ThingOwner<Filth> innerContainer;
 
         public float cleanupTarget = 0.9f;
+
+        public float lastBeautyValue;
 
         public CompBinClean()
         {
@@ -39,9 +42,15 @@ namespace VanillaFurnitureEC
 
         public bool ShouldClean => AmountStoredPct >= cleanupTarget;
 
-        public override void CompTick()
+        public override void CompTickInterval(int delta) => TickInterval(delta);
+
+        public override void CompTickRare() => TickInterval(GenTicks.TickRareInterval);
+
+        public override void CompTickLong() => TickInterval(GenTicks.TickLongInterval);
+
+        protected virtual void TickInterval(int delta)
         {
-            if (parent.IsHashIntervalTick(Props.timerInTicks))
+            if (parent.IsHashIntervalTick(Props.timerInTicks, delta))
             {
                 var amountStored = AmountStored;
                 if (amountStored < Props.capacity)
@@ -61,6 +70,23 @@ namespace VanillaFurnitureEC
                     }
                 }
             }
+
+            // 3 times per day, recalculate the beauty of the room due to building beauty changes
+            if (parent.IsHashIntervalTick(GenDate.TicksPerDay / 3))
+            {
+                // Only do something if the beauty actually changed
+                var beauty = parent.GetStatValue(StatDefOf.Beauty);
+                if (!Mathf.Approximately(lastBeautyValue, beauty))
+                {
+                    lastBeautyValue = beauty;
+                    parent.GetRoom()?.Notify_BedTypeChanged();
+                }
+            }
+        }
+
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            lastBeautyValue = parent.GetStatValue(StatDefOf.Beauty);
         }
 
         public override void PostDestroy(DestroyMode mode, Map previousMap)

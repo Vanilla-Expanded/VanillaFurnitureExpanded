@@ -17,11 +17,10 @@ namespace VanillaFurnitureEC
 
         // Jobs
         public static JobDef VFE_CleanBin;
-        public static JobDef VFE_ListenToMusic;
 
         // JoyGivers
         public static JoyGiverDef VFE_Play_Computer;
-        
+
         // LearningDesire
         public static LearningDesireDef VFE_ComputerLearning;
 

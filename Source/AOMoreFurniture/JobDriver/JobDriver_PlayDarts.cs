@@ -7,9 +7,9 @@ namespace VanillaFurnitureEC
     {
         protected override void ModifyPlayToil(Toil toil)
         {
-            toil.tickAction += () =>
+            toil.tickIntervalAction += delta =>
             {
-                if (pawn.IsHashIntervalTick(400))
+                if (pawn.IsHashIntervalTick(400, delta))
                     ThrowDart(pawn, TargetA.Cell);
             };
         }

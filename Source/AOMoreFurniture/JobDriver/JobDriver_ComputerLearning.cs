@@ -37,12 +37,12 @@ public class JobDriver_ComputerLearning : JobDriver
             .FailOn(() => !LearningGiver_ComputerUsing.CanUseComputerNow(TargetThingA, pawn));
 
         var computerUseToil = ToilMaker.MakeToil();
-        computerUseToil.tickAction = () =>
+        computerUseToil.tickIntervalAction = delta =>
         {
-            pawn.GainComfortFromCellIfPossible(1);
+            pawn.GainComfortFromCellIfPossible(delta);
             pawn.rotationTracker.FaceTarget(TargetA);
-            LearningUtility.LearningTickCheckEnd(pawn,1);
-            pawn.skills.Learn(SkillDefOf.Intellectual, VFE_DefOf.VFE_ComputerLearning.xpPerTick);
+            LearningUtility.LearningTickCheckEnd(pawn, delta);
+            pawn.skills.Learn(SkillDefOf.Intellectual, VFE_DefOf.VFE_ComputerLearning.xpPerTick * delta);
 
             if (joyData is { sound: not null } && Find.TickManager.TicksGame >= nextSoundTick)
             {

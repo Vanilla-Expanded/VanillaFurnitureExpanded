@@ -25,9 +25,9 @@ namespace VanillaFurnitureEC
                 workDone = 0f;
                 totalWork = 150f;
             };
-            clean.tickAction = () =>
+            clean.tickIntervalAction = delta =>
             {
-                workDone++;
+                workDone += delta;
                 if (workDone >= totalWork)
                 {
                     var bin = job.GetTarget(TargetIndex.A).Thing;
