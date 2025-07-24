@@ -50,6 +50,9 @@ namespace VanillaFurnitureEC
 
         protected virtual void TickInterval(int delta)
         {
+            if (!parent.Spawned)
+                return;
+            
             if (parent.IsHashIntervalTick(Props.timerInTicks, delta))
             {
                 var amountStored = AmountStored;
