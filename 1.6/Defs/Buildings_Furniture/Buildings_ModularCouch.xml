@@ -12,6 +12,7 @@
 <!--        <drawerType>RealtimeOnly</drawerType>-->
         <uiIconPath>NewThings/Furniture/ModularCouch/ModularCouch_Omnidirectional</uiIconPath>
         <altitudeLayer>Building</altitudeLayer>
+        <rotatable>false</rotatable>
         <statBases>
             <MaxHitPoints>100</MaxHitPoints>
             <WorkToBuild>12000</WorkToBuild>
@@ -31,89 +32,134 @@
                     <!-- If name is omitted, the file name will be used instead. -->
                     <!-- If sorting priority is omitted, a value of 0 will be used instead. -->
                     <!-- The float menu is sorted by putting entries with the highest priority at the top. -->
+                    <!-- clockwiseRotationIndex is used for rotating, currently only used for gravships. -->
+                    <!-- Keep default (negative values) to make a specific graphic not rotated. -->
+                    <!-- Counteclockwise rotation is achieved by rotating clockwise. -->
+                    <!-- For example, 1 counterclockwise rotation is 3 clockwise rotations. -->
                     <li>
+                        <!-- 0 -->
                         <name>Down-left (Inner)</name>
                         <sortingPriority>497</sortingPriority>
+                        <clockwiseRotationIndex>14</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 1 -->
                         <name>Down-left (Outer)</name>
                         <sortingPriority>797</sortingPriority>
+                        <clockwiseRotationIndex>15</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 2 -->
                         <name>Down-left (Straight)</name>
                         <sortingPriority>999</sortingPriority>
+                        <clockwiseRotationIndex>9</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 3 -->
                         <name>Down-middle (Straight)</name>
                         <sortingPriority>998</sortingPriority>
+                        <clockwiseRotationIndex>8</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 4 -->
                         <name>Down-right (Inner)</name>
                         <sortingPriority>496</sortingPriority>
+                        <clockwiseRotationIndex>0</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 5 -->
                         <name>Down-right (Outer)</name>
                         <sortingPriority>796</sortingPriority>
+                        <clockwiseRotationIndex>1</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 6 -->
                         <name>Down-right (Straight)</name>
                         <sortingPriority>997</sortingPriority>
+                        <clockwiseRotationIndex>7</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 7 -->
                         <name>Left-down (Straight)</name>
                         <sortingPriority>967</sortingPriority>
+                        <clockwiseRotationIndex>16</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 8 -->
                         <name>Left-middle (Straight)</name>
                         <sortingPriority>968</sortingPriority>
+                        <clockwiseRotationIndex>17</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 9 -->
                         <name>Left-up (Straight)</name>
                         <sortingPriority>969</sortingPriority>
+                        <clockwiseRotationIndex>20</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 10 -->
                         <name>Omnidirectional</name>
                         <sortingPriority>100000</sortingPriority>
                     </li>
                     <li>
+                        <!-- 11 -->
                         <name>Right-down (Straight)</name>
                         <sortingPriority>987</sortingPriority>
+                        <clockwiseRotationIndex>2</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 12 -->
                         <name>Right-middle (Straight)</name>
                         <sortingPriority>988</sortingPriority>
+                        <clockwiseRotationIndex>3</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 13 -->
                         <name>Right-up (Straight)</name>
                         <sortingPriority>989</sortingPriority>
+                        <clockwiseRotationIndex>6</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 14 -->
                         <name>Up-left (Inner)</name>
                         <sortingPriority>498</sortingPriority>
+                        <clockwiseRotationIndex>18</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 15 -->
                         <name>Up-left (Outer)</name>
                         <sortingPriority>798</sortingPriority>
+                        <clockwiseRotationIndex>19</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 16 -->
                         <name>Up-left (Straight)</name>
                         <sortingPriority>979</sortingPriority>
+                        <clockwiseRotationIndex>13</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 17 -->
                         <name>Up-middle (Straight)</name>
                         <sortingPriority>978</sortingPriority>
+                        <clockwiseRotationIndex>12</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 18 -->
                         <name>Up-right (Inner)</name>
                         <sortingPriority>499</sortingPriority>
+                        <clockwiseRotationIndex>4</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 19 -->
                         <name>Up-right (Outer)</name>
                         <sortingPriority>799</sortingPriority>
+                        <clockwiseRotationIndex>5</clockwiseRotationIndex>
                     </li>
                     <li>
+                        <!-- 20 -->
                         <name>Up-right (Straight)</name>
                         <sortingPriority>977</sortingPriority>
+                        <clockwiseRotationIndex>11</clockwiseRotationIndex>
                     </li>
                 </defaultGraphicData>
                 <styledGraphicData>
