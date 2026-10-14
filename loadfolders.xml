@@ -1,8 +1,5 @@
 <loadFolders>
-	<v1.4>
-		<li>/</li>
-		<li>1.4</li>
-	</v1.4>
+	
 	<v1.5>
 		<li>/</li>
 		<li>1.5</li>
@@ -13,4 +10,9 @@
 		<li>1.6</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.6/Mods/Ideology</li>
 	</v1.6>
+	<v1.7>
+		<li>/</li>
+		<li>1.6</li>
+		<li IfModActive="Ludeon.RimWorld.Ideology">1.6/Mods/Ideology</li>
+	</v1.7>
 </loadFolders>
